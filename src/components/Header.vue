@@ -1,5 +1,16 @@
 <script setup>
+document.addEventListener('DOMContentLoaded', function () {
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
 
+  // Initially hide the mobile menu
+  mobileMenu.classList.add('hidden');
+
+  mobileMenuButton.addEventListener('click', function () {
+    // Toggle the 'hidden' class to show/hide the mobile menu
+    mobileMenu.classList.toggle('hidden');
+  });
+});
 </script>
 
 <template>
@@ -7,7 +18,7 @@
     <div class="relative flex h-16 items-center justify-between">
       <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
         <!-- Mobile menu button-->
-        <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+        <button id="mobile-menu-button" type="button" class="relative inline-flex items-center justify-center rounded-md p-2 ml-3 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
           <span class="absolute -inset-0.5"></span>
           <span class="sr-only">Open main menu</span>
           <!--
@@ -26,7 +37,7 @@
       </div>
       <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
         <div class="flex flex-shrink-0 items-center">
-          <img class="h-10 lg:w-full lg:ml-5" src="../assets/Capture.jpg" alt="Your Company">
+          <img class="h-10 lg:w-full lg:ml-5 ml-32" src="../assets/Capture.jpg" alt="Your Company">
         </div>
         <div class="hidden lg:ml-auto lg:w-5/12 sm:block rounded-3xl" style="background:#2c306b;">
           <div class="flex space-x-3">
