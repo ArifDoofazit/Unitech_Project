@@ -3,14 +3,14 @@ export default {
   content: [
     "./index.html",
     "./src/**/*.{vue,js,ts,jsx,tsx}",
+    "./node_modules/flowbite/**/*.js"
   ],
   theme: {
     extend: {
-      colors: {
-        yellow: '#eb9843' ,
-      }
     },
   },
-  plugins: [],
+  plugins: [
+    require('flowbite/plugin')
+  ],
 }
 
