@@ -1,9 +1,9 @@
 <script setup>
 import Slider from '@/components/Slider.vue';
-import Products from '@/components/Products.vue';
+import Product from '@/components/Product.vue';
 </script>
 
 <template>
     <Slider />
-    <Products />
+    <Product />
 </template>

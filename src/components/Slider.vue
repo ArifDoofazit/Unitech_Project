@@ -4,24 +4,24 @@
 
 <template>
 
-    <div id="default-carousel" class="relative w-full" data-carousel="static">
+    <div id="default-carousel" class="relative w-full" data-carousel="slide">
         <!-- Carousel wrapper -->
-        <div class="relative h-56 overflow-hidden lg:h-[650px] md:h-96">
+        <div class="relative h-80 overflow-hidden lg:h-[650px] md:h-96">
              <!-- Item 1 -->
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
                 <div class="absolute z-10 lg:mt-64 p-8">
-                    <h2 class="text-6xl text-[#eb9843] font-normal">The Best Hardware Tools</h2>
-                    <p class="text-xl leading-8 text-white font-medium py-4">We only provide hardware that meets ANSI/BHMA <br> Grade-1 and Grade-2 standards</p>
+                    <h2 class="text-2xl lg:text-6xl text-[#eb9843] font-normal mt-24 lg:mt-0">The Best Hardware Tools</h2>
+                    <p class="text-sm lg:text-xl lg:leading-8 text-black font-medium py-4">We only provide hardware that meets ANSI/BHMA <br class="hidden lg:block"> Grade-1 and Grade-2 standards</p>
                 </div>
-                <img src="../assets/image/Slider1.jpeg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                <img src="../assets/image/Slider-Two.webp" class="absolute block w-full h-80 lg:h-[650px] -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
             </div>
             <!-- Item 2 -->
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="../assets/image/Slider2.jpeg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                <img src="../assets/image/Slider1.jpeg" class="absolute block w-full h-80 lg:h-[650px] -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
             </div>
             <!-- Item 3 -->
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="../assets/image/Slider3.jpeg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                <img src="../assets/image/Slider-Four.jpeg" class="absolute block w-full h-80 lg:h-[650px] -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
             </div>
         </div>
         <!-- Slider indicators -->
