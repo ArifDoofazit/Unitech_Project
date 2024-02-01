@@ -14,8 +14,8 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
 
 <template>
-<nav class="bg-[#fff]">
-    <div class="relative flex h-16 items-center justify-between">
+  <nav class="bg-[#fff] border-b-2">
+    <div class="relative flex h-20 items-center justify-between">
       <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
         <!-- Mobile menu button-->
         <button id="mobile-menu-button" type="button" class="relative inline-flex items-center justify-center rounded-md p-2 ml-3 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
@@ -37,17 +37,16 @@ document.addEventListener('DOMContentLoaded', function () {
       </div>
       <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
         <div class="flex flex-shrink-0 items-center">
-          <img class="h-10 lg:w-full lg:ml-5 ml-32" src="../assets/Capture.jpg" alt="Your Company">
+          <img class="h-10 lg:w-full lg:ml-5 ml-28" src="../assets/Capture.jpg" alt="Your Company">
         </div>
         <div class="hidden lg:ml-auto lg:w-5/12 sm:block rounded-3xl" style="background:#2c306b;">
           <div class="flex space-x-3">
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-            <a href="#" class="rounded-md px-3 py-2 text-sm font-medium" style="color:#f89942;" aria-current="page"><RouterLink to="/">Home</RouterLink></a>
-            
-            <a href="#" class="text-white  rounded-md px-3 py-2 text-sm font-medium"> <RouterLink to="/about">About</RouterLink></a>
 
+            <RouterLink to="/" class="text-white  rounded-md px-3 py-2 text-sm font-medium">Home</RouterLink>
+            <RouterLink to="/about" class="text-white  rounded-md px-3 py-2 text-sm font-medium">About</RouterLink>
             <a href="#" class="text-white  rounded-md px-3 py-2 text-sm font-medium">Service</a>
-            <a href="#" class="text-white  rounded-md px-3 py-2 text-sm font-medium">Products</a>
+            <RouterLink to="/products" class="text-white  rounded-md px-3 py-2 text-sm font-medium">Product</RouterLink>
             <a href="#" class="text-white rounded-md px-3 py-2 text-sm font-medium">Gallery</a>
             <a href="#" class="text-white rounded-md px-3 py-2 text-sm font-medium">Contact us</a>
 
