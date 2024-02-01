@@ -9,6 +9,5 @@
     <Slider></Slider>
     <Banerpage></Banerpage>
     <Blogpost></Blogpost>
-    <Clients></Clients>
-    
+    <Clients></Clients> 
 </template>
