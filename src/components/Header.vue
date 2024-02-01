@@ -42,10 +42,11 @@ document.addEventListener('DOMContentLoaded', function () {
         <div class="hidden lg:ml-auto lg:w-5/12 sm:block rounded-3xl" style="background:#2c306b;">
           <div class="flex space-x-3">
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+
             <RouterLink to="/" class="text-white  rounded-md px-3 py-2 text-sm font-medium">Home</RouterLink>
-            <a href="#" class="text-white  rounded-md px-3 py-2 text-sm font-medium">About</a>
+            <RouterLink to="/about" class="text-white  rounded-md px-3 py-2 text-sm font-medium">About</RouterLink>
             <a href="#" class="text-white  rounded-md px-3 py-2 text-sm font-medium">Service</a>
-              <RouterLink to="/products" class="text-white  rounded-md px-3 py-2 text-sm font-medium">Product</RouterLink>
+            <RouterLink to="/products" class="text-white  rounded-md px-3 py-2 text-sm font-medium">Product</RouterLink>
             <a href="#" class="text-white rounded-md px-3 py-2 text-sm font-medium">Gallery</a>
             <a href="#" class="text-white rounded-md px-3 py-2 text-sm font-medium">Contact us</a>
 
