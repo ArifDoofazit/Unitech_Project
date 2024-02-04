@@ -24,6 +24,13 @@ const router = createRouter({
       component: () => import('../views/ProductView.vue')
     },
     {
+      path: '/gallery',
+      name: 'gallery',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/Gallerypage.vue')
+    },
       path: '/contact',
       name: 'contact',
       component: () => import('../views/ContactPageView.vue')
