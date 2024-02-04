@@ -44,11 +44,12 @@ document.addEventListener('DOMContentLoaded', function () {
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
 
             <RouterLink to="/" class="text-white  rounded-md px-3 py-2 text-sm font-medium">Home</RouterLink>
+            <RouterLink to="/service" class="text-white  rounded-md px-3 py-2 text-sm font-medium">Service</RouterLink>
             <RouterLink to="/about" class="text-white  rounded-md px-3 py-2 text-sm font-medium">About</RouterLink>
-            <a href="#" class="text-white  rounded-md px-3 py-2 text-sm font-medium">Service</a>
             <RouterLink to="/products" class="text-white  rounded-md px-3 py-2 text-sm font-medium">Product</RouterLink>
             <RouterLink to="/gallery" class="text-white  rounded-md px-3 py-2 text-sm font-medium">Gallery</RouterLink>
-            <a href="#" class="text-white rounded-md px-3 py-2 text-sm font-medium">Contact us</a>
+            <RouterLink to="/contact" class="text-white  rounded-md px-3 py-2 text-sm font-medium">Contact us</RouterLink>
+
 
             <a href="#" class="bg-white rounded-3xl px-2 py-1 text-sm font-medium lg:h-7 lg:w-7 lg:mt-1" style="color: #2c306b;"> <i class="fa-solid fa-phone"></i> </a>
             <a href="#" class="bg-white rounded-3xl px-2 py-1 text-sm font-medium lg:h-7 lg:w-7 lg:mt-1 " style="color: #2c306b;"> <i class="fa-solid fa-location-dot"></i> </a>
@@ -62,12 +63,13 @@ document.addEventListener('DOMContentLoaded', function () {
   <div class="sm:hidden" id="mobile-menu">
     <div class="space-y-1 px-2 pb-3 pt-2">
       <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-      <a href="#" class="hover:bg-gray-700 block rounded-md px-3 py-2 text-base font-medium" style="color:#f89942;" aria-current="page">Home</a>
+      <RouterLink to="/" class="hover:bg-gray-700 block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Home</RouterLink>
       <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">About</a>
       <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Service</a>
+      <RouterLink to="/products" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Products</RouterLink>
       <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Products</a>
       <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Gallery</a>
-      <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Contact us</a>
+      <RouterLink to="/contact" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Contact us</RouterLink>
     </div>
   </div>
 </nav>
