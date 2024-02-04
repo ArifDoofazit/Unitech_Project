@@ -47,6 +47,8 @@ document.addEventListener('DOMContentLoaded', function () {
             <RouterLink to="/service" class="text-white  rounded-md px-3 py-2 text-sm font-medium">Service</RouterLink>
             <RouterLink to="/about" class="text-white  rounded-md px-3 py-2 text-sm font-medium">About</RouterLink>
             <RouterLink to="/products" class="text-white  rounded-md px-3 py-2 text-sm font-medium">Product</RouterLink>
+            <RouterLink to="/gallery" class="text-white  rounded-md px-3 py-2 text-sm font-medium">Gallery</RouterLink>
+            <a href="#" class="text-white rounded-md px-3 py-2 text-sm font-medium">Contact us</a>
             <a href="#" class="text-white rounded-md px-3 py-2 text-sm font-medium">Gallery</a>
             <RouterLink to="/contact" class="text-white  rounded-md px-3 py-2 text-sm font-medium">Contact us</RouterLink>
 
