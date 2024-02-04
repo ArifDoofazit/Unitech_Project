@@ -1,10 +1,26 @@
-<script setup></script>
+<script setup>
+import { ref } from 'vue';
+
+const button1Color = ref('#eb9843');
+const button2Color = ref('white');
+const button1Text = ref('text-white');
+const button2Text = ref('text-black');
+const isButton1Active = ref(true);
+
+const toggleButtons = () => {
+    isButton1Active.value = !isButton1Active.value;
+    button1Color.value = button1Color.value === '#eb9843' ? 'white' : '#eb9843';
+    button2Color.value = button2Color.value === 'white' ? '#eb9843' : 'white';
+    button1Text.value = button1Text.value === 'text-white' ? 'text-black' : 'text-white';
+    button2Text.value = button2Text.value === 'text-black' ? 'text-white' : 'text-black';
+};
+</script>
 
 <template>
-    <div class="container mx-auto h-auto pb-10">
+    <div class="container mx-auto h-auto pb-10 sm:h-auto sm:pb-10">
         <div class="grid lg:grid-cols-3 gap-5">
 
-            <div class="Menu pb-10 w-[350px]">
+            <div class="Menu pb-10 w-[350px] hidden lg:block">
                 <h3 class="lg:text-2xl font-normal text-start">Category Menu</h3>
                 <hr class="mt-2">
 
@@ -98,20 +114,68 @@
 
             <!-- List Image -->
 
-            <div class="w-full h-14 bg-[#0000000d]">
+            <div class="col-span-2 lg:w-full h-auto pb-10">
 
-                <div class="col-span-2">
-                    <div class="icon">
-                        <i class="fa-solid fa-grip-lines-vertical"></i>
+                <div class="grid lg:grid-cols-3 gap-0">
+                    <div class="bg-[#0000000d] py-2 px-2 flex justify-center lg:justify-start">
+                        <div class="icon rounded-2xl w-28 h-10 flex justify-center text-xl text-white border-slate-500">
+                            <button @click="toggleButtons" class="w-11 h-10 text-xl rounded-3xl rounded-r-none border transition-all duration-300" :class="{ 'bg-[#eb9843] text-white': isButton1Active, 'bg-white text-black': !isButton1Active }">
+                                <i class="fa-solid fa-grip-vertical"></i>
+                            </button>
+                            <button @click="toggleButtons" class="w-11 h-10 text-xl rounded-3xl rounded-l-none border transition-all duration-300" :class="{ 'bg-[#eb9843] text-white': !isButton1Active, 'bg-white text-black': isButton1Active }">
+                                <i class="fa-solid fa-grip"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-center bg-[#0000000d]">
+                        <p class="flex items-center font-light">Paginate By </p>
+                        
+                        <select id="pageNumbers" class="mt-2 ml-2 cursor-pointer text-black w-20 h-10 bg-white-400 border border-gray-300 text-sm rounded-full focus:ring-[#eb9843] focus:border-[#eb9843] block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        <option selected>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        </select>
+
+                    </div>
+
+                    <div class="flex lg:justify-end justify-center bg-[#0000000d]">
+                        <p class="flex items-center font-light">Sort By </p>
+                        
+                        <select id="pageNumbers" class="mt-2 ml-2 cursor-pointer rounded-full text-black w-32 h-10 bg-white-400 border border-gray-300 text-sm focus:ring-[#eb9843] focus:border-[#eb9843] block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        <option selected>Featured</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        </select>
+
                     </div>
                 </div>
 
-                    <div class="flex justify-center mt-32">
-                        <div class="product-card w-full rounded-t-2xl drop-shadow-2xl overflow-hidden cursor-pointer relative group">
-                            <img src="../assets/image/product2.webp" class="w-full h-96 rounded-t-2xl transition-transform duration-300 transform scale-100 group-hover:scale-105" alt="">
-                            <img src="../assets/image/product4.webp" class="w-full h-96 rounded-t-2xl absolute top-0 left-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" alt="">
-                            <div class="h-52 overflow-hidden rounded-b-2xl drop-shadow-2xl bg-[#eb9843] text-white transition duration-300 ease-in-out transform group-hover:bg-[#2c306b]  group-hover:text-[#eb9843]">
-                                <h2 class="text-center font-normal py-5 text-2xl mt-12">Reducers & Adapters</h2>
+                <div class="grid lg:grid-cols-2 lg:grid-rows-2 h-auto pb-10">
+                    <div class="flex justify-center lg:mt-32 mt-16">
+                        <div class="product-card lg:max-w-full max-w-[320px] rounded-t-2xl drop-shadow-2xl overflow-hidden cursor-pointer relative group">
+                            <div class="w-full z-10 absolute top-[430px] text-center space-x-3 hidden transition-all group-hover:block">
+                                <span class="py-2 px-3 bg-[#eb9843] text-white text-lg z-10 hover:bg-[#2c306b] transition-all">a</span>
+                                <span class="py-2 px-3 bg-[#eb9843] text-white text-lg z-10 hover:bg-[#2c306b] transition-all">a</span>
+                                <span class="py-2 px-3 bg-[#eb9843] text-white text-lg z-10 hover:bg-[#2c306b] transition-all">a</span>
+                                <span class="py-2 px-3 bg-[#eb9843] text-white text-lg z-10 hover:bg-[#2c306b] transition-all">a</span>
+                            </div>
+                            <img src="../assets/image/product2.webp" class="lg:w-full h-[480px] rounded-t-2xl transition-transform duration-300 transform scale-100 group-hover:scale-105" alt="">
+                            <img src="../assets/image/product4.webp" class="lg:w-full h-[480px] rounded-t-2xl absolute top-0 left-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" alt="">
+                            <div class="overflow-hidden h-32 rounded-b-2xl drop-shadow-2xl bg-[#eb9843] text-white transition duration-300 ease-in-out transform group-hover:bg-[#2c306b]  group-hover:text-[#eb9843]">
+                                <h2 class="text-center font-normal py-5 text-2xl mt-2">Reducers & Adapters</h2>
                                 <div class="text-center text-white">
                                     <p>$300.00 <strike class="ml-5 text-[#e4e4e4]">$500.00</strike></p>
                                 </div>
@@ -119,21 +183,18 @@
                         </div>
                     </div>
 
-            </div>
-
-            <div class="w-full h-14 bg-[#0000000d]">
-
-                <div class="col-span-2">
-                    <div class="icon">
-                    </div>
-                </div>
-
-                    <div class="flex justify-center mt-32">
-                        <div class="product-card w-full rounded-t-2xl drop-shadow-2xl overflow-hidden cursor-pointer relative group">
-                            <img src="../assets/image/product1.webp" class="w-full h-96 rounded-t-2xl transition-transform duration-300 transform scale-100 group-hover:scale-105" alt="">
-                            <img src="../assets/image/product3.webp" class="w-full h-96 rounded-t-2xl absolute top-0 left-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" alt="">
-                            <div class="h-52 overflow-hidden rounded-b-2xl drop-shadow-2xl bg-[#eb9843] text-white transition duration-300 ease-in-out transform group-hover:bg-[#2c306b]  group-hover:text-[#eb9843]">
-                                <h2 class="text-center font-normal py-5 text-2xl mt-12">The Vase</h2>
+                    <div class="flex justify-center lg:mt-32 mt-10">
+                        <div class="product-card lg:max-w-full max-w-[320px] rounded-t-2xl drop-shadow-2xl overflow-hidden cursor-pointer relative group">
+                            <div class="w-full z-10 absolute top-[430px] text-center space-x-3 hidden transition-all group-hover:block">
+                                <span class="py-2 px-3 bg-[#eb9843] text-white text-lg z-10 hover:bg-[#2c306b] transition-all">a</span>
+                                <span class="py-2 px-3 bg-[#eb9843] text-white text-lg z-10 hover:bg-[#2c306b] transition-all">a</span>
+                                <span class="py-2 px-3 bg-[#eb9843] text-white text-lg z-10 hover:bg-[#2c306b] transition-all">a</span>
+                                <span class="py-2 px-3 bg-[#eb9843] text-white text-lg z-10 hover:bg-[#2c306b] transition-all">a</span>
+                            </div>
+                            <img src="../assets/image/product2.webp" class="lg:w-full h-[480px] rounded-t-2xl transition-transform duration-300 transform scale-100 group-hover:scale-105" alt="">
+                            <img src="../assets/image/product4.webp" class="lg:w-full h-[480px] rounded-t-2xl absolute top-0 left-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" alt="">
+                            <div class="overflow-hidden h-32 rounded-b-2xl drop-shadow-2xl bg-[#eb9843] text-white transition duration-300 ease-in-out transform group-hover:bg-[#2c306b]  group-hover:text-[#eb9843]">
+                                <h2 class="text-center font-normal py-5 text-2xl mt-2">Reducers & Adapters</h2>
                                 <div class="text-center text-white">
                                     <p>$300.00 <strike class="ml-5 text-[#e4e4e4]">$500.00</strike></p>
                                 </div>
@@ -141,10 +202,47 @@
                         </div>
                     </div>
 
+                    <div class="flex justify-center lg:mt-32 mt-10">
+                        <div class="product-card lg:max-w-full max-w-[320px] rounded-t-2xl drop-shadow-2xl overflow-hidden cursor-pointer relative group">
+                            <div class="w-full z-10 absolute top-[430px] text-center space-x-3 hidden transition-all group-hover:block">
+                                <span class="py-2 px-3 bg-[#eb9843] text-white text-lg z-10 hover:bg-[#2c306b] transition-all">a</span>
+                                <span class="py-2 px-3 bg-[#eb9843] text-white text-lg z-10 hover:bg-[#2c306b] transition-all">a</span>
+                                <span class="py-2 px-3 bg-[#eb9843] text-white text-lg z-10 hover:bg-[#2c306b] transition-all">a</span>
+                                <span class="py-2 px-3 bg-[#eb9843] text-white text-lg z-10 hover:bg-[#2c306b] transition-all">a</span>
+                            </div>
+                            <img src="../assets/image/product2.webp" class="lg:w-full h-[480px] rounded-t-2xl transition-transform duration-300 transform scale-100 group-hover:scale-105" alt="">
+                            <img src="../assets/image/product4.webp" class="lg:w-full h-[480px] rounded-t-2xl absolute top-0 left-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" alt="">
+                            <div class="overflow-hidden h-32 rounded-b-2xl drop-shadow-2xl bg-[#eb9843] text-white transition duration-300 ease-in-out transform group-hover:bg-[#2c306b]  group-hover:text-[#eb9843]">
+                                <h2 class="text-center font-normal py-5 text-2xl mt-2">Reducers & Adapters</h2>
+                                <div class="text-center text-white">
+                                    <p>$300.00 <strike class="ml-5 text-[#e4e4e4]">$500.00</strike></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="flex justify-center lg:mt-32 mt-10">
+                        <div class="product-card lg:max-w-full max-w-[320px] rounded-t-2xl drop-shadow-2xl overflow-hidden cursor-pointer relative group">
+                            <div class="lg:w-full z-10 absolute top-[430px] text-center space-x-3 hidden transition-all group-hover:block">
+                                <span class="py-2 px-3 bg-[#eb9843] text-white text-lg z-10 hover:bg-[#2c306b] transition-all">a</span>
+                                <span class="py-2 px-3 bg-[#eb9843] text-white text-lg z-10 hover:bg-[#2c306b] transition-all">a</span>
+                                <span class="py-2 px-3 bg-[#eb9843] text-white text-lg z-10 hover:bg-[#2c306b] transition-all">a</span>
+                                <span class="py-2 px-3 bg-[#eb9843] text-white text-lg z-10 hover:bg-[#2c306b] transition-all">a</span>
+                            </div>
+                            <img src="../assets/image/product2.webp" class="lg:w-full w-80 h-[480px] rounded-t-2xl transition-transform duration-300 transform scale-100 group-hover:scale-105" alt="">
+                            <img src="../assets/image/product4.webp" class="lg:w-full w-80 h-[480px] rounded-t-2xl absolute top-0 left-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" alt="">
+                            <div class="overflow-hidden h-32 rounded-b-2xl drop-shadow-2xl bg-[#eb9843] text-white transition duration-300 ease-in-out transform group-hover:bg-[#2c306b]  group-hover:text-[#eb9843]">
+                                <h2 class="text-center font-normal py-5 text-2xl mt-2">Reducers & Adapters</h2>
+                                <div class="text-center text-white">
+                                    <p>$300.00 <strike class="ml-5 text-[#e4e4e4]">$500.00</strike></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-
-            
-
         </div>
     </div>
 </template>
