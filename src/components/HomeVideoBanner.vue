@@ -34,11 +34,11 @@
                             </button>
                         </div>
                         <!-- Modal body -->
-                        <div class="p-4 md:p-5 space-y-4">
-                            <iframe width="600" height="325" src="https://www.youtube.com/embed/JJMPKgyCoSY?si=dYkpmNZMr1ChtYuk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <div class=" space-y-4">
+                            <iframe width="640" height="325" src="https://www.youtube.com/embed/JJMPKgyCoSY?si=dYkpmNZMr1ChtYuk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                         </div>
                         <!-- Modal footer -->
-                        <div class="flex items-center p-4 md:p-5 rounded-b dark:border-gray-600">
+                        <div class="flex items-center md:p-5 rounded-b dark:border-gray-600">
                             
                         </div>
                     </div>

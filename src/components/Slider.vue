@@ -1,5 +1,5 @@
 <script setup>
-
+import '../../node_modules/flowbite/dist/flowbite'
 </script>
 
 <template>
