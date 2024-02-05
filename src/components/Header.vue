@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
       </div>
       <div class="flex flex-1 items-center justify-center sm:items-center lg:h-20">
 
-        <div class="flex justify-center items-center w-72 h-20">
+        <div class="flex justify-center items-center w-72 h-20 border-l-8 border-[#eb9843]">
           <img class="lg:w-full h-auto lg:ml-5 lg:mt-3 ml-28" src="../assets/image/UGL/Unitech-Logo-Animation.gif" alt="Your Company">
         </div>
 
