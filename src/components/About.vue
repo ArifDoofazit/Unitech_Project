@@ -113,7 +113,7 @@
                                     </a>
                 
                                         <a href="#">
-                                            <h5 class="mt-4 mb-2 text-2xl font-semibold tracking-tight text-gray-900 text-white">EXTERIORS</h5>
+                                            <h5 class="mt-4 mb-2 text-2xl font-semibold tracking-tight text-white">EXTERIORS</h5>
                                         </a>
                                         <p class="mb-3 font-normal text-gray-500 dark:text-gray-100">Sed vestibulum nulla elementum auctor tincidunt. Aliquam sit amet cursus mauris. Sed vitae mattis ipsum. Vestibulum enim nulla, sollicitudin ac hendrerit nec, tempor quis nisl</p>
                                 </div>
@@ -125,7 +125,7 @@
                                     </a>
                 
                                         <a href="#">
-                                            <h5 class="mt-4 mb-2 text-2xl font-semibold tracking-tight text-gray-900 text-white">MASONRY</h5>
+                                            <h5 class="mt-4 mb-2 text-2xl font-semibold tracking-tight text-white">MASONRY</h5>
                                         </a>
                                         <p class="mb-3 font-normal text-gray-500 dark:text-gray-100">Sed vestibulum nulla elementum auctor tincidunt. Aliquam sit amet cursus mauris. Sed vitae mattis ipsum. Vestibulum enim nulla, sollicitudin ac hendrerit nec, tempor quis nisl</p>
                                 </div>
@@ -137,7 +137,7 @@
                                     </a>
                 
                                         <a href="#">
-                                            <h5 class="mt-4 mb-2 text-2xl font-semibold tracking-tight text-gray-900 text-white">INTERIORS</h5>
+                                            <h5 class="mt-4 mb-2 text-2xl font-semibold tracking-tight text-white">INTERIORS</h5>
                                         </a>
                                         <p class="mb-3 font-normal text-gray-500 dark:text-gray-100">Sed vestibulum nulla elementum auctor tincidunt. Aliquam sit amet cursus mauris. Sed vitae mattis ipsum. Vestibulum enim nulla, sollicitudin ac hendrerit nec, tempor quis nisl</p>
                                 </div>
@@ -148,9 +148,7 @@
 
                     </div>
                     <div class="border-8 border-[#202447] rounded-md">
-                        <p class="">
-                            <img src="../assets/about001_6557fbf8-05bb-4747-9958-bb03634ebd2e_770x.webp" class="" alt="">
-                        </p>
+                        <img src="../assets/about001_6557fbf8-05bb-4747-9958-bb03634ebd2e_770x.webp" class="w-full h-full bg-cover" alt="">
                     </div>
                 </div>
             </div>

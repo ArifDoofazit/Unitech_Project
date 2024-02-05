@@ -4,9 +4,9 @@
 
 <template>
     <section class="">
-        <div class="h-auto w-auto pb-4">
+        <div class="h-auto w-auto pb-20">
             <div class="container mx-auto px-4 mt-44">
-                <h2 class="lg:text-3xl lg:ml-10 text-xl mt-7 font-semibold" style="color:#eb9843;">BLOG POST</h2>
+                <h2 class="lg:text-4xl lg:ml-10 pb-10 text-xl text-[#eb9843] font-medium">BLOG POST</h2>
                 <div class="mt-5 grid grid-cols-1 gap-4  sm:grid-cols-2 md:grid-cols-3 lg:ml-24 lg:mr-4">
                     <!-- card-1========================== -->
 

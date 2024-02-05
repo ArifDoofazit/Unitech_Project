@@ -35,23 +35,29 @@ document.addEventListener('DOMContentLoaded', function () {
           </svg>
         </button>
       </div>
-      <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-        <div class="flex flex-shrink-0 items-center">
-          <img class="h-10 lg:w-full lg:ml-5 ml-28" src="../assets/Capture.jpg" alt="Your Company">
+      <div class="flex flex-1 items-center justify-center sm:items-center lg:h-20">
+
+        <div class="flex justify-center items-center w-72 h-20">
+          <img class="lg:w-full h-auto lg:ml-5 lg:mt-3 ml-28" src="../assets/image/UGL/Unitech-Logo-Animation.gif" alt="Your Company">
         </div>
-        <div class="hidden lg:ml-auto lg:w-5/12 sm:block rounded-3xl" style="background:#2c306b;">
-          <div class="flex space-x-3">
-            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
 
-            <RouterLink to="/" class="text-white  rounded-md px-3 py-2 text-sm font-medium">Home</RouterLink>
-            <RouterLink to="/service" class="text-white  rounded-md px-3 py-2 text-sm font-medium">Service</RouterLink>
-            <RouterLink to="/about" class="text-white  rounded-md px-3 py-2 text-sm font-medium">About</RouterLink>
-            <RouterLink to="/products" class="text-white  rounded-md px-3 py-2 text-sm font-medium">Product</RouterLink>
-            <RouterLink to="/gallery" class="text-white  rounded-md px-3 py-2 text-sm font-medium">Gallery</RouterLink>
-            <RouterLink to="/contact" class="text-white  rounded-md px-3 py-2 text-sm font-medium">Contact us</RouterLink>
+        <div class="hidden lg:ml-auto lg:w-3/6 sm:block rounded-l-3xl" style="background:#2c306b;">
+          <div class="flex justify-center items-center space-x-3">
 
-            <a href="#" class="bg-white rounded-3xl px-2 py-1 text-sm font-medium lg:h-7 lg:w-7 lg:mt-1" style="color: #2c306b;"> <i class="fa-solid fa-phone"></i> </a>
-            <a href="#" class="bg-white rounded-3xl px-2 py-1 text-sm font-medium lg:h-7 lg:w-7 lg:mt-1 " style="color: #2c306b;"> <i class="fa-solid fa-location-dot"></i> </a>
+            <RouterLink to="/" class="text-white px-3 py-3 text-base font-medium hover:bg-[#fab915] transition-all">Home</RouterLink>
+            <RouterLink to="/service" class="text-white px-3 py-3 text-base font-medium hover:bg-[#fab915] transition-all">Service</RouterLink>
+            <RouterLink to="/about" class="text-white px-3 py-3 text-base font-medium hover:bg-[#fab915] transition-all">About</RouterLink>
+            <RouterLink to="/products" class="text-white px-3 py-3 text-base font-medium hover:bg-[#fab915] transition-all">Product</RouterLink>
+            <RouterLink to="/gallery" class="text-white px-3 py-3 text-base font-medium hover:bg-[#fab915] transition-all">Gallery</RouterLink>
+            <RouterLink to="/contact" class="text-white px-3 py-3 text-base font-medium hover:bg-[#fab915] transition-all">Contact us</RouterLink>
+
+            <a href="#" class="w-8 h-8 flex justify-center items-center bg-white rounded-full text-[#2c306b] hover:bg-[#fab915] hover:text-white transition-all">
+              <i class="fa-solid fa-phone"></i>
+            </a>
+
+            <a href="#" class="w-8 h-8 flex justify-center items-center bg-white rounded-full text-[#2c306b] hover:bg-[#fab915] hover:text-white transition-all">
+              <i class="fa-solid fa-location-dot"></i>
+            </a>
                       
           </div>
         </div>
