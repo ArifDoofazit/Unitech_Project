@@ -30,8 +30,8 @@
                     </li>
                 </ol>
             </nav>
-
         </div>
+
     </div>
 </template>
 

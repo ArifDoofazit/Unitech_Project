@@ -7,7 +7,7 @@
         <div class="">
             <h2 class="lg:text-3xl lg:ml-10 text-xl mt-5 font-semibold" style="color:#eb9843;">FEATURED</h2>
             <img src="../assets/banner-hardware.jpg" class="w-full lg:h-60 h-40 mt-10 opacity-30" alt="">
-            <div class="container">
+            <div class="container mx-auto">
                 <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-4">
                     <div class="z-10 h-72 w-72 shadow-md rounded-full lg:ml-28 ml-4 -mt-20 border-solid border-4 border-yellow-400">
                     <img src="../assets/banner-1.jpg" class="h-72 w-72 shadow-md rounded-full" alt="">

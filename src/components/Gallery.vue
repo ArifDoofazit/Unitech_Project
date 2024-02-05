@@ -32,6 +32,58 @@
         </div>
         <!-- Title_Heading End=========================== -->
 
+
+        <!-- gallery================================================= -->
+        <h2 class=" lg:text-4xl lg:pb-7 lg:-mt-10 pb-5 -mt-14 text-center text-[#eb9843]">HARDWARES TOOLS</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 pb-10 bg-[#E3E1D9]">
+            <div class="grid gap-4">
+                <div>
+                    <img class="h-auto max-w-full rounded-lg mt-10" src="../assets/gallery/img-1.webp" alt="">
+                </div>
+                <div>
+                    <img class="h-auto max-w-full rounded-lg" src="../assets/gallery/image-2.jpg" alt="">
+                </div>
+                <div>
+                    <img class="lg:h-72 w-full rounded-lg" src="../assets/gallery/image-3.webp" alt="">
+                </div>
+            </div>
+            <div class="grid gap-2">
+                <div>
+                    <img class="h-auto max-w-full rounded-lg mt-8" src="../assets/gallery/image-4.jpg" alt="">
+                </div>
+                <div>
+                    <img class="h-auto max-w-full rounded-lg" src="../assets/gallery/image-5.jpg" alt="">
+                </div>
+                <div>
+                    <img class="h-auto max-w-full rounded-lg" src="../assets/gallery/image-6.jpg" alt="">
+                </div>
+            </div>
+            <div class="grid gap-0">
+                <div>
+                    <img class="h-auto max-w-full rounded-lg lg:mt-16" src="../assets/gallery/image-7.jpg" alt="">
+                </div>
+                <div>
+                    <img class="h-auto max-w-full rounded-lg" src="../assets/gallery/image-8.jpg" alt="">
+                </div>
+                <div>
+                    <img class="lg:h-60 w-full rounded-lg" src="../assets/gallery/image-9.jpg" alt="">
+                </div>
+            </div>
+            <div class="grid gap-4">
+                <div>
+                    <img class="lg:h-72 w-full rounded-lg lg:mt-14" src="../assets/gallery/image-10.jpg" alt="">
+                </div>
+                <div>
+                    <img class=" lg:h-96 w-full" src="../assets/gallery/image-11.jpg" alt="">
+                </div>
+                <div>
+                    <img class="lg:h-72 w-full rounded-lg" src="../assets/gallery/image-12.jpg" alt="">
+                </div>
+            </div>
+        </div>
+
+        <!-- gallery End================================================= -->
+
 </template>
 
 <style scoped>
