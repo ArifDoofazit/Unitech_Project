@@ -1,5 +1,5 @@
 <script setup>
-
+import GalleryImage from './GalleryImage.vue';
 </script>
 
 <template> 
@@ -31,6 +31,9 @@
 
         </div>
         <!-- Title_Heading End=========================== -->
+
+        <GalleryImage />
+
 
 
 </template>
