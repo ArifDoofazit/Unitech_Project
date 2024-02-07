@@ -35,21 +35,22 @@ document.addEventListener('DOMContentLoaded', function () {
           </svg>
         </button>
       </div>
-      <div class="flex flex-1 items-center justify-center sm:items-center lg:h-20">
+      <div class="flex flex-1 items-center justify-center sm:items-center lg:h-20 overflow-hidden">
 
-        <div class="flex justify-center items-center w-72 h-20 border-l-8 border-[#eb9843]">
-          <img class="lg:w-full h-auto lg:ml-5 lg:mt-3 ml-28" src="../assets/image/UGL/Unitech-Logo-Animation.gif" alt="Your Company">
+        <div class="flex justify-center items-center w-auto h-20 lg:border-l-8 lg:border-[#eb9843] overflow-hidden lg:z-10">
+          <!-- <img class="lg:w-full h-auto lg:ml-5 lg:mt-3 ml-28" src="../assets/image/UGL/Unitech-Logo-Animation.gif" alt="Your Company"> -->
+          <div class="Header_icon"></div>
         </div>
 
         <div class="hidden lg:ml-auto lg:w-3/6 sm:block rounded-l-3xl" style="background:#2c306b;">
           <div class="flex justify-center items-center space-x-3">
 
-            <RouterLink to="/" class="text-white px-3 py-3 text-base font-medium hover:bg-[#fab915] transition-all">Home</RouterLink>
-            <RouterLink to="/service" class="text-white px-3 py-3 text-base font-medium hover:bg-[#fab915] transition-all">Service</RouterLink>
-            <RouterLink to="/about" class="text-white px-3 py-3 text-base font-medium hover:bg-[#fab915] transition-all">About</RouterLink>
-            <RouterLink to="/products" class="text-white px-3 py-3 text-base font-medium hover:bg-[#fab915] transition-all">Product</RouterLink>
-            <RouterLink to="/gallery" class="text-white px-3 py-3 text-base font-medium hover:bg-[#fab915] transition-all">Gallery</RouterLink>
-            <RouterLink to="/contact" class="text-white px-3 py-3 text-base font-medium hover:bg-[#fab915] transition-all">Contact us</RouterLink>
+            <RouterLink to="/" class="text-white px-3 py-3 text-base font-medium hover:bg-[#fab915] hover:text-white transition-all">Home</RouterLink>
+            <RouterLink to="/service" class="text-white px-3 py-3 text-base font-medium hover:bg-[#fab915] hover:text-white transition-all">Service</RouterLink>
+            <RouterLink to="/about" class="text-white px-3 py-3 text-base font-medium hover:bg-[#fab915] hover:text-white transition-all">About</RouterLink>
+            <RouterLink to="/products" class="text-white px-3 py-3 text-base font-medium hover:bg-[#fab915] hover:text-white transition-all">Product</RouterLink>
+            <RouterLink to="/gallery" class="text-white px-3 py-3 text-base font-medium hover:bg-[#fab915] hover:text-white transition-all">Gallery</RouterLink>
+            <RouterLink to="/contact" class="text-white px-3 py-3 text-base font-medium hover:bg-[#fab915] hover:text-white transition-all">Contact us</RouterLink>
 
             <a href="#" class="w-8 h-8 flex justify-center items-center bg-white rounded-full text-[#2c306b] hover:bg-[#fab915] hover:text-white transition-all">
               <i class="fa-solid fa-phone"></i>
@@ -69,14 +70,42 @@ document.addEventListener('DOMContentLoaded', function () {
     <div class="space-y-1 px-2 pb-3 pt-2">
       <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
       <RouterLink to="/" class="hover:bg-gray-700 block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Home</RouterLink>
-      <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">About</a>
-      <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Service</a>
+      <RouterLink to="/about" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">About</RouterLink>
+      <RouterLink to="/service" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Service</RouterLink>
       <RouterLink to="/products" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Products</RouterLink>
-      <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Products</a>
-      <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Gallery</a>
+      <RouterLink to="/gallery" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Gallery</RouterLink>
       <RouterLink to="/contact" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Contact us</RouterLink>
     </div>
   </div>
 </nav>
 
 </template>
+
+<style scoped>
+nav a.router-link-exact-active {
+    color: #eb9843;
+}
+.Header_icon{
+  width: 500px;
+  height: 250px;
+  background: url(/src/assets/image/UGL/Unitech-Logo-Animation.gif) no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  margin-top: -5px;
+  margin-left: -65px;
+  z-index: 1;
+}
+@media (max-width: 768px) {
+  .Header_icon  {
+    width: 300px;
+    height: 200px;
+    background: url(/src/assets/image/UGL/Unitech-Logo-Animation.gif) no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    margin-top: 20px;
+    margin-left: 80px;
+    z-index: 1;
+  }
+}
+
+</style>

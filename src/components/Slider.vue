@@ -1,39 +1,87 @@
-<script setup>
-import '../../node_modules/flowbite/dist/flowbite'
+<script>
+import '../../node_modules/owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel';
+
+
+export default {
+    data() {
+        return {
+            slides: [
+                {
+                    image: 'https://images.pexels.com/photos/6689289/pexels-photo-6689289.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+                    title: 'The Best Hardware Tools',
+                    description: 'We only provide hardware that meets ANSI/BHMA Grade-1 and Grade-2 standards'
+                },
+                {
+                    image: 'https://www.bproperty.com/blog/wp-content/uploads/door-handle-key-keyhole-279810.jpg',
+                    // title: 'Second Slide Title',
+                    // description: 'Description for the second slide'
+                },
+                {
+                    image: 'https://www.hiatt-hardware.com/media/resized/magefan_blog/767_400/Bathroom-door-lock-types.jpg',
+                    // title: 'Third Slide Title',
+                    // description: 'Description for the third slide'
+                }
+            ],
+            owlCarouselInstance: null
+        };
+    },
+    mounted() {
+        this.initializeCarousel();
+    },
+    methods: {
+        initializeCarousel() {
+            this.owlCarouselInstance = $('#main-slider').owlCarousel({
+                rtl: false,
+                loop: true,
+                nav: false,
+                dots: false,
+                autoplay: true,
+                autoplayTimeout: 3000,
+                autoplayHoverPause: false,
+                responsive: {
+                    0: {
+                        items: 1
+                    }
+                }
+            });
+        }
+    },
+    destroyed() {
+        if (this.owlCarouselInstance) {
+            this.owlCarouselInstance.trigger('destroy.owl.carousel').removeClass('owl-carousel owl-loaded');
+        }
+    }
+};
 </script>
 
 <template>
 
-    <div id="default-carousel" class="relative w-full" data-carousel="slide">
-        <!-- Carousel wrapper -->
-        <div class="relative h-80 overflow-hidden lg:h-[650px] md:h-96">
-             <!-- Item 1 -->
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <div class="absolute z-10 lg:mt-64 p-8">
-                    <h2 class="text-2xl lg:text-6xl text-[#eb9843] font-normal mt-24 lg:mt-0">The Best Hardware Tools</h2>
-                    <p class="text-sm lg:text-xl lg:leading-8 text-black font-medium py-4">We only provide hardware that meets ANSI/BHMA <br class="hidden lg:block"> Grade-1 and Grade-2 standards</p>
+        <section>
+            <div id="main-slider" class="owl-carousel owl-theme relative">
+                <div v-for="(slide, index) in slides" :key="index" class="relative w-full lg:h-[680px] h-[350px] bg-cover bg-center border-b border-zinc-300" :style="{ backgroundImage: 'url(' + slide.image + ')' }">
+                    <div class="bg-overlay grid grid-cols-1 lg:grid-cols-2 py-20 md:py-28 lg:py-32 xl:py-56 px-3 md:px-4 lg:px-8">
+                        <div class="flex flex-col gap-5 md:gap-8 lg:mt-10">
+                            <h2 class="text-3xl md:text-3xl lg:text-5xl text-[#2c306b] font-semibold">{{ slide.title }}</h2>
+                            <p class="lg:text-xl text-sm lg:w-[450px] w-[300px] lg:leading-9">{{ slide.description }}</p>
+                            <div class="flex gap-3">
+                                <button v-if="index === 0" class="lg:py-3 lg:px-7 py-2 px-4 rounded-3xl bg-[#eb9843] text-white lg:text-lg font-medium">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <img src="../assets/image/Slider-Two.webp" class="absolute block w-full h-80 lg:h-[650px] -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
             </div>
-            <!-- Item 2 -->
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="../assets/image/Slider1.jpeg" class="absolute block w-full h-80 lg:h-[650px] -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-            </div>
-            <!-- Item 3 -->
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="../assets/image/Slider-Four.jpeg" class="absolute block w-full h-80 lg:h-[650px] -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-            </div>
-        </div>
-        <!-- Slider indicators -->
-        <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
-            <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
-            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
-            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
-        </div>
-    </div>
+        </section>
 
 </template>
 
 <style scoped>
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+body {
+	font-family: "Montserrat", sans-serif;
+	color: #fff;
+	overflow-x: hidden;
+}
+
 
 </style>

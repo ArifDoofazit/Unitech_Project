@@ -167,10 +167,18 @@ const toggleButtons = () => {
                     <div class="flex justify-center lg:mt-32 mt-16">
                         <div class="product-card lg:max-w-full max-w-[320px] rounded-t-2xl drop-shadow-2xl overflow-hidden cursor-pointer relative group">
                             <div class="w-full z-10 absolute top-[430px] text-center space-x-3 hidden transition-all group-hover:block">
-                                <span class="py-2 px-3 bg-[#eb9843] text-white text-lg z-10 hover:bg-[#2c306b] transition-all">a</span>
-                                <span class="py-2 px-3 bg-[#eb9843] text-white text-lg z-10 hover:bg-[#2c306b] transition-all">a</span>
-                                <span class="py-2 px-3 bg-[#eb9843] text-white text-lg z-10 hover:bg-[#2c306b] transition-all">a</span>
-                                <span class="py-2 px-3 bg-[#eb9843] text-white text-lg z-10 hover:bg-[#2c306b] transition-all">a</span>
+                                <span class="py-2 px-2 rounded-sm bg-[#eb9843] text-white text-lg z-10 hover:bg-[#2c306b] transition-all">
+                                    <i class="fa-solid fa-link"></i>
+                                </span>
+                                <span class="py-2 px-2 rounded-sm bg-[#eb9843] text-white text-lg z-10 hover:bg-[#2c306b] transition-all">
+                                    <i class="fa-regular fa-copy"></i>
+                                </span>
+                                <span class="py-2 px-2 rounded-sm bg-[#eb9843] text-white text-lg z-10 hover:bg-[#2c306b] transition-all">
+                                    <i class="fa-regular fa-heart"></i>
+                                </span>
+                                <span class="py-2 px-2 rounded-sm bg-[#eb9843] text-white text-lg z-10 hover:bg-[#2c306b] transition-all">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </span>
                             </div>
                             <img src="../assets/image/product2.webp" class="lg:w-full h-[480px] rounded-t-2xl transition-transform duration-300 transform scale-100 group-hover:scale-105" alt="">
                             <img src="../assets/image/product4.webp" class="lg:w-full h-[480px] rounded-t-2xl absolute top-0 left-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" alt="">
@@ -186,10 +194,18 @@ const toggleButtons = () => {
                     <div class="flex justify-center lg:mt-32 mt-10">
                         <div class="product-card lg:max-w-full max-w-[320px] rounded-t-2xl drop-shadow-2xl overflow-hidden cursor-pointer relative group">
                             <div class="w-full z-10 absolute top-[430px] text-center space-x-3 hidden transition-all group-hover:block">
-                                <span class="py-2 px-3 bg-[#eb9843] text-white text-lg z-10 hover:bg-[#2c306b] transition-all">a</span>
-                                <span class="py-2 px-3 bg-[#eb9843] text-white text-lg z-10 hover:bg-[#2c306b] transition-all">a</span>
-                                <span class="py-2 px-3 bg-[#eb9843] text-white text-lg z-10 hover:bg-[#2c306b] transition-all">a</span>
-                                <span class="py-2 px-3 bg-[#eb9843] text-white text-lg z-10 hover:bg-[#2c306b] transition-all">a</span>
+                                <span class="py-2 px-2 rounded-sm bg-[#eb9843] text-white text-lg z-10 hover:bg-[#2c306b] transition-all">
+                                    <i class="fa-solid fa-link"></i>
+                                </span>
+                                <span class="py-2 px-2 rounded-sm bg-[#eb9843] text-white text-lg z-10 hover:bg-[#2c306b] transition-all">
+                                    <i class="fa-regular fa-copy"></i>
+                                </span>
+                                <span class="py-2 px-2 rounded-sm bg-[#eb9843] text-white text-lg z-10 hover:bg-[#2c306b] transition-all">
+                                    <i class="fa-regular fa-heart"></i>
+                                </span>
+                                <span class="py-2 px-2 rounded-sm bg-[#eb9843] text-white text-lg z-10 hover:bg-[#2c306b] transition-all">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </span>
                             </div>
                             <img src="../assets/image/product2.webp" class="lg:w-full h-[480px] rounded-t-2xl transition-transform duration-300 transform scale-100 group-hover:scale-105" alt="">
                             <img src="../assets/image/product4.webp" class="lg:w-full h-[480px] rounded-t-2xl absolute top-0 left-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" alt="">
@@ -205,10 +221,18 @@ const toggleButtons = () => {
                     <div class="flex justify-center lg:mt-32 mt-10">
                         <div class="product-card lg:max-w-full max-w-[320px] rounded-t-2xl drop-shadow-2xl overflow-hidden cursor-pointer relative group">
                             <div class="w-full z-10 absolute top-[430px] text-center space-x-3 hidden transition-all group-hover:block">
-                                <span class="py-2 px-3 bg-[#eb9843] text-white text-lg z-10 hover:bg-[#2c306b] transition-all">a</span>
-                                <span class="py-2 px-3 bg-[#eb9843] text-white text-lg z-10 hover:bg-[#2c306b] transition-all">a</span>
-                                <span class="py-2 px-3 bg-[#eb9843] text-white text-lg z-10 hover:bg-[#2c306b] transition-all">a</span>
-                                <span class="py-2 px-3 bg-[#eb9843] text-white text-lg z-10 hover:bg-[#2c306b] transition-all">a</span>
+                                <span class="py-2 px-2 rounded-sm bg-[#eb9843] text-white text-lg z-10 hover:bg-[#2c306b] transition-all">
+                                    <i class="fa-solid fa-link"></i>
+                                </span>
+                                <span class="py-2 px-2 rounded-sm bg-[#eb9843] text-white text-lg z-10 hover:bg-[#2c306b] transition-all">
+                                    <i class="fa-regular fa-copy"></i>
+                                </span>
+                                <span class="py-2 px-2 rounded-sm bg-[#eb9843] text-white text-lg z-10 hover:bg-[#2c306b] transition-all">
+                                    <i class="fa-regular fa-heart"></i>
+                                </span>
+                                <span class="py-2 px-2 rounded-sm bg-[#eb9843] text-white text-lg z-10 hover:bg-[#2c306b] transition-all">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </span>
                             </div>
                             <img src="../assets/image/product2.webp" class="lg:w-full h-[480px] rounded-t-2xl transition-transform duration-300 transform scale-100 group-hover:scale-105" alt="">
                             <img src="../assets/image/product4.webp" class="lg:w-full h-[480px] rounded-t-2xl absolute top-0 left-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" alt="">
@@ -225,10 +249,18 @@ const toggleButtons = () => {
                     <div class="flex justify-center lg:mt-32 mt-10">
                         <div class="product-card lg:max-w-full max-w-[320px] rounded-t-2xl drop-shadow-2xl overflow-hidden cursor-pointer relative group">
                             <div class="lg:w-full z-10 absolute top-[430px] text-center space-x-3 hidden transition-all group-hover:block">
-                                <span class="py-2 px-3 bg-[#eb9843] text-white text-lg z-10 hover:bg-[#2c306b] transition-all">a</span>
-                                <span class="py-2 px-3 bg-[#eb9843] text-white text-lg z-10 hover:bg-[#2c306b] transition-all">a</span>
-                                <span class="py-2 px-3 bg-[#eb9843] text-white text-lg z-10 hover:bg-[#2c306b] transition-all">a</span>
-                                <span class="py-2 px-3 bg-[#eb9843] text-white text-lg z-10 hover:bg-[#2c306b] transition-all">a</span>
+                                <span class="py-2 px-2 rounded-sm bg-[#eb9843] text-white text-lg z-10 hover:bg-[#2c306b] transition-all">
+                                    <i class="fa-solid fa-link"></i>
+                                </span>
+                                <span class="py-2 px-2 rounded-sm bg-[#eb9843] text-white text-lg z-10 hover:bg-[#2c306b] transition-all">
+                                    <i class="fa-regular fa-copy"></i>
+                                </span>
+                                <span class="py-2 px-2 rounded-sm bg-[#eb9843] text-white text-lg z-10 hover:bg-[#2c306b] transition-all">
+                                    <i class="fa-regular fa-heart"></i>
+                                </span>
+                                <span class="py-2 px-2 rounded-sm bg-[#eb9843] text-white text-lg z-10 hover:bg-[#2c306b] transition-all">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </span>
                             </div>
                             <img src="../assets/image/product2.webp" class="lg:w-full w-80 h-[480px] rounded-t-2xl transition-transform duration-300 transform scale-100 group-hover:scale-105" alt="">
                             <img src="../assets/image/product4.webp" class="lg:w-full w-80 h-[480px] rounded-t-2xl absolute top-0 left-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" alt="">
