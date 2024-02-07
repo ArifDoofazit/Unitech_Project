@@ -23,10 +23,10 @@
                         </p>
 
                         <div class="lg:mt-32 mt-6 flex gap-3">
-                            <a href="#" class="bg-white lg:ml-4 rounded-lg px-2 text-center py-2 text-sm font-medium lg:h-8 lg:w-8 lg:mt-1 w-8 text-[#2c306b]"> <i class="fa-solid fa-phone"></i> </a>
-                            <a href="#" class="bg-white lg:ml-4 rounded-lg px-2 text-center py-2 text-sm font-medium lg:h-8 lg:w-8 lg:mt-1 w-8 text-[#2c306b]"> <i class="fa-brands fa-facebook-f"></i> </a>
-                            <a href="#" class="bg-white lg:ml-4 rounded-lg px-2 text-center py-2 text-sm font-medium lg:h-8 lg:w-8 lg:mt-1 w-8 text-[#2c306b]"> <i class="fa-brands fa-instagram"></i> </a>
-                            <a href="#" class="bg-white lg:ml-4 rounded-lg px-2 text-center py-2 text-sm font-medium lg:h-8 lg:w-8 lg:mt-1 w-8 text-[#2c306b]"> <i class="fa-brands fa-youtube"></i> </a>
+                            <a href="#" class="bg-white lg:ml-4 rounded px-2 flex justify-center items-center py-2 text-base font-medium lg:h-8 lg:w-8 lg:mt-1 w-8 text-[#2c306b]"> <i class="fa-solid fa-phone"></i> </a>
+                            <a href="#" class="bg-white lg:ml-4 rounded px-2 flex justify-center items-center py-2 text-base font-medium lg:h-8 lg:w-8 lg:mt-1 w-8 text-[#2c306b]"> <i class="fa-brands fa-facebook-f"></i> </a>
+                            <a href="#" class="bg-white lg:ml-4 rounded px-2 flex justify-center items-center py-2 text-base font-medium lg:h-8 lg:w-8 lg:mt-1 w-8 text-[#2c306b]"> <i class="fa-brands fa-instagram"></i> </a>
+                            <a href="#" class="bg-white lg:ml-4 rounded px-2 flex justify-center items-center py-2 text-base font-medium lg:h-8 lg:w-8 lg:mt-1 w-8 text-[#2c306b]"> <i class="fa-brands fa-youtube"></i> </a>
                         </div>
                         <img src="../assets/Footerimage.png" class="-mt-72 lg:h-80 h-72 lg:ml-32 opacity-25 -ml-2" alt="">
                     </div>

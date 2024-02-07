@@ -38,8 +38,9 @@ document.addEventListener('DOMContentLoaded', function () {
       <div class="flex flex-1 items-center justify-center sm:items-center lg:h-20 overflow-hidden">
 
         <div class="flex justify-center items-center w-auto h-20 lg:border-l-8 lg:border-[#eb9843] overflow-hidden lg:z-10">
-          <!-- <img class="lg:w-full h-auto lg:ml-5 lg:mt-3 ml-28" src="../assets/image/UGL/Unitech-Logo-Animation.gif" alt="Your Company"> -->
-          <div class="Header_icon"></div>
+          <a href="https://demo.unitechgloballtd.com">
+            <div class="Header_icon"></div>
+          </a>
         </div>
 
         <div class="hidden lg:ml-auto lg:w-3/6 sm:block rounded-l-3xl" style="background:#2c306b;">
@@ -66,15 +67,15 @@ document.addEventListener('DOMContentLoaded', function () {
     </div>
 
   <!-- Mobile menu, show/hide based on menu state. -->
-  <div class="sm:hidden" id="mobile-menu">
+  <div class="sm:hidden bg-[#999999]" id="mobile-menu">
     <div class="space-y-1 px-2 pb-3 pt-2">
       <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-      <RouterLink to="/" class="hover:bg-gray-700 block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Home</RouterLink>
-      <RouterLink to="/about" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">About</RouterLink>
-      <RouterLink to="/service" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Service</RouterLink>
-      <RouterLink to="/products" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Products</RouterLink>
-      <RouterLink to="/gallery" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Gallery</RouterLink>
-      <RouterLink to="/contact" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Contact us</RouterLink>
+      <RouterLink to="/" class="hover:bg-gray-700 block rounded-md px-3 py-2 text-base font-medium border" aria-current="page">Home</RouterLink>
+      <RouterLink to="/about" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium border">About</RouterLink>
+      <RouterLink to="/service" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium border">Service</RouterLink>
+      <RouterLink to="/products" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium border">Products</RouterLink>
+      <RouterLink to="/gallery" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium border">Gallery</RouterLink>
+      <RouterLink to="/contact" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium border">Contact us</RouterLink>
     </div>
   </div>
 </nav>

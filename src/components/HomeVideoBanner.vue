@@ -2,7 +2,7 @@
 
 <template>
     <div class="Contact_Heading lg:w-full mt-72">
-            <div class="Title_Heading py-28 w-full h-full mb-20 z-[1] flex justify-center">
+            <div class="Title_Heading py-28 w-full h-full mb-20 z-[1] border flex justify-center">
             
             <div class="w-96 h-96 text-center mt-5">
                 

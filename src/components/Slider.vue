@@ -58,7 +58,7 @@ export default {
 <template>
 
         <section>
-            <div id="main-slider" class="owl-carousel owl-theme relative">
+            <div id="main-slider" class="owl-carousel owl-theme relative lg:h-[680px] h-[350px]">
                 <div v-for="(slide, index) in slides" :key="index" class="relative w-full lg:h-[680px] h-[350px] bg-cover bg-center border-b border-zinc-300" :style="{ backgroundImage: 'url(' + slide.image + ')' }">
                     <div class="bg-overlay grid grid-cols-1 lg:grid-cols-2 py-20 md:py-28 lg:py-32 xl:py-56 px-3 md:px-4 lg:px-8">
                         <div class="flex flex-col gap-5 md:gap-8 lg:mt-10">
