@@ -5,7 +5,7 @@
 <template>
     <section class="">
         <div class="">
-            <h3 class="w-96 text-4xl text-[#eb9843] font-medium uppercase text-center lg:ml-20 py-6">Featured</h3>
+            <h3 class="lg:w-96 text-4xl text-[#eb9843] font-medium uppercase text-center lg:ml-20 py-6">Featured</h3>
             <img src="../assets/banner-hardware.jpg" class="w-full lg:h-60 h-40 mt-10 opacity-30" alt="">
             <div class="container mx-auto">
                 <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-4">

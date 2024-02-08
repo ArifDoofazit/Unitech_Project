@@ -1,45 +1,247 @@
 <script setup></script>
 
 <template>
-    <div class="container mx-auto pb-20">
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-            <div>
-                <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg" alt="">
+    <div class="container mx-auto pb-10">
+        <div class="grid lg:grid-cols-4 gap-5 lg:grid-rows-3">
+            <div class="flex justify-center">
+                <div
+                    class="product-card w-72 rounded-2xl drop-shadow-2xl overflow-hidden cursor-pointer relative group border hover:shadow-2xl">
+                    <img src="../assets/image/product/prducts-1.webp"
+                        class="w-full h-80 rounded-t-2xl transition-transform duration-300 transform scale-100 group-hover:scale-105"
+                        alt="">
+                    <img src="../assets/image/product/prducts-1.webp"
+                        class="w-full h-80 rounded-t-2xl absolute top-0 left-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                        alt="">
+                    <div
+                        class="h-32 rounded-b-2xl drop-shadow-2xl border-2 border-[#f89b3b] bg-white text-[#f89b3b] transition duration-300 ease-in-out transform group-hover:text-[#eb9843]">
+                        <h2 class="text-center font-normal pt-5 text-2xl">DOVE HANDLE</h2>
+                        <div class="text-center text-black pt-1">
+                            <p>AB/AC 96mm, 4 colors</p>
+                            <p class="font-medium pt-1">Code: 317</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div>
-                <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg" alt="">
+
+            <div class="flex justify-center">
+                <div
+                    class="product-card w-72 rounded-2xl drop-shadow-2xl overflow-hidden cursor-pointer relative group border hover:shadow-2xl">
+                    <img src="../assets/image/product/product3.webp"
+                        class="w-full h-80 rounded-t-2xl transition-transform duration-300 transform scale-100 group-hover:scale-105"
+                        alt="">
+                    <img src="../assets/image/product/product3.webp"
+                        class="w-full h-80 rounded-t-2xl absolute top-0 left-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                        alt="">
+                    <div
+                        class="h-32 rounded-b-2xl drop-shadow-2xl border-2 border-[#f89b3b] bg-white text-[#f89b3b] transition duration-300 ease-in-out transform group-hover:text-[#eb9843]">
+                        <h2 class="text-center font-normal pt-5 text-2xl">DOVE HANDLE</h2>
+                        <div class="text-center text-black pt-1">
+                            <p>AB/AC 96mm, 4 colors</p>
+                            <p class="font-medium pt-1">Code: 317</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div>
-                <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg" alt="">
+
+            <div class="flex justify-center">
+                <div
+                    class="product-card w-72 rounded-2xl drop-shadow-2xl overflow-hidden cursor-pointer relative group border hover:shadow-2xl">
+                    <img src="../assets/image/product/product4.webp"
+                        class="w-full h-80 rounded-t-2xl transition-transform duration-300 transform scale-100 group-hover:scale-105"
+                        alt="">
+                    <img src="../assets/image/product/product4.webp"
+                        class="w-full h-80 rounded-t-2xl absolute top-0 left-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                        alt="">
+                    <div
+                        class="h-32 rounded-b-2xl drop-shadow-2xl border-2 border-[#f89b3b] bg-white text-[#f89b3b] transition duration-300 ease-in-out transform group-hover:text-[#eb9843]">
+                        <h2 class="text-center font-normal pt-5 text-2xl">DOVE HANDLE</h2>
+                        <div class="text-center text-black pt-1">
+                            <p>AB/AC 96mm, 4 colors</p>
+                            <p class="font-medium pt-1">Code: 317</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div>
-                <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg" alt="">
+
+            <div class="flex justify-center">
+                <div
+                    class="product-card w-72 rounded-2xl drop-shadow-2xl overflow-hidden cursor-pointer relative group border hover:shadow-2xl">
+                    <img src="../assets/image/product/product5.webp"
+                        class="w-full h-80 rounded-t-2xl transition-transform duration-300 transform scale-100 group-hover:scale-105"
+                        alt="">
+                    <img src="../assets/image/product/product5.webp"
+                        class="w-full h-80 rounded-t-2xl absolute top-0 left-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                        alt="">
+                    <div
+                        class="h-32 rounded-b-2xl drop-shadow-2xl border-2 border-[#f89b3b] bg-white text-[#f89b3b] transition duration-300 ease-in-out transform group-hover:text-[#eb9843]">
+                        <h2 class="text-center font-normal pt-5 text-2xl">DOVE HANDLE</h2>
+                        <div class="text-center text-black pt-1">
+                            <p>AB/AC 96mm, 4 colors</p>
+                            <p class="font-medium pt-1">Code: 317</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div>
-                <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg" alt="">
+
+            <div class="flex justify-center">
+                <div
+                    class="product-card w-72 rounded-2xl drop-shadow-2xl overflow-hidden cursor-pointer relative group border hover:shadow-2xl">
+                    <img src="../assets/image/product/product6.jpg"
+                        class="w-full h-80 rounded-t-2xl transition-transform duration-300 transform scale-100 group-hover:scale-105"
+                        alt="">
+                    <img src="../assets/image/product/product6.jpg"
+                        class="w-full h-80 rounded-t-2xl absolute top-0 left-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                        alt="">
+                    <div
+                        class="h-32 rounded-b-2xl drop-shadow-2xl border-2 border-[#f89b3b] bg-white text-[#f89b3b] transition duration-300 ease-in-out transform group-hover:text-[#eb9843]">
+                        <h2 class="text-center font-normal pt-5 text-2xl">DOVE HANDLE</h2>
+                        <div class="text-center text-black pt-1">
+                            <p>AB/AC 96mm, 4 colors</p>
+                            <p class="font-medium pt-1">Code: 317</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div>
-                <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-5.jpg" alt="">
+            <div class="flex justify-center">
+                <div
+                    class="product-card w-72 rounded-2xl drop-shadow-2xl overflow-hidden cursor-pointer relative group border hover:shadow-2xl">
+                    <img src="../assets/image/product/product8.jpg"
+                        class="w-full h-80 rounded-t-2xl transition-transform duration-300 transform scale-100 group-hover:scale-105"
+                        alt="">
+                    <img src="../assets/image/product/product8.jpg"
+                        class="w-full h-80 rounded-t-2xl absolute top-0 left-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                        alt="">
+                    <div
+                        class="h-32 rounded-b-2xl drop-shadow-2xl border-2 border-[#f89b3b] bg-white text-[#f89b3b] transition duration-300 ease-in-out transform group-hover:text-[#eb9843]">
+                        <h2 class="text-center font-normal pt-5 text-2xl">DOVE HANDLE</h2>
+                        <div class="text-center text-black pt-1">
+                            <p>AB/AC 96mm, 4 colors</p>
+                            <p class="font-medium pt-1">Code: 317</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div>
-                <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-6.jpg" alt="">
+
+            <div class="flex justify-center">
+                <div
+                    class="product-card w-72 rounded-2xl drop-shadow-2xl overflow-hidden cursor-pointer relative group border hover:shadow-2xl">
+                    <img src="../assets/image/product/product9.webp"
+                        class="w-full h-80 rounded-t-2xl transition-transform duration-300 transform scale-100 group-hover:scale-105"
+                        alt="">
+                    <img src="../assets/image/product/product9.webp"
+                        class="w-full h-80 rounded-t-2xl absolute top-0 left-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                        alt="">
+                    <div
+                        class="h-32 rounded-b-2xl drop-shadow-2xl border-2 border-[#f89b3b] bg-white text-[#f89b3b] transition duration-300 ease-in-out transform group-hover:text-[#eb9843]">
+                        <h2 class="text-center font-normal pt-5 text-2xl">DOVE HANDLE</h2>
+                        <div class="text-center text-black pt-1">
+                            <p>AB/AC 96mm, 4 colors</p>
+                            <p class="font-medium pt-1">Code: 317</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div>
-                <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-7.jpg" alt="">
+
+            <div class="flex justify-center">
+                <div
+                    class="product-card w-72 rounded-2xl drop-shadow-2xl overflow-hidden cursor-pointer relative group border hover:shadow-2xl">
+                    <img src="../assets/image/product/smart-door-lock.webp"
+                        class="w-full h-80 rounded-t-2xl transition-transform duration-300 transform scale-100 group-hover:scale-105"
+                        alt="">
+                    <img src="../assets/image/product/smart-door-lock.webp"
+                        class="w-full h-80 rounded-t-2xl absolute top-0 left-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                        alt="">
+                    <div
+                        class="h-32 rounded-b-2xl drop-shadow-2xl border-2 border-[#f89b3b] bg-white text-[#f89b3b] transition duration-300 ease-in-out transform group-hover:text-[#eb9843]">
+                        <h2 class="text-center font-normal pt-5 text-2xl">DOVE HANDLE</h2>
+                        <div class="text-center text-black pt-1">
+                            <p>AB/AC 96mm, 4 colors</p>
+                            <p class="font-medium pt-1">Code: 317</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div>
-                <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-8.jpg" alt="">
-            </div>
-            <div>
-                <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-9.jpg" alt="">
-            </div>
-            <div>
-                <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-10.jpg" alt="">
-            </div>
-            <div>
-                <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-11.jpg" alt="">
+
+            <div class="flex justify-center">
+                <div
+                    class="product-card w-72 rounded-2xl drop-shadow-2xl overflow-hidden cursor-pointer relative group border hover:shadow-2xl">
+                    <img src="../assets/image/product/product6.webp"
+                        class="w-full h-80 rounded-t-2xl transition-transform duration-300 transform scale-100 group-hover:scale-105"
+                        alt="">
+                    <img src="../assets/image/product/product6.webp"
+                        class="w-full h-80 rounded-t-2xl absolute top-0 left-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                        alt="">
+                    <div
+                        class="h-32 rounded-b-2xl drop-shadow-2xl border-2 border-[#f89b3b] bg-white text-[#f89b3b] transition duration-300 ease-in-out transform group-hover:text-[#eb9843]">
+                        <h2 class="text-center font-normal pt-5 text-2xl">DOVE HANDLE</h2>
+                        <div class="text-center text-black pt-1">
+                        <p>AB/AC 96mm, 4 colors</p>
+                        <p class="font-medium pt-1">Code: 317</p>
+                    </div>
+                </div>
             </div>
         </div>
 
+        <div class="flex justify-center">
+            <div
+                class="product-card w-72 rounded-2xl drop-shadow-2xl overflow-hidden cursor-pointer relative group border hover:shadow-2xl">
+                <img src="../assets/image/product/product7.webp"
+                    class="w-full h-80 rounded-t-2xl transition-transform duration-300 transform scale-100 group-hover:scale-105"
+                    alt="">
+                <img src="../assets/image/product/product7.webp"
+                    class="w-full h-80 rounded-t-2xl absolute top-0 left-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                    alt="">
+                <div
+                    class="h-32 rounded-b-2xl drop-shadow-2xl border-2 border-[#f89b3b] bg-white text-[#f89b3b] transition duration-300 ease-in-out transform group-hover:text-[#eb9843]">
+                    <h2 class="text-center font-normal pt-5 text-2xl">DOVE HANDLE</h2>
+                    <div class="text-center text-black pt-1">
+                        <p>AB/AC 96mm, 4 colors</p>
+                        <p class="font-medium pt-1">Code: 317</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex justify-center">
+            <div
+                class="product-card w-72 rounded-2xl drop-shadow-2xl overflow-hidden cursor-pointer relative group border hover:shadow-2xl">
+                <img src="../assets/image/product/product10.jpg"
+                    class="w-full h-80 rounded-t-2xl transition-transform duration-300 transform scale-100 group-hover:scale-105"
+                    alt="">
+                <img src="../assets/image/product/product10.jpg"
+                    class="w-full h-80 rounded-t-2xl absolute top-0 left-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                    alt="">
+                <div
+                    class="h-32 rounded-b-2xl drop-shadow-2xl border-2 border-[#f89b3b] bg-white text-[#f89b3b] transition duration-300 ease-in-out transform group-hover:text-[#eb9843]">
+                    <h2 class="text-center font-normal pt-5 text-2xl">DOVE HANDLE</h2>
+                    <div class="text-center text-black pt-1">
+                        <p>AB/AC 96mm, 4 colors</p>
+                        <p class="font-medium pt-1">Code: 317</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex justify-center">
+            <div
+                class="product-card w-72 rounded-2xl drop-shadow-2xl overflow-hidden cursor-pointer relative group border hover:shadow-2xl">
+                <img src="../assets/image/product/product-end.jpg"
+                    class="w-full h-80 rounded-t-2xl transition-transform duration-300 transform scale-100 group-hover:scale-105"
+                    alt="">
+                <img src="../assets/image/product/product-end.jpg"
+                    class="w-full h-80 rounded-t-2xl absolute top-0 left-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                    alt="">
+                <div
+                    class="h-32 rounded-b-2xl drop-shadow-2xl border-2 border-[#f89b3b] bg-white text-[#f89b3b] transition duration-300 ease-in-out transform group-hover:text-[#eb9843]">
+                    <h2 class="text-center font-normal pt-5 text-2xl">DOVE HANDLE</h2>
+                    <div class="text-center text-black pt-1">
+                        <p>AB/AC 96mm, 4 colors</p>
+                        <p class="font-medium pt-1">Code: 317</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
     </div>
-</template>
+</div></template>
