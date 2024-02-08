@@ -41,8 +41,8 @@ $(".dot").on("click", function () {
         <section>
             <div class="slider w-full lg:h-[650px] h-[500px] relative lg:mt-20">
                 <ul class="items relative w-full lg:h-[650px] h-[500px] overflow-hidden ">
-                    <div class="absolute lg:top-1/3 top-1/4 z-20">
-                        <h2 class="font-medium lg:text-5xl text-3xl text-[#f89b3b] pl-8">We Believe in Quality</h2>
+                    <div class="absolute lg:top-1/4 top-1/4 z-20 bg-[#f89b3b] rounded-r-xl bg-opacity-40 p-10">
+                        <h2 class="font-medium lg:text-5xl text-3xl text-[#2c306b] pl-8">We Believe in Quality</h2>
                         <p class="lg:w-[700px] font-normal text-lg pl-8 pt-5 leading-8 text-white">
                             provides high quality accessories of hardware, specially various Lock, Handle, others doors and all kinds of home
                             accessories etc
