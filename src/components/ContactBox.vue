@@ -2,35 +2,10 @@
 
 <template>
     <div class="container mx-auto">
-        <div class="grid lg:grid-cols-3 gap-8 pb-10">
-            <div class="w-full h-auto border rounded-3xl py-10 pl-10 pb-10 border-[#273270] transition-all group hover:border-[#eb9843]">
-                <div class="phone_icon w-16 h-16 text-2xl text-white bg-[#eb9843] flex justify-center items-center rounded-full py-3 px-3 transition-all duration-300 group-hover:bg-[#273270]">
-                    <i class="fa-solid fa-phone"></i>
-                </div>
-                <h3 class="pt-10 text-2xl font-normal pl-2">Phone</h3>
-                <p class="pt-3 pl-2"><span class="font-medium">Toll-Free :</span> 0000 - 123 - 456789</p>
-                <p class="pt-3 pl-2"><span class="font-medium">Fax :</span> +880 1877-0404 04</p>
+        <div class="grid lg:grid-cols-1 pb-10">
+            <div class="map w-full h-auto">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1824.9127055181661!2d90.41866774981598!3d23.82480660440489!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c70c6224ce65%3A0x2411b912811be75b!2sBG%20Group%20-%20Head%20Office!5e0!3m2!1sen!2sbd!4v1707542341305!5m2!1sen!2sbd" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
-
-            <div class="w-full h-auto border rounded-3xl py-10 pl-10 pb-10 border-[#273270] transition-all group hover:border-[#eb9843]">
-                <div class="phone_icon w-16 h-16 text-2xl text-white rounded-full py-3 px-3 bg-[#eb9843] flex justify-center items-center transition-all duration-300 group-hover:bg-[#273270]">
-                    <i class="fa-solid fa-envelope"></i>
-                </div>
-                <h3 class="pt-10 text-2xl font-normal pl-2">Email</h3>
-                <p class="pt-3 pl-2 ">unitechg@gmail.com</p>
-                <p class="pt-3 pl-2 ">support@unitech.com</p>
-            </div>
-
-            <div class="w-full h-auto border rounded-3xl py-10 pl-10 pb-10 border-[#273270] transition-all group hover:border-[#eb9843]">
-                <div class="phone_icon w-16 h-16 text-2xl text-white rounded-full py-3 px-3 bg-[#eb9843] flex justify-center items-center transition-all duration-300 group-hover:bg-[#273270]">
-                    <i class="fa-solid fa-location-arrow"></i>
-                </div>
-                <h3 class="pt-10 text-2xl font-normal pl-2">Address</h3>
-                <p class="pt-3 pl-2 leading-8">House 49, Road 07, Nikunja - 1 <br>
-                    Dhaka 1223, Bangladesh
-                </p>
-            </div>
-
         </div>
     </div>
 </template>

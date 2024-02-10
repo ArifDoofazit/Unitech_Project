@@ -11,6 +11,16 @@ const toggleMobileMenu = () => {
 const closeMobileMenu = () => {
   isMobileMenuOpen.value = false;
 };
+
+const menuItems = [
+  { label: 'Home', to: '/' },
+  { label: 'Service', to: '/service' },
+  { label: 'About', to: '/about' },
+  { label: 'Product', to: '/products' },
+  { label: 'Gallery', to: '/gallery' },
+  { label: 'Contact us', to: '/contact' }
+];
+
 </script>
 
 <template>
@@ -46,24 +56,21 @@ const closeMobileMenu = () => {
         <!-- Mobile menu links -->
         <div class="hidden lg:mr-0 lg:w-3/6 sm:block rounded-l-3xl" style="background:#2c306b;">
           <div class="flex justify-center items-center space-x-3 lg:mr-8">
-            <RouterLink @click="closeMobileMenu" to="/" class="text-white px-3 py-3 text-base font-medium hover:bg-[#f89b3b] hover:text-white transition-all">Home</RouterLink>
-            <RouterLink @click="closeMobileMenu" to="/service" class="text-white px-3 py-3 text-base font-medium hover:bg-[#f89b3b] hover:text-white transition-all">Service</RouterLink>
-            <RouterLink @click="closeMobileMenu" to="/about" class="text-white px-3 py-3 text-base font-medium hover:bg-[#f89b3b] hover:text-white transition-all">About</RouterLink>
-            <RouterLink @click="closeMobileMenu" to="/products" class="text-white px-3 py-3 text-base font-medium hover:bg-[#f89b3b] hover:text-white transition-all">Product</RouterLink>
-            <RouterLink @click="closeMobileMenu" to="/gallery" class="text-white px-3 py-3 text-base font-medium hover:bg-[#f89b3b] hover:text-white transition-all">Gallery</RouterLink>
-            <RouterLink @click="closeMobileMenu" to="/contact" class="text-white px-3 py-3 text-base font-medium hover:bg-[#f89b3b] hover:text-white transition-all">Contact us</RouterLink>
+              <!-- Loop through menu items -->
+              <RouterLink v-for="(item, index) in menuItems" :key="index" @click="closeMobileMenu" :to="item.to" class="text-white px-3 py-3 text-base font-medium hover:bg-[#f89b3b] hover:text-white transition-all">
+                {{ item.label }}
+              </RouterLink>
 
-            <!-- Additional links -->
-            <a href="#" class="w-8 h-8 flex justify-center items-center bg-white rounded-full text-[#2c306b] hover:bg-[#f89b3b] hover:text-white transition-all">
-              <i class="fa-solid fa-phone"></i>
-            </a>
-            <a href="#" class="w-8 h-8 flex justify-center items-center bg-white rounded-full text-[#2c306b] hover:bg-[#f89b3b] hover:text-white transition-all">
-              <i class="fa-solid fa-location-dot"></i>
-            </a>
+              <!-- Additional links -->
+              <a href="#" class="w-8 h-8 flex justify-center items-center bg-white rounded-full text-[#2c306b] hover:bg-[#f89b3b] hover:text-white transition-all">
+                <i class="fa-solid fa-phone"></i>
+              </a>
+              <a href="#" class="w-8 h-8 flex justify-center items-center bg-white rounded-full text-[#2c306b] hover:bg-[#f89b3b] hover:text-white transition-all">
+                <i class="fa-solid fa-location-dot"></i>
+              </a>
           </div>
         </div>
       </div>
-
       <!-- Mobile menu, show/hide based on menu state -->
       <div v-show="isMobileMenuOpen" @click.away="closeMobileMenu" class="sm:hidden bg-gray-300 bg-opacity-50" id="mobile-menu">
         <div class="space-y-1 px-2 pb-3 pt-2 z-30">
