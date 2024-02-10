@@ -40,7 +40,7 @@
                 <!-- card-1==================================== -->
                 <div class="lg:ml-5 max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                     <a href="#" class="bg-[#202472] text-[#fab915] text-4xl pt-3 pb-2 pr-3 pl-3 shadow-md rounded-full lg:w-32 lg:h-32 border-solid border-4 border-yellow-400">
-                        <i class="fa-solid fa-cart-shopping"></i>
+                        <i class="fa-solid fa-key"></i>
                     </a>
                         <a href="#">
                             <h5 class="mt-4 mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">PLUMBING MATERIALS</h5>
@@ -52,7 +52,7 @@
                 <!-- card-2=============================== -->                 
                     <div class="lg:ml-2 max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                         <a href="#" class="bg-[#202472] text-[#fab915] text-4xl pt-2 pb-2 pr-3 pl-3 shadow-md rounded-full lg:w-32 lg:h-32 border-solid border-4 border-yellow-400">
-                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                            <i class="fa-solid fa-door-closed"></i>
                         </a>
                         <a href="#">
                             <h5 class="mt-4 mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">ELECTRICAL FITTINGS</h5>
@@ -65,8 +65,8 @@
 
                 <!-- card-3=============================== -->
                 <div class="lg:ml-2 max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                    <a href="#" class="bg-[#202472] text-[#fab915] text-4xl pt-2 pb-2 pr-2 pl-2 shadow-md rounded-full lg:w-32 lg:h-32 border-solid border-4 border-yellow-400">
-                        <i class="fa-solid fa-gears"></i>
+                    <a href="#" class="bg-[#202472] text-[#fab915] text-4xl pt-2 pb-2 pr-3 pl-3 shadow-md rounded-full lg:w-32 lg:h-32 border-solid border-4 border-yellow-400">
+                        <i class="fa-brands fa-keycdn"></i>
                     </a>
                         <a href="#">
                             <h5 class="mt-4 mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">THE DRIVEWAY & LAWN</h5>
@@ -80,7 +80,7 @@
                 <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                         
                     <a href="#" class="bg-[#202472] text-[#fab915] text-4xl pt-2 pb-1 pr-2 pl-2 shadow-md rounded-full lg:w-32 lg:h-32 border-solid border-4 border-yellow-400">
-                        <i class="fa-solid fa-gavel"></i>
+                        <i class="fa-solid fa-dungeon"></i>
                     </a>
 
                         <a href="#">
@@ -158,25 +158,25 @@
         <section class="bg-[#F2EFE5]">
             <div class="container mx-auto">
             <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-4 py-10">
-                <div class="bg-[#E3E1D9]">
+                <div class="h-auto bg-[#E3E1D9]">
                     <img src="../assets/team001_800x.webp" alt="">
-                    <h3 class="text-center text-xl font-medium mt-5">RACHEL HOLLOWAY</h3>
-                    <p class="text-center text-md">Landscaper</p>
+                    <h3 class="text-center text-xl font-medium mt-5">Main Door Handles</h3>
+                    <p class="text-center text-md">Rs.2,999.00</p>
                 </div>
                 <div class="bg-[#E3E1D9]">
                     <img src="../assets/team002_800x.webp" alt="">
-                    <h3 class="text-center text-xl font-medium mt-5">WALTER CHAMBER</h3>
-                    <p class="text-center text-md">Architecht</p>
+                    <h3 class="text-center text-xl font-medium mt-5">Main Doors Pack of(Left)</h3>
+                    <p class="text-center text-md">AU $250.44</p>
                 </div>
                 <div class="bg-[#E3E1D9]">
                     <img src="../assets/team003_800x.webp" alt="">
-                    <h3 class="text-center text-xl font-medium mt-5">SHIRLEY MCKENZIE</h3>
-                    <p class="text-center text-md">Gardener</p>
+                    <h3 class="text-center text-xl font-medium mt-5">Glass Door Pull Handle</h3>
+                    <p class="text-center text-md">US $79.19</p>
                 </div>
                 <div class="bg-[#E3E1D9]">
                     <img src="../assets/team004_800x.webp" alt="">
-                    <h3 class="text-center text-xl font-medium mt-5">TOMMIE CARROLL</h3>
-                    <p class="text-center text-md">Plumber</p>
+                    <h3 class="text-center text-xl font-medium mt-5">10'' Aluminum Horse</h3>
+                    <p class="text-center text-md">₱7,823.27</p>
                 </div>
             </div>
         </div>
