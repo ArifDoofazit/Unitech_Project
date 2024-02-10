@@ -1,4 +1,39 @@
 <script setup>
+const footerLogo = [
+    {
+        images: "../src/assets/UGL/UGL%20Logo%20one%20color-04.png"
+    },
+    {
+        images: "../src/assets/UGL/Hi_Care.png"
+    },
+]
+const contactDetails = [
+    {
+        title: "Contact Us",
+        number: "+8801877-040404",
+        emailAdress: "E: unitechg@gmail.com",
+        officeAddress: 'House 49, Road 07, Nikunja 1 Dhaka 1223, Bangladesh',
+    }
+]
+
+const oderDetails = [
+    {
+        title: "Order Now",
+        description: "From anywhere in Bangladesh, the best premium quality produts, order us for any kind of items of hardware products "
+    }
+]
+
+const copyRight = [
+    {
+        copyRightInfo: "Copyright © Unitech Global Limited | Hi-Care - Hardware Product.All rights reserved"
+    }
+]
+
+const creator = [
+    {
+        developer: "Developed by Doofaz IT Limited"
+    }
+]
 </script>
 
 <template>
@@ -7,22 +42,22 @@
             <div class="container mx-auto">
                 <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-4 h-5/6">
                     <div class="lg:ml-32 lg:mt-4 ml-5">
-                        <div class="grid grid-cols-2 gap-1 lg:grid-cols-none">
-                            <img src="../assets/UGL/UGL Logo one color-04.png" class="lg:w-64 w-36 pt-3" alt="">
-                            <img src="../assets/UGL/Hi_Care.png" class="lg:w-64 pt-3" alt="">
+                        <div v-for="(logo , index) in footerLogo" :key="index" class="grid grid-cols-2 gap-1 lg:grid-cols-none">
+                            <img :src="logo.images" class="lg:w-60 w-36 pt-3" alt="">
                         </div>
                     </div>
-                    <div class="lg:ml-20 lg:mt-4 ml-5 -mt-4">
-                        <h2 class="text-white text-xl mt-10">Contact Us</h2>
-                        <h4 class="text-white text-lg mt-3" style="color:#eb9843;"> +8801877-040404 </h4>
-                        <h5 class="text-white">E: unitechg@gmail.com</h5>
-                        <h5 class="text-white lg:mt-7 mt-5">House 49, Road 07, Nikunja 1 <br>
-                        Dhaka 1223, Bangladesh  </h5>
+                    <div v-for="(contactInfo , index) in contactDetails" :key="index" class="lg:ml-20 lg:mt-4 ml-5 -mt-4">
+                        <h2 class="text-white text-xl mt-5">{{ contactInfo.title }}</h2>
+                        <h4 class="text-white text-lg mt-3" style="color:#eb9843;"> {{ contactInfo.number }} </h4>
+                        <h5 class="text-white  text-lg">{{ contactInfo.emailAdress }}</h5>
+                        <h5 class="text-white lg:mt-7 mt-5  text-lg">
+                            {{ contactInfo.officeAddress }}
+                        </h5>
                     </div>
-                    <div class="lg:mt-4 ml-5 overflow-hidden relative">
-                        <h2 class="text-white text-xl mt-5">Order Now</h2>
-                        <p class="text-white text-sm w-72 leading-6 mt-2">From anywhere in Bangladesh, the best premium quality produts, <br class="lg:block hidden">
-                            order us for any kind of items of hardware products 
+                    <div v-for="(oderInfo , index) in oderDetails" :key="index" class="lg:mt-4 ml-5 overflow-hidden relative">
+                        <h2 class="text-white text-xl mt-5">{{ oderInfo.title }}</h2>
+                        <p class="text-white text-base w-72 leading-6 mt-2">
+                            {{ oderInfo.description }}
                         </p>
 
                         <div class="lg:mt-32 mt-6 flex gap-3">
@@ -32,18 +67,17 @@
                             <a href="#" class="bg-white lg:ml-4 rounded px-2 flex justify-center items-center py-2 text-base font-medium lg:h-8 lg:w-8 lg:mt-1 w-8 text-[#2c306b]"> <i class="fa-brands fa-youtube"></i> </a>
                         </div>
                     </div>
-                    <img src="../assets/image/UGL/Footer_Bg.png" class="lg:w-[350px] lg:h-[420px] w-[340px] h-[400px] lg:mt-2 mt-[182px] absolute overflow-hidden z-20 right-0" alt="">
+                    <img src="../assets/image/UGL/Footer_Bg.png" class="lg:w-[320px] lg:h-[405px] w-[340px] h-[400px] lg:mt-2 mt-[182px] absolute overflow-hidden z-20 right-0" alt="">
                 </div>
 
                 <hr class="w-11/12 mx-auto mt-8 ">
                <div class="grid lg:grid-cols-2">
-                    <div class="copyright lg:w-[660px]">
-                        <h2 class="lg:text-white lg:py-4 pt-5 pl-5 lg:pl-0 lg:ml-14 lg:text-base text-xs text-[#da6565]">Copyright © Unitech Global Limited | Hi-Care - Hardware Product.All rights reserved</h2>
+                    <div v-for="(copyInfo , index) in copyRight" :key="index" class="copyright lg:w-[660px]">
+                        <h2 class="lg:text-white lg:py-4 pt-5 pl-5 lg:pl-0 lg:ml-14 lg:text-base text-xs text-[#da6565]">{{ copyInfo.copyRightInfo }}</h2>
                     </div>
-                    <div class="Developers lg:w-[640px]">
-                        <a href="https://web.doofazit.com/" class="lg:text-white leading-6 lg:text-base text-xs pl-5 lg:pl-0 lg:text-end mr-14 py-4 text-[#da6565] lg:flex lg:justify-end">Developed by Doofaz IT Limited</a>
+                    <div v-for="(develop , index) in creator" :key="index" class="Developers lg:w-[640px]">
+                        <a href="https://web.doofazit.com/" class="lg:text-white leading-6 lg:text-base text-xs pl-5 lg:pl-0 lg:text-end mr-14 py-4 text-[#da6565] lg:flex lg:justify-end">{{ develop.developer }}</a>
                     </div>
-                    
                </div>
 
             </div>

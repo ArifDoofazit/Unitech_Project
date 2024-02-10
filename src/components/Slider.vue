@@ -1,4 +1,4 @@
-<script>
+<script setup>
 function slider(flag, num) {
     var current = $(".item.current"),
         next,
@@ -34,29 +34,33 @@ $(".dot").on("click", function () {
     setSlider = setInterval(slider, 4000);
 });
 
+const slides = [
+    { image: "https://images.pexels.com/photos/6689289/pexels-photo-6689289.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
+    { image: "https://www.bproperty.com/blog/wp-content/uploads/door-handle-key-keyhole-279810.jpg" },
+    { image: "https://m.media-amazon.com/images/S/aplus-media-library-service-media/bd86580b-3f97-4fc4-9f7a-790c132a2a76.__CR0,0,600,450_PT0_SX600_V1___.png" }
+];
+
+let currentIndex = 0;
+
+let sliderContent = {
+    title: "We Believe in Quality",
+    description: "Provides high quality accessories of hardware, specially various Lock, Handle, others doors and all kinds of home accessories etc",
+    subtitle: "WHOLESALE ONLY"
+};
 </script>
 
 <template>
 
         <section>
             <div class="slider w-full lg:h-[650px] h-[500px] relative lg:mt-20">
-                <ul class="items relative w-full lg:h-[650px] h-[500px] overflow-hidden ">
-                    <div class="absolute lg:top-1/4 top-1/4 z-20 bg-[#f89b3b] rounded-r-xl bg-opacity-40 p-10">
-                        <h2 class="font-medium lg:text-5xl text-3xl text-[#2c306b] pl-8">We Believe in Quality</h2>
-                        <p class="lg:w-[700px] font-normal text-lg pl-8 pt-5 leading-8 text-white">
-                            provides high quality accessories of hardware, specially various Lock, Handle, others doors and all kinds of home
-                            accessories etc
-                        </p>
-                        <h4 class="font-medium text-2xl text-[#ed1f36] pl-8 mt-20">W H O L E S A L E O N L Y</h4>
+                <ul class="items relative w-full lg:h-[650px] h-[500px] overflow-hidden">
+                    <div v-if="sliderContent" class="absolute lg:top-1/4 top-16 z-20 bg-[#f89b3b] lg:rounded-r-xl bg-opacity-40 p-10">
+                        <h2 class="font-medium lg:text-5xl text-3xl text-[#2c306b] lg:pl-8 pl-0">{{ sliderContent.title }}</h2>
+                        <p class="lg:w-[700px] font-normal text-lg lg:pl-8 p-0 pt-5 leading-8 text-white">{{ sliderContent.description }}</p>
+                        <h4 class="font-medium text-2xl text-[#ed1f36] lg:pl-8 pl-0 mt-20">{{ sliderContent.subtitle }}</h4>
                     </div>
-                    <li class="item current">
-                        <img src="https://images.pexels.com/photos/6689289/pexels-photo-6689289.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
-                    </li>
-                    <li class=item>
-                        <img src="https://www.bproperty.com/blog/wp-content/uploads/door-handle-key-keyhole-279810.jpg">
-                    </li>
-                    <li class=item>
-                        <img src="https://m.media-amazon.com/images/S/aplus-media-library-service-media/bd86580b-3f97-4fc4-9f7a-790c132a2a76.__CR0,0,600,450_PT0_SX600_V1___.png">
+                    <li v-for="(slide, index) in slides" :key="index" class="item" :class="{ current: index === currentIndex }">
+                        <img :src="slide.image" alt="slide image">
                     </li>
                 </ul>
             </div>

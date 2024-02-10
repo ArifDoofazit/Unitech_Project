@@ -9,8 +9,8 @@
             <div class="flex justify-center ">
                 <div class="product-card lg:max-w-full max-w-[320px] rounded-2xl drop-shadow-2xl overflow-hidden cursor-pointer relative border group">
                     <div class="h-full">
-                        <img src="../assets/image/product/product2.webp" class="lg:w-full h-[640px] transition-transform duration-300 transform scale-100 group-hover:scale-105" alt="">
-                        <img src="../assets/image/product/product3.webp" class="lg:w-full h-[640px] absolute top-0 left-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" alt="">
+                        <img src="../assets/image/product/product-2.webp" class="lg:w-full h-[640px] transition-transform duration-300 transform scale-100 group-hover:scale-105" alt="">
+                        <img src="../assets/image/product/product-3.webp" class="lg:w-full h-[640px] absolute top-0 left-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" alt="">
                     </div>
                 </div>
             </div>
@@ -57,10 +57,10 @@
             <div id="default-tab-content">
                 <div class="hidden p-4 rounded-lg bg-gray-50 border dark:bg-gray-800" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                     <div class="grid grid-cols-4 gap-4">
-                        <img src="../assets/image/product/product2.webp" class="lg:w-full h-[320px] border rounded-xl transition-transform duration-300 transform scale-100 group-hover:scale-105" alt="">
-                        <img src="../assets/image/product/product4.webp" class="lg:w-full h-[320px] border rounded-xl transition-transform duration-300 transform scale-100 group-hover:scale-105" alt="">
-                        <img src="../assets/image/product/product5.webp" class="lg:w-full h-[320px] border rounded-xl transition-transform duration-300 transform scale-100 group-hover:scale-105" alt="">
-                        <img src="../assets/image/product/product6.jpg" class="lg:w-full h-[320px] p-5 bg-white border rounded-xl transition-transform duration-300 transform scale-100 group-hover:scale-105" alt="">
+                        <img src="../assets/image/product/product-2.webp" class="lg:w-full h-[320px] border rounded-xl transition-transform duration-300 transform scale-100 group-hover:scale-105" alt="">
+                        <img src="../assets/image/product/product-4.webp" class="lg:w-full h-[320px] border rounded-xl transition-transform duration-300 transform scale-100 group-hover:scale-105" alt="">
+                        <img src="../assets/image/product/product-5.webp" class="lg:w-full h-[320px] border rounded-xl transition-transform duration-300 transform scale-100 group-hover:scale-105" alt="">
+                        <img src="../assets/image/product/product-6.jpg" class="lg:w-full h-[320px] p-5 bg-white border rounded-xl transition-transform duration-300 transform scale-100 group-hover:scale-105" alt="">
                     </div>
                 </div>
                 <div class="hidden p-4 rounded-lg bg-gray-50 border dark:bg-gray-800" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
