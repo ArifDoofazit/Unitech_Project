@@ -11,6 +11,8 @@ const toggleMobileMenu = () => {
 const closeMobileMenu = () => {
   isMobileMenuOpen.value = false;
 };
+
+
 </script>
 
 <template>

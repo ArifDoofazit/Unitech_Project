@@ -1,8 +1,23 @@
-<script setup></script>
+<script setup>
+ 
+ const servicebox = [
+    {
+        name: "How Unitech makes a difference?",
+        Highly: "Highly Durable",
+        Knterdum: "Knterdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque euismod venenatis dolor sed condimentum. Donec interdum arcu id nibh porttitor scelerisque Nunc faucibus .",
+        Maintenance: "Maintenance free",
+        Impact: "Impact resistant",
+        Excellent: "Excellent Noise Insulation",
+        Weather:"Weather resistant",
+        UV:"UV protection",
+    }
+ ]
+
+</script>
 
 <template>
     <div class="container mx-auto">
-        <h2 class="text-center font-medium text-5xl text-[#273270] mt-10 pb-10">How Unitech makes a difference?</h2>
+        <h2 v-for="(service , index) in servicebox" :key="index" class="text-center font-medium text-5xl text-[#273270] mt-10 pb-10"> {{service.name}} </h2>
 
         <div class="container mx-auto pb-20">
             <div class="grid lg:grid-cols-2 lg:row-span-3 gap-5">
@@ -13,8 +28,8 @@
                                 <i class="fa-solid fa-building"></i>
                             </div>
                         </div>
-                        <h3 class="Title text-center mt-8 text-2xl text-[#273270] font-medium with-underline">Highly Durable</h3>
-                        <p class="text-center lg:text-xl lg:px-8 px-4 leading-10 mt-10">Knterdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque euismod venenatis dolor sed condimentum. Donec interdum arcu id nibh porttitor scelerisque Nunc faucibus .</p>
+                        <h3 v-for="(service , index) in servicebox" :key="index" class="Title text-center mt-8 text-2xl text-[#273270] font-medium with-underline"> {{service.Highly}} </h3>
+                        <p v-for="(service , index) in servicebox" :key="index" class="text-center lg:text-xl lg:px-8 px-4 leading-10 mt-10">{{service.Knterdum}}</p>
                     </div>
                 </div>
 
@@ -26,8 +41,8 @@
                                 <i class="fa-solid fa-wrench"></i>
                             </div>
                         </div>
-                        <h3 class="Title text-center mt-8 text-2xl text-[#273270] font-medium with-underline">Maintenance free</h3>
-                        <p class="text-center lg:text-xl lg:px-8 px-4 leading-10 mt-10">Knterdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque euismod venenatis dolor sed condimentum. Donec interdum arcu id nibh porttitor scelerisque Nunc faucibus .</p>
+                        <h3 v-for="(service , index) in servicebox" :key="index" class="Title text-center mt-8 text-2xl text-[#273270] font-medium with-underline">{{service.Maintenance}}</h3>
+                        <p v-for="(service , index) in servicebox" :key="index"  class="text-center lg:text-xl lg:px-8 px-4 leading-10 mt-10">{{service.Knterdum}}</p>
                     </div>
                 </div>
 
@@ -38,8 +53,8 @@
                                 <i class="fa-solid fa-credit-card"></i>
                             </div>
                         </div>
-                        <h3 class="Title text-center mt-8 text-2xl text-[#273270] font-medium with-underline">Impact resistant</h3>
-                        <p class="text-center lg:text-xl lg:px-8 px-4 leading-10 mt-10">Knterdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque euismod venenatis dolor sed condimentum. Donec interdum arcu id nibh porttitor scelerisque Nunc faucibus .</p>
+                        <h3 v-for="(service , index) in servicebox" :key="index" class="Title text-center mt-8 text-2xl text-[#273270] font-medium with-underline">{{service.Impact}}</h3>
+                        <p v-for="(service , index) in servicebox" :key="index" class="text-center lg:text-xl lg:px-8 px-4 leading-10 mt-10">{{service.Knterdum}}</p>
                     </div>
                 </div>
 
@@ -51,8 +66,8 @@
                                 <i class="fa-solid fa-volume-high"></i>
                             </div>
                         </div>
-                        <h3 class="Title text-center mt-8 text-2xl text-[#273270] font-medium with-underline">Excellent Noise Insulation</h3>
-                        <p class="text-center lg:text-xl lg:px-8 px-4 leading-10 mt-10">Knterdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque euismod venenatis dolor sed condimentum. Donec interdum arcu id nibh porttitor scelerisque Nunc faucibus .</p>
+                        <h3 v-for="(service , index) in servicebox" :key="index"  class="Title text-center mt-8 text-2xl text-[#273270] font-medium with-underline">{{service.Excellent}}</h3>
+                        <p v-for="(service , index) in servicebox" :key="index"  class="text-center lg:text-xl lg:px-8 px-4 leading-10 mt-10">{{service.Knterdum}}</p>
                     </div>
                 </div>
 
@@ -64,8 +79,8 @@
                                 <i class="fa-solid fa-umbrella"></i>
                             </div>
                         </div>
-                        <h3 class="Title text-center mt-8 text-2xl text-[#273270] font-medium with-underline">Weather resistant</h3>
-                        <p class="text-center lg:text-xl lg:px-8 px-4 leading-10 mt-10">Knterdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque euismod venenatis dolor sed condimentum. Donec interdum arcu id nibh porttitor scelerisque Nunc faucibus .</p>
+                        <h3 v-for="(service , index) in servicebox" :key="index"  class="Title text-center mt-8 text-2xl text-[#273270] font-medium with-underline">{{service.Weather}}</h3>
+                        <p v-for="(service , index) in servicebox" :key="index"  class="text-center lg:text-xl lg:px-8 px-4 leading-10 mt-10">{{service.Knterdum}}</p>
                     </div>
                 </div>
 
@@ -77,8 +92,8 @@
                                 <i class="fa-solid fa-house-chimney-window"></i>
                             </div>
                         </div>
-                        <h3 class="Title text-center mt-8 text-2xl text-[#273270] font-medium with-underline">UV protection</h3>
-                        <p class="text-center lg:text-xl lg:px-8 px-4 leading-10 mt-10">Knterdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque euismod venenatis dolor sed condimentum. Donec interdum arcu id nibh porttitor scelerisque Nunc faucibus .</p>
+                        <h3 v-for="(service , index) in servicebox" :key="index"  class="Title text-center mt-8 text-2xl text-[#273270] font-medium with-underline">{{service.UV}}</h3>
+                        <p v-for="(service , index) in servicebox" :key="index"  class="text-center lg:text-xl lg:px-8 px-4 leading-10 mt-10">{{service.Knterdum}}</p>
                     </div>
                 </div>
                 

@@ -1,10 +1,39 @@
-<script setup></script>
+<script setup>
+const aboutus=[
+    {
+        about:"ABOUT US",
+        UNITECH:"UNITECH HARDWARES",
+        Vivamus:"Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.",
+        PLUMBING:"PLUMBING MATERIALS",
+        Sed:"Sed vestibulum nulla elementum auctor tincidunt. Aliquam sit amet cursus mauris. Sed vitae mattis ipsum. Vestibulum enim nulla, sollicitudin ac hendrerit nec, tempor quis nisl",
+        ELECTRICAL:"ELECTRICAL FITTINGS",
+        THE:"THE DRIVEWAY & LAWN",
+        EXTERIORS:"EXTERIORS",
+        OUR:"OUR WORKS",
+        WALKWAYS:"WALKWAYS BY THE POOLSIDE",
+        MASONRY:"MASONRY",
+        INTERIORS:"INTERIORS",
+        imageone:"http://localhost:5173/src/assets/about001_6557fbf8-05bb-4747-9958-bb03634ebd2e_770x.webp",
+        manecardimage1:"http://localhost:5173/src/assets/team001_800x.webp",
+        manecardimage2:"http://localhost:5173/src/assets/team002_800x.webp",
+        manecardimage3:"http://localhost:5173/src/assets/team003_800x.webp",
+        manecardimage4:"http://localhost:5173/src/assets/team004_800x.webp",
+        Main:"Main Door Handles",
+        Rs:"Rs.2,999.00",
+        Doors:"Main Doors Pack of(Left)",
+        AU:"AU $250.44",
+        Glass:"Glass Door Pull Handle",
+        Horse:"10'' Aluminum Horse",
+        P:"₱7,823.27",
+    }
+]
+</script>
 
 <template>
     <div class="Heading">
         <!-- Title_Heading=========================== -->
         <div class="Title_Heading py-28 w-full h-auto text-center mb-20 relative z-[1]">
-            <h2 class="text-white text-5xl font-normal">ABOUT US</h2>
+            <h2 v-for="(indexs , index) in aboutus" :key="index" class="text-white text-5xl font-normal">{{indexs.about}}</h2>
 
             <nav class="flex justify-center py-5" aria-label="Breadcrumb">
                 <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
@@ -32,8 +61,8 @@
       
         <!-- about-page-card=================================== -->
 
-        <h2 class="text-center lg:text-4xl lg:font-semibold -mt-10">UNITECH HARDWARES</h2>
-        <p class="text-center lg:py-5 py-5 lg:text-xl text-[#B4B4B8]">Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.</p>
+        <h2 v-for="(indexs , index) in aboutus" :key="index" class="text-center lg:text-4xl lg:font-semibold -mt-10">{{indexs.UNITECH}}</h2>
+        <p v-for="(indexs , index) in aboutus" :key="index" class="text-center lg:py-5 py-5 lg:text-xl text-[#B4B4B8]">{{indexs.Vivamus}}</p>
 
             <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-4 py-10">
 
@@ -43,9 +72,9 @@
                         <i class="fa-solid fa-key"></i>
                     </a>
                         <a href="#">
-                            <h5 class="mt-4 mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">PLUMBING MATERIALS</h5>
+                            <h5 v-for="(indexs , index) in aboutus" :key="index" class="mt-4 mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">{{indexs.PLUMBING}}</h5>
                         </a>
-                        <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">Sed vestibulum nulla elementum auctor tincidunt. Aliquam sit amet cursus mauris. Sed vitae mattis ipsum. Vestibulum enim nulla, sollicitudin ac hendrerit nec, tempor quis nisl</p>
+                        <p v-for="(indexs , index) in aboutus" :key="index" class="mb-3 font-normal text-gray-500 dark:text-gray-400">{{indexs.Sed}}</p>
                     </div>
                 <!-- card-1 End==================================== -->
                 
@@ -55,9 +84,9 @@
                             <i class="fa-solid fa-door-closed"></i>
                         </a>
                         <a href="#">
-                            <h5 class="mt-4 mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">ELECTRICAL FITTINGS</h5>
+                            <h5 v-for="(indexs , index) in aboutus" :key="index" class="mt-4 mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">{{ indexs.ELECTRICAL }}</h5>
                         </a>
-                        <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">Sed vestibulum nulla elementum auctor tincidunt. Aliquam sit amet cursus mauris. Sed vitae mattis ipsum. Vestibulum enim nulla, sollicitudin ac hendrerit nec, tempor quis nisl</p>
+                        <p v-for="(indexs , index) in aboutus" :key="index" class="mb-3 font-normal text-gray-500 dark:text-gray-400">{{indexs.Sed}}</p>
                         
                     </div>
                     <!-- card-2 End=============================== --> 
@@ -69,9 +98,9 @@
                         <i class="fa-brands fa-keycdn"></i>
                     </a>
                         <a href="#">
-                            <h5 class="mt-4 mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">THE DRIVEWAY & LAWN</h5>
+                            <h5 v-for="(indexs , index) in aboutus" :key="index" class="mt-4 mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">{{indexs.THE}}</h5>
                         </a>
-                        <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">Sed vestibulum nulla elementum auctor tincidunt. Aliquam sit amet cursus mauris. Sed vitae mattis ipsum. Vestibulum enim nulla, sollicitudin ac hendrerit nec, tempor quis nisl</p>
+                        <p v-for="(indexs , index) in aboutus" :key="index" class="mb-3 font-normal text-gray-500 dark:text-gray-400">{{indexs.Sed}}</p>
                         
                 </div>
                 <!-- card-3 End=============================== -->
@@ -84,9 +113,9 @@
                     </a>
 
                         <a href="#">
-                            <h5 class="mt-4 mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">EXTERIORS</h5>
+                            <h5 v-for="(indexs , index) in aboutus" :key="index" class="mt-4 mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">{{indexs.EXTERIORS}}</h5>
                         </a>
-                        <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">Sed vestibulum nulla elementum auctor tincidunt. Aliquam sit amet cursus mauris. Sed vitae mattis ipsum. Vestibulum enim nulla, sollicitudin ac hendrerit nec, tempor quis nisl</p>
+                        <p v-for="(indexs , index) in aboutus" :key="index" class="mb-3 font-normal text-gray-500 dark:text-gray-400">{{indexs.Sed}}</p>
                         
                 </div>
                 <!-- card-4 End=============================== -->
@@ -96,12 +125,12 @@
         <!-- about-page-card End=================================== -->
 
         <div class="about-page-para py-20 w-full h-auto mb-20 relative z-[1]">
-            <h2 class="text-white lg:text-6xl text-3xl font-normal text-center">OUR WORKS</h2>
+            <h2 v-for="(indexs , index) in aboutus" :key="index" class="text-white lg:text-6xl text-3xl font-normal text-center">{{indexs.OUR}}</h2>
 
             <div class="container mx-auto mt-8">
                 <div class="grid md:grid-cols-2 grid-cols-1 gap-4 ">
                     <div class="p-2 rounded-md">
-                        <h2 class="text-white lg:text-4xl text-xl">WALKWAYS BY THE POOLSIDE</h2>
+                        <h2 v-for="(indexs , index) in aboutus" :key="index" class="text-white lg:text-4xl text-xl">{{indexs.WALKWAYS}}</h2>
 
 
                         <div class="container mx-auto mt-6">
@@ -113,9 +142,9 @@
                                     </a>
                 
                                         <a href="#">
-                                            <h5 class="mt-4 mb-2 text-2xl font-semibold tracking-tight text-white">EXTERIORS</h5>
+                                            <h5 v-for="(indexs , index) in aboutus" :key="index" class="mt-4 mb-2 text-2xl font-semibold tracking-tight text-white">{{indexs.EXTERIORS}}</h5>
                                         </a>
-                                        <p class="mb-3 font-normal text-gray-500 dark:text-gray-100">Sed vestibulum nulla elementum auctor tincidunt. Aliquam sit amet cursus mauris. Sed vitae mattis ipsum. Vestibulum enim nulla, sollicitudin ac hendrerit nec, tempor quis nisl</p>
+                                        <p v-for="(indexs , index) in aboutus" :key="index" class="mb-3 font-normal text-gray-500 dark:text-gray-100">{{indexs.Sed}}</p>
                                 </div>
                                 <!-- ========================1 End================================= -->
                                 <!-- ========================2================================= -->
@@ -125,9 +154,9 @@
                                     </a>
                 
                                         <a href="#">
-                                            <h5 class="mt-4 mb-2 text-2xl font-semibold tracking-tight text-white">MASONRY</h5>
+                                            <h5 v-for="(indexs , index) in aboutus" :key="index" class="mt-4 mb-2 text-2xl font-semibold tracking-tight text-white">{{indexs.MASONRY}}</h5>
                                         </a>
-                                        <p class="mb-3 font-normal text-gray-500 dark:text-gray-100">Sed vestibulum nulla elementum auctor tincidunt. Aliquam sit amet cursus mauris. Sed vitae mattis ipsum. Vestibulum enim nulla, sollicitudin ac hendrerit nec, tempor quis nisl</p>
+                                        <p v-for="(indexs , index) in aboutus" :key="index" class="mb-3 font-normal text-gray-500 dark:text-gray-100">{{indexs.Sed}}</p>
                                 </div>
                                 <!-- ========================2 End================================= -->
                                 <!-- ========================3================================= -->
@@ -137,9 +166,9 @@
                                     </a>
                 
                                         <a href="#">
-                                            <h5 class="mt-4 mb-2 text-2xl font-semibold tracking-tight text-white">INTERIORS</h5>
+                                            <h5 v-for="(indexs , index) in aboutus" :key="index" class="mt-4 mb-2 text-2xl font-semibold tracking-tight text-white">{{indexs.INTERIORS}}</h5>
                                         </a>
-                                        <p class="mb-3 font-normal text-gray-500 dark:text-gray-100">Sed vestibulum nulla elementum auctor tincidunt. Aliquam sit amet cursus mauris. Sed vitae mattis ipsum. Vestibulum enim nulla, sollicitudin ac hendrerit nec, tempor quis nisl</p>
+                                        <p v-for="(indexs , index) in aboutus" :key="index" class="mb-3 font-normal text-gray-500 dark:text-gray-100">{{indexs.Sed}}</p>
                                 </div>
                                 <!-- ========================3End================================= -->
                             </div>
@@ -147,8 +176,8 @@
                         
 
                     </div>
-                    <div class="border-8 border-[#202447] rounded-md">
-                        <img src="../assets/about001_6557fbf8-05bb-4747-9958-bb03634ebd2e_770x.webp" class="w-full h-full bg-cover" alt="">
+                    <div v-for="(indexs , index) in aboutus" :key="index" class="border-8 border-[#202447] rounded-md">
+                        <img :src="indexs.imageone" class="w-full h-full bg-cover" alt="">
                     </div>
                 </div>
             </div>
@@ -158,25 +187,25 @@
         <section class="bg-[#F2EFE5]">
             <div class="container mx-auto">
             <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-4 py-10">
-                <div class="h-auto bg-[#E3E1D9]">
-                    <img src="../assets/team001_800x.webp" alt="">
-                    <h3 class="text-center text-xl font-medium mt-5">Main Door Handles</h3>
-                    <p class="text-center text-md">Rs.2,999.00</p>
+                <div v-for="(indexs , index) in aboutus" :key="index" class="h-auto bg-[#E3E1D9]">
+                    <img :src="indexs.manecardimage1" alt="">
+                    <h3 class="text-center text-xl font-medium mt-5">{{indexs.Main}}</h3>
+                    <p class="text-center text-md">{{indexs.Rs}}</p>
                 </div>
-                <div class="bg-[#E3E1D9]">
-                    <img src="../assets/team002_800x.webp" alt="">
-                    <h3 class="text-center text-xl font-medium mt-5">Main Doors Pack of(Left)</h3>
-                    <p class="text-center text-md">AU $250.44</p>
+                <div v-for="(indexs , index) in aboutus" :key="index" class="bg-[#E3E1D9]">
+                    <img :src="indexs.manecardimage2" alt="">
+                    <h3 class="text-center text-xl font-medium mt-5">{{indexs.Doors}}</h3>
+                    <p class="text-center text-md">{{indexs.AU}}</p>
                 </div>
-                <div class="bg-[#E3E1D9]">
-                    <img src="../assets/team003_800x.webp" alt="">
-                    <h3 class="text-center text-xl font-medium mt-5">Glass Door Pull Handle</h3>
+                <div v-for="(indexs , index) in aboutus" :key="index" class="bg-[#E3E1D9]">
+                    <img :src="indexs.manecardimage3" alt=""/>
+                    <h3 class="text-center text-xl font-medium mt-5">{{indexs.Glass}}</h3>
                     <p class="text-center text-md">US $79.19</p>
                 </div>
-                <div class="bg-[#E3E1D9]">
-                    <img src="../assets/team004_800x.webp" alt="">
-                    <h3 class="text-center text-xl font-medium mt-5">10'' Aluminum Horse</h3>
-                    <p class="text-center text-md">₱7,823.27</p>
+                <div v-for="(indexs , index) in aboutus" :key="index" class="bg-[#E3E1D9]">
+                    <img :src="indexs.manecardimage4" alt="">
+                    <h3 class="text-center text-xl font-medium mt-5">{{indexs.Horse}}</h3>
+                    <p class="text-center text-md">{{indexs.P}}</p>
                 </div>
             </div>
         </div>

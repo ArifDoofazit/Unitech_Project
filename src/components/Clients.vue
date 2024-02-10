@@ -1,6 +1,4 @@
-<script setup>
-
-</script>
+<script setup></script>
 <template>
     <section class="">
         <div class="h-auto w-auto pb-10">
