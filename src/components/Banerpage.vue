@@ -32,20 +32,7 @@ const banners = [
                             <p class="text-center text-[#a6a5a4]">{{ banner.description }}</p>
                         </div>
                     </div>
-                    <!-- <div class="flex justify-center lg:mt-0 mt-10">
-                        <div class="z-10 h-72 w-72 shadow-md rounded-full lg:ml-28 ml-4 lg:-mt-28 mt-36 border-solid border-4 border-yellow-400">
-                            <img src="https://www.ryanscomputers.com/storage/products/main/smartx-sx-528-wi-fi-fingerprint-smart-door-11677998097.webp" class="h-72 w-72 shadow-md rounded-full" alt="">
-                            <h3 class="lg:ml-5 text-center text-2xl lg:font-semibold text-[#eb9843] mt-5">Products</h3>
-                            <p class="text-center text-[#a6a5a4]">Vivamus elementum semper nisi. Aenean vulputate.Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.</p>
-                        </div>
-                    </div>
-                   <div class="flex justify-center lg:mt-0 mt-10">
-                        <div class="z-10 h-72 w-72 shadow-md rounded-full lg:ml-28 ml-4 mt-36 lg:-mt-28 border-solid border-4 border-yellow-400">
-                            <img src="https://upload.digoodcms.com/542/image_1682566518_AJ3011-09-K9-1.jpg?imageMogr2/thumbnail/300x/gravity/Center/crop/300x300" class="h-72 w-72 shadow-md rounded-full" alt="">
-                            <h3 class="lg:ml-5 text-center text-2xl lg:font-semibold text-[#eb9843] mt-5">Quality</h3>
-                            <p class="text-center text-[#a6a5a4]">Aenean vulputate Integer tincidunt. Cras dapibus. Nullam dictum felis eu pede mollis pretium.Vivamus elementum semper nisi.</p>
-                        </div>
-                   </div> -->
+
                 </div>
             </div>
         </div>

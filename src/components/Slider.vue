@@ -35,36 +35,38 @@ $(".dot").on("click", function () {
 });
 
 const slides = [
-    { image: "https://images.pexels.com/photos/6689289/pexels-photo-6689289.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-    { image: "https://www.bproperty.com/blog/wp-content/uploads/door-handle-key-keyhole-279810.jpg" },
-    { image: "https://m.media-amazon.com/images/S/aplus-media-library-service-media/bd86580b-3f97-4fc4-9f7a-790c132a2a76.__CR0,0,600,450_PT0_SX600_V1___.png" }
+    { image: "../src/assets/image/Slider/Slider-1.jpg", content: { title: "PAD LOCK", description: "Super premium solid steel 10 years guarantee" } },
+    { image: "../src/assets/image/Slider/Slider-2.jpg", content: { title: "DOVE HANDLE", description: "Premium quality of aluminium" } },
+    { image: "../src/assets/image/Slider/Slider-3.jpg", content: { title: "DOVE HANDLE", description: "Premium quality of aluminium" } },
+    { image: "../src/assets/image/Slider/Slider-4.jpg", content: { title: "CONCEALED HINGES", description: "100% stainless steel hydraulic piston" } },
+    { image: "../src/assets/image/Slider/Slider-5.jpg", content: { title: "DRAWER SLIDER", description: "100% stainless steel hydraulic Presser" } },
 ];
 
 let currentIndex = 0;
 
-let sliderContent = {
-    title: "We Believe in Quality",
-    description: "Provides high quality accessories of hardware, specially various Lock, Handle, others doors and all kinds of home accessories etc",
-    subtitle: "WHOLESALE ONLY"
-};
+// You can initialize sliderContent to the first slide content
+let sliderContent = slides[currentIndex].content;
 </script>
 
 <template>
 
-        <section>
-            <div class="slider w-full lg:h-[650px] h-[500px] relative lg:mt-20">
-                <ul class="items relative w-full lg:h-[650px] h-[500px] overflow-hidden">
-                    <div v-if="sliderContent" class="absolute lg:top-1/4 top-16 z-20 bg-[#f89b3b] lg:rounded-r-xl bg-opacity-40 p-10">
-                        <h2 class="font-medium lg:text-5xl text-3xl text-[#2c306b] lg:pl-8 pl-0">{{ sliderContent.title }}</h2>
-                        <p class="lg:w-[700px] font-normal text-lg lg:pl-8 p-0 pt-5 leading-8 text-white">{{ sliderContent.description }}</p>
-                        <h4 class="font-medium text-2xl text-[#ed1f36] lg:pl-8 pl-0 mt-20">{{ sliderContent.subtitle }}</h4>
+    <section>
+        <div class="slider w-full lg:h-[650px] h-[500px] relative lg:mt-20">
+            <ul class="items relative w-full lg:h-[650px] h-[500px] overflow-hidden">
+                <li v-for="(slide, index) in slides" :key="index" class="item" :class="{ current: index === currentIndex }">
+                    <img :src="slide.image" alt="slide image" class="bg-cover">
+                    <div v-if="slide.content" class="w-full absolute lg:top-2/4 flex lg:justify-end top-2/4 z-20 lg:rounded-r-xl bg-opacity-40 lg:pr-32 pr-5">
+                        <div class="lg:w-[500px] w-full text-right">
+                            <h2 class="font-bold lg:text-5xl text-2xl text-[#f89b3b] lg:pl-8 pl-4">{{ slide.content.title }}</h2>
+                            <p class="lg:w-[410px] w-[240px] lg:ml-[90px] ml-[110px] lg:text-right lg:font-normal lg:text-3xl text-lg lg:pl-8 pl-4 lg:pt-5 pt-2 leading-6 text-white">{{ slide.content.description }}</p>
+                            <button class="mt-5 py-2 px-8 rounded-md bg-[#f89b3b] font-medium lg:text-2xl text-lg ml-4 lg:ml-0">More</button>
+                        </div>
                     </div>
-                    <li v-for="(slide, index) in slides" :key="index" class="item" :class="{ current: index === currentIndex }">
-                        <img :src="slide.image" alt="slide image">
-                    </li>
-                </ul>
-            </div>
-        </section>
+                </li>
+            </ul>
+        </div>
+    </section>
+
 
 </template>
 
@@ -94,5 +96,23 @@ let sliderContent = {
   height: 650px;
   object-fit: cover;
 }
+@media (max-width: 768px) {
+    .item img {
+        width: 500px !important;
+        height: 420px;
+        background-size: cover;
+        object-fit:fill;
+        overflow: hidden;
+    }
+}
 
+@media (max-width: 576px) {
+    .item img {
+        width: 500px;
+        height: 420px;
+        background-size: cover;
+        object-fit:fill;
+        overflow: hidden;
+    }
+}
 </style>

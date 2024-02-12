@@ -1,12 +1,11 @@
 <script setup></script>
 
 <template>
-    <div class="Product_Heading lg:w-full">
-        <div class="Title_Heading py-28 w-full h-auto text-center mb-20 relative z-[1]">
-            <h2 class="text-white text-5xl font-normal">Products</h2>
+    <div class="Product_Heading lg:w-full lg:mt-20">
+        <div class="Title_Heading py-5 w-full h-auto text-start lg:px-5 pl-3 lg:pl-5 mb-20 relative z-[1]">
 
-            <nav class="flex justify-center py-5" aria-label="Breadcrumb">
-                <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
+            <nav class="flex justify-start py-5" aria-label="Breadcrumb">
+                <ol class="inline-flex items-start space-x-1 md:space-x-2 rtl:space-x-reverse">
                     <li class="inline-flex items-center">
                         <RouterLink to="/" class="inline-flex items-center text-sm font-medium text-white hover:text-[#eb9843] dark:text-gray-400 dark:hover:text-white">
                             <svg class="w-3 h-3 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
@@ -26,6 +25,13 @@
                 </ol>
             </nav>
 
+            <h2 class="text-[#f89b3b] lg:text-5xl text-3xl font-medium lg:py-5"> We Believe in Quality</h2>
+            <p class="text-white lg:text-xl text-base font-normal leading-8">
+                provides high quality accessories of hardware, specially various Lock, <br class="lg:block hidden"> Handle, others doors and all kinds of home
+                accessories etc.
+            </p>
+
+            <h4 class="font-normal lg:text-2xl text-xl text-[#bf1f36] py-10">W H O L E  S A L E  O N L Y</h4>
         </div>
     </div>
 </template>
@@ -46,7 +52,7 @@
     left: 0;
     top: 0;
     z-index: -1;
-    background: #000;
+    background: #333888;
     opacity: .6;
 }
 </style>

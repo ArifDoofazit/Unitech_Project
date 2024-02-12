@@ -5,7 +5,7 @@ import GalleryImage from './GalleryImage.vue';
 <template> 
 
         <!-- Title_Heading=========================== -->
-        <div class="Title_Heading py-28 w-full h-auto text-center mb-20 relative z-[1]">
+        <div class="Title_Heading py-10 lg:mt-20 w-full h-auto text-center mb-20 relative z-[1]">
             <h2 class="text-white text-5xl font-normal">GALLERY</h2>
 
             <nav class="flex justify-center py-5" aria-label="Breadcrumb">

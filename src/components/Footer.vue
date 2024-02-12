@@ -1,12 +1,4 @@
 <script setup>
-const footerLogo = [
-    {
-        images: "../src/assets/UGL/UGL%20Logo%20one%20color-04.png"
-    },
-    {
-        images: "../src/assets/UGL/Hi_Care.png"
-    },
-]
 const contactDetails = [
     {
         title: "Contact Us",
@@ -37,13 +29,14 @@ const creator = [
 </script>
 
 <template>
-    <section>
-        <div class="h-auto w-auto pb-4 bg-[#27266e]">
+    <section class="bg-[#27266e]">
+        <div class="h-auto w-auto pb-4 bg-[url(../assets/image/UGL/Footer_Bg.png)] bg-no-repeat bg-right">
             <div class="container mx-auto">
-                <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-4 h-5/6">
+                <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-4 h-5/6 lg:pb-10">
                     <div class="lg:ml-32 lg:mt-4 ml-5">
-                        <div v-for="(logo , index) in footerLogo" :key="index" class="grid grid-cols-2 gap-1 lg:grid-cols-none">
-                            <img :src="logo.images" class="lg:w-60 w-36 pt-3" alt="">
+                        <div class="grid grid-cols-2 gap-1 lg:grid-cols-none">
+                            <img src="../assets/UGL/UGL Logo one color-04.png" class="lg:w-64 w-36 pt-3" alt="">
+                            <img src="../assets/UGL/Hi_Care.png" class="lg:w-64 pt-3" alt="">
                         </div>
                     </div>
                     <div v-for="(contactInfo , index) in contactDetails" :key="index" class="lg:ml-20 lg:mt-4 ml-5 -mt-4">
@@ -62,21 +55,19 @@ const creator = [
 
                         <div class="lg:mt-32 mt-6 flex gap-3">
                             <a href="#" class="bg-white lg:ml-4 rounded px-2 flex justify-center items-center py-2 text-base font-medium lg:h-8 lg:w-8 lg:mt-1 w-8 text-[#2c306b]"> <i class="fa-solid fa-phone"></i> </a>
-                            <a href="#" class="bg-white lg:ml-4 rounded px-2 flex justify-center items-center py-2 text-base font-medium lg:h-8 lg:w-8 lg:mt-1 w-8 text-[#2c306b]"> <i class="fa-brands fa-facebook-f"></i> </a>
+                            <a href="https://www.facebook.com/hicare11" class="bg-white lg:ml-4 rounded px-2 flex justify-center items-center py-2 text-base font-medium lg:h-8 lg:w-8 lg:mt-1 w-8 text-[#2c306b]"> <i class="fa-brands fa-facebook-f"></i> </a>
                             <a href="#" class="bg-white lg:ml-4 rounded px-2 flex justify-center items-center py-2 text-base font-medium lg:h-8 lg:w-8 lg:mt-1 w-8 text-[#2c306b]"> <i class="fa-brands fa-instagram"></i> </a>
                             <a href="#" class="bg-white lg:ml-4 rounded px-2 flex justify-center items-center py-2 text-base font-medium lg:h-8 lg:w-8 lg:mt-1 w-8 text-[#2c306b]"> <i class="fa-brands fa-youtube"></i> </a>
                         </div>
                     </div>
-                    <img src="../assets/image/UGL/Footer_Bg.png" class="lg:w-[320px] lg:h-[405px] w-[340px] h-[400px] lg:mt-2 mt-[182px] absolute overflow-hidden z-20 right-0" alt="">
                 </div>
 
-                <hr class="w-11/12 mx-auto mt-8 ">
-               <div class="grid lg:grid-cols-2">
+               <div class="grid lg:grid-cols-2 lg:border-t-2 border-t mt-10 lg:mt-0">
                     <div v-for="(copyInfo , index) in copyRight" :key="index" class="copyright lg:w-[660px]">
-                        <h2 class="lg:text-white lg:py-4 pt-5 pl-5 lg:pl-0 lg:ml-14 lg:text-base text-xs text-[#da6565]">{{ copyInfo.copyRightInfo }}</h2>
+                        <h2 class="lg:text-white lg:py-4 pt-5 pl-5 lg:pl-0 lg:text-left lg:text-base text-xs text-[#da6565]">{{ copyInfo.copyRightInfo }}</h2>
                     </div>
                     <div v-for="(develop , index) in creator" :key="index" class="Developers lg:w-[640px]">
-                        <a href="https://web.doofazit.com/" class="lg:text-white leading-6 lg:text-base text-xs pl-5 lg:pl-0 lg:text-end mr-14 py-4 text-[#da6565] lg:flex lg:justify-end">{{ develop.developer }}</a>
+                        <a href="https://web.doofazit.com/" class="lg:text-white leading-6 lg:text-base text-xs lg:text-right pl-5 lg:pl-0 lg:py-4  text-[#da6565] lg:flex lg:justify-end">{{ develop.developer }}</a>
                     </div>
                </div>
 

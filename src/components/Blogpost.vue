@@ -33,7 +33,7 @@ const blogCard = [
 
                     <div v-for="(card , index) in blogCard" :key="index" class="max-w-sm h-auto bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                         <a href="#">
-                            <img class="rounded-t-lg lg:h-60 lg:w-full" :src="card.images" alt="" />
+                            <img class="rounded-t-lg lg:h-60 w-full" :src="card.images" alt="" />
                         </a>
                         <div class="p-5">
                             <a href="#">

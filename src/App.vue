@@ -10,7 +10,7 @@ const isLoading = ref(true); // Initially set to true to show the preloader
 // Toggle isLoading after 3 seconds
 setTimeout(() => {
   isLoading.value = false;
-}, 10000);
+}, 5000);
 </script>
 
 <template>

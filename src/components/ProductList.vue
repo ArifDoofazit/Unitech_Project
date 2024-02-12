@@ -2,8 +2,8 @@
 const productCards = [
     {
         images: [
-            "../src/assets/image/product/product-1.webp",
-            "../src/assets/image/product/product-1.webp"
+            "https://m.media-amazon.com/images/I/61PutjqJLFL.jpg",
+            "https://m.media-amazon.com/images/I/61PutjqJLFL.jpg"
         ],
         productName: "DOVE HANDLE",
         productDetails: "AB/AC 96mm, 4 colors",
@@ -11,8 +11,8 @@ const productCards = [
     },
     {
         images: [
-            "../src/assets/image/product/product-6.jpg",
-            "../src/assets/image/product/product-6.jpg"
+            "https://www.jiomart.com/images/product/original/rvegn1pyt6/screwtight-heavy-duty-mortise-handle-door-locks-for-main-door-bullet-door-lock-body-with-3-key-double-action-mortise-lock-for-door-door-locks-for-home-azmph-001-ky-bs-product-images-orvegn1pyt6-p605635730-0-202310141507.jpg?im=Resize=(420,420)",
+            "https://www.jiomart.com/images/product/original/rvegn1pyt6/screwtight-heavy-duty-mortise-handle-door-locks-for-main-door-bullet-door-lock-body-with-3-key-double-action-mortise-lock-for-door-door-locks-for-home-azmph-001-ky-bs-product-images-orvegn1pyt6-p605635730-0-202310141507.jpg?im=Resize=(420,420)"
         ],
         productName: "DOVE HANDLE",
         productDetails: "AB/AC 96mm, 4 colors",
@@ -20,8 +20,8 @@ const productCards = [
     },
     {
         images: [
-            "../src/assets/image/product/product-4.webp",
-            "../src/assets/image/product/product-4.webp"
+            "https://www.plantex.in/cdn/shop/products/81NXVeS3vBL_4ddf2b74-9ec0-4f06-87a6-c76e5d7b5484.jpg?v=1690692488",
+            "https://www.plantex.in/cdn/shop/products/81NXVeS3vBL_4ddf2b74-9ec0-4f06-87a6-c76e5d7b5484.jpg?v=1690692488"
         ],
         productName: "DOVE HANDLE",
         productDetails: "AB/AC 96mm, 4 colors",
@@ -29,8 +29,8 @@ const productCards = [
     },
     {
         images: [
-            "../src/assets/image/product/product-5.webp",
-            "../src/assets/image/product/product-5.webp"
+            "https://www.jiomart.com/images/product/original/rvegn1pyt6/screwtight-heavy-duty-mortise-handle-door-locks-for-main-door-bullet-door-lock-body-with-3-key-double-action-mortise-lock-for-door-door-locks-for-home-azmph-001-ky-bs-product-images-orvegn1pyt6-p605635730-0-202310141507.jpg?im=Resize=(420,420)",
+            "https://www.jiomart.com/images/product/original/rvegn1pyt6/screwtight-heavy-duty-mortise-handle-door-locks-for-main-door-bullet-door-lock-body-with-3-key-double-action-mortise-lock-for-door-door-locks-for-home-azmph-001-ky-bs-product-images-orvegn1pyt6-p605635730-0-202310141507.jpg?im=Resize=(420,420)"
         ],
         productName: "DOVE HANDLE",
         productDetails: "AB/AC 96mm, 4 colors",
@@ -38,8 +38,8 @@ const productCards = [
     },
     {
         images: [
-            "../src/assets/image/product/product-6.webp",
-            "../src/assets/image/product/product-6.webp"
+            "https://www.plantex.in/cdn/shop/products/81NXVeS3vBL_4ddf2b74-9ec0-4f06-87a6-c76e5d7b5484.jpg?v=1690692488",
+            "https://www.plantex.in/cdn/shop/products/81NXVeS3vBL_4ddf2b74-9ec0-4f06-87a6-c76e5d7b5484.jpg?v=1690692488"
         ],
         productName: "DOVE HANDLE",
         productDetails: "AB/AC 96mm, 4 colors",
@@ -47,8 +47,8 @@ const productCards = [
     },
     {
         images: [
-            "../src/assets/image/product/product-7.webp",
-            "../src/assets/image/product/product-7.webp"
+            "https://m.media-amazon.com/images/I/61PutjqJLFL.jpg",
+            "https://m.media-amazon.com/images/I/61PutjqJLFL.jpg"
         ],
         productName: "DOVE HANDLE",
         productDetails: "AB/AC 96mm, 4 colors",
@@ -56,8 +56,8 @@ const productCards = [
     },
     {
         images: [
-            "../src/assets/image/product/product-8.jpg",
-            "../src/assets/image/product/product-8.jpg"
+            "https://m.media-amazon.com/images/I/71GV627s4YL._AC_UF1000,1000_QL80_.jpg",
+            "https://m.media-amazon.com/images/I/71GV627s4YL._AC_UF1000,1000_QL80_.jpg"
         ],
         productName: "DOVE HANDLE",
         productDetails: "AB/AC 96mm, 4 colors",
@@ -65,8 +65,8 @@ const productCards = [
     },
     {
         images: [
-            "../src/assets/image/product/product-9.webp",
-            "../src/assets/image/product/product-9.webp"
+            "https://www.jiomart.com/images/product/original/rvegn1pyt6/screwtight-heavy-duty-mortise-handle-door-locks-for-main-door-bullet-door-lock-body-with-3-key-double-action-mortise-lock-for-door-door-locks-for-home-azmph-001-ky-bs-product-images-orvegn1pyt6-p605635730-0-202310141507.jpg?im=Resize=(420,420)",
+            "https://www.jiomart.com/images/product/original/rvegn1pyt6/screwtight-heavy-duty-mortise-handle-door-locks-for-main-door-bullet-door-lock-body-with-3-key-double-action-mortise-lock-for-door-door-locks-for-home-azmph-001-ky-bs-product-images-orvegn1pyt6-p605635730-0-202310141507.jpg?im=Resize=(420,420)"
         ],
         productName: "DOVE HANDLE",
         productDetails: "AB/AC 96mm, 4 colors",
@@ -74,8 +74,8 @@ const productCards = [
     },
     {
         images: [
-            "../src/assets/image/product/product-10.jpg",
-            "../src/assets/image/product/product-10.jpg"
+            "https://www.plantex.in/cdn/shop/products/81NXVeS3vBL_4ddf2b74-9ec0-4f06-87a6-c76e5d7b5484.jpg?v=1690692488",
+            "https://www.plantex.in/cdn/shop/products/81NXVeS3vBL_4ddf2b74-9ec0-4f06-87a6-c76e5d7b5484.jpg?v=1690692488"
         ],
         productName: "DOVE HANDLE",
         productDetails: "AB/AC 96mm, 4 colors",
@@ -83,8 +83,8 @@ const productCards = [
     },
     {
         images: [
-            "../src/assets/image/product/product-6.jpg",
-            "../src/assets/image/product/product-6.jpg"
+            "https://m.media-amazon.com/images/I/71GV627s4YL._AC_UF1000,1000_QL80_.jpg",
+            "https://m.media-amazon.com/images/I/71GV627s4YL._AC_UF1000,1000_QL80_.jpg"
         ],
         productName: "DOVE HANDLE",
         productDetails: "AB/AC 96mm, 4 colors",
@@ -92,8 +92,8 @@ const productCards = [
     },
     {
         images: [
-            "../src/assets/image/product/smart-door-lock.webp",
-            "../src/assets/image/product/smart-door-lock.webp"
+            "https://www.jiomart.com/images/product/original/rvegn1pyt6/screwtight-heavy-duty-mortise-handle-door-locks-for-main-door-bullet-door-lock-body-with-3-key-double-action-mortise-lock-for-door-door-locks-for-home-azmph-001-ky-bs-product-images-orvegn1pyt6-p605635730-0-202310141507.jpg?im=Resize=(420,420)",
+            "https://www.jiomart.com/images/product/original/rvegn1pyt6/screwtight-heavy-duty-mortise-handle-door-locks-for-main-door-bullet-door-lock-body-with-3-key-double-action-mortise-lock-for-door-door-locks-for-home-azmph-001-ky-bs-product-images-orvegn1pyt6-p605635730-0-202310141507.jpg?im=Resize=(420,420)"
         ],
         productName: "DOVE HANDLE",
         productDetails: "AB/AC 96mm, 4 colors",
@@ -101,8 +101,8 @@ const productCards = [
     },
     {
         images: [
-            "../src/assets/image/product/product-end.jpg",
-            "../src/assets/image/product/product-end.jpg"
+            "https://www.plantex.in/cdn/shop/products/81NXVeS3vBL_4ddf2b74-9ec0-4f06-87a6-c76e5d7b5484.jpg?v=1690692488",
+            "https://www.plantex.in/cdn/shop/products/81NXVeS3vBL_4ddf2b74-9ec0-4f06-87a6-c76e5d7b5484.jpg?v=1690692488"
         ],
         productName: "DOVE HANDLE",
         productDetails: "AB/AC 96mm, 4 colors",
@@ -115,19 +115,21 @@ const productCards = [
     <div class="container mx-auto pb-10">
         <div class="grid lg:grid-cols-4 gap-5 lg:grid-rows-3">
 
-            <div v-for="(productCard , index) in productCards" :key="index" class="flex justify-center">
-                <div class="product-card w-72 rounded-2xl drop-shadow-2xl overflow-hidden cursor-pointer relative group border hover:shadow-2xl">
-                    <img :src="productCard.images[0]" class="w-full h-80 rounded-t-2xl transition-transform duration-300 transform scale-100 group-hover:scale-105" alt="">
-                    <img :src="productCard.images[1]" class="w-full h-80 rounded-t-2xl absolute top-0 left-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" alt="">
-                    <div class="h-32 rounded-b-2xl drop-shadow-2xl border-2 border-[#f89b3b] bg-white text-[#f89b3b] transition duration-300 ease-in-out transform group-hover:text-[#eb9843]">
-                            <h2 class="text-center font-normal pt-5 text-2xl">{{ productCard.productName }}</h2>
-                        <div class="text-center text-black pt-1">
-                            <p>{{ productCard.productDetails }}</p>
-                            <p class="font-medium pt-1">Code: {{ productCard.productCode }}</p>
+            <RouterLink v-for="(productCard, index) in productCards" :key="index" to="/product-details">
+                <div class="flex justify-center">
+                    <div class="product-card w-72 rounded-lg drop-shadow-2xl overflow-hidden cursor-pointer relative group border hover:shadow-2xl">
+                        <img :src="productCard.images[0]" class="w-full h-[270px] rounded-lg " alt="">
+                        <img :src="productCard.images[1]" class="w-full h-[270px] rounded-lg absolute top-0 left-0 opacity-0 " alt="">
+                        <div class="lg:h-20 leading-9 rounded-2xl drop-shadow-xl border-2 border-[#f89b3b] bg-white text-[#f89b3b] transition duration-300 ease-in-out transform group-hover:text-[#eb9843]">
+                                <h2 class="text-center font-semibold pt-1 text-xl">{{ productCard.productName }}</h2>
+                            <div class="text-center text-black text-base">
+                                <p>{{ productCard.productDetails }}</p>
+                                <p class="font-medium">Code: {{ productCard.productCode }}</p>
+                            </div>
                         </div>
-                    </div>
-                 </div>
-            </div>
+                     </div>
+                </div>
+            </RouterLink>
 
         </div>
     </div>
