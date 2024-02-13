@@ -22,11 +22,11 @@ const openingHours = {
 </script>
 
 <template>
-    <div class="container mx-auto pb-20 lg:mt-8">
+    <div class="container mx-auto pb-20">
         <div class="grid lg:grid-cols-2 gap-5">
             <div class="Info ">
                 <div v-for="(addressInfo , index) in addressDetails" :key="index" class="Address border-b pb-6 border-gray-300 lg:px-0 px-4">
-                    <h3 class="font-medium text-xl text-[#2c306b] leading-10">
+                    <h3 class="font-medium text-xl text-[#2c306b] leading-10 lg:pt-10">
                         <i class="fa-solid fa-house pr-2"></i> {{ addressInfo.title }} 
                         <span class="text-gray-500 text-lg lg:ml-16"> <br class="lg:hidden block">
                             {{ addressInfo.officeAddress }}

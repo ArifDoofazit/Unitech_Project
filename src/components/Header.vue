@@ -47,8 +47,8 @@ const menuItems = [
         </div>
       
         <!-- Logo -->
-        <div class="flex justify-center items-center w-auto h-14 lg:border-l-[6px] lg:border-[#f26272] overflow-hidden lg:z-10 lg:ml-0">
-          <a href="https://demo.unitechgloballtd.com" class="border-r-4 border-[#f26272] lg:border-none lg:ml-0 ml-1 p-2">
+        <div class="flex justify-end items-center w-full lg:w-auto h-14 overflow-hidden lg:z-10 lg:ml-0">
+          <a href="https://demo.unitechgloballtd.com" class="border-r-4 border-[#f26272] lg:border-none lg:ml-0 ml-1 lg:p-0 p-2">
             <div class="Header_icon "></div>
           </a>
         </div>
@@ -92,13 +92,12 @@ nav a.router-link-exact-active {
     color: #f89b3b;
 }
 .Header_icon{
-  width: 330px;
-  height: 60px;
-  background: url(../assets/UGL/Gmail_signature.png) no-repeat;
+  width: 380px;
+  height: 50px;
+  background: url(../assets/image/UGL/UGL-AND-Hi_Care-logo-of-web-desktop.png) no-repeat;
   background-size: cover;
   overflow: hidden;
-  margin-top: -5px;
-  margin-left: 20px;
+  margin-top: 0px;
   z-index: 1;
 }
 @media (max-width: 768px) {
@@ -109,7 +108,6 @@ nav a.router-link-exact-active {
     background-size: cover;
     overflow: hidden;
     position: sticky;
-    margin-top: 10px;
     margin-left: 110px;
     z-index: 1;
   }

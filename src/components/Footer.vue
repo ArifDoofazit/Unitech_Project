@@ -36,7 +36,7 @@ const creator = [
                     <div class="lg:ml-32 lg:mt-4 ml-5">
                         <div class="grid grid-cols-2 gap-1 lg:grid-cols-none">
                             <img src="../assets/UGL/UGL Logo one color-04.png" class="lg:w-64 w-36 pt-3" alt="">
-                            <img src="../assets/UGL/Hi_Care.png" class="lg:w-64 pt-3" alt="">
+                            <img src="../assets/image/UGL/Hi_Care-logo-of-web-2.png" class="lg:w-60 w-36 lg:ml-2 pt-3" alt="">
                         </div>
                     </div>
                     <div v-for="(contactInfo , index) in contactDetails" :key="index" class="lg:ml-20 lg:mt-4 ml-5 -mt-4">
@@ -62,13 +62,15 @@ const creator = [
                     </div>
                 </div>
 
-               <div class="grid lg:grid-cols-2 lg:border-t-2 border-t mt-10 lg:mt-0">
-                    <div v-for="(copyInfo , index) in copyRight" :key="index" class="copyright lg:w-[660px]">
-                        <h2 class="lg:text-white lg:py-4 pt-5 pl-5 lg:pl-0 lg:text-left lg:text-base text-xs text-[#da6565]">{{ copyInfo.copyRightInfo }}</h2>
-                    </div>
-                    <div v-for="(develop , index) in creator" :key="index" class="Developers lg:w-[640px]">
-                        <a href="https://web.doofazit.com/" class="lg:text-white leading-6 lg:text-base text-xs lg:text-right pl-5 lg:pl-0 lg:py-4  text-[#da6565] lg:flex lg:justify-end">{{ develop.developer }}</a>
-                    </div>
+               <div class="w-full flex justify-center">
+                    <div class="grid grid-cols-2 md:grid-cols-2 lg:border-t-2 border-t w-11/12 mt-10 lg:mt-0">
+                        <div v-for="(copyInfo, index) in copyRight" :key="index" class="copyright lg:w-[660px]">
+                            <h2 class="lg:text-white w-auto lg:py-4 py-2 pl-5 lg:pl-0 md:pl-0 lg:text-left lg:text-base text-xs text-[#da6565]">{{ copyInfo.copyRightInfo }}</h2>
+                        </div>
+                        <div v-for="(develop, index) in creator" :key="index" class="Developers lg:w-full lg:text-right flex justify-end lg:pr-0 md:pr-0 pr-5">
+                            <a href="https://web.doofazit.com/" class="lg:text-white lg:text-base lg:text-right text-xs lg:pl-0 pl-5 lg:py-4 py-2 text-[#da6565]">{{ develop.developer }}</a>
+                        </div>
+                   </div>
                </div>
 
             </div>

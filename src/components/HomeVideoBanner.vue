@@ -12,7 +12,7 @@
                     </button>
                 </div>
                 <h2 class="text-3xl text-slate-600 font-normal uppercase">Any Kind Of Services</h2>
-                <p class="py-5 text-xl font-light">$40 OFF ALL PRODUCTS</p>
+                <p class="py-5 text-xl font-light text-white">$40 OFF ALL PRODUCTS</p>
 
                 <button class="py-3 px-7 rounded-3xl bg-[#eb9843]">Buy Now</button>
             </div>
