@@ -13,7 +13,7 @@ const aboutus=[
         WALKWAYS:"WALKWAYS BY THE POOLSIDE",
         MASONRY:"MASONRY",
         INTERIORS:"INTERIORS",
-        imageone:"http://localhost:5173/src/assets/about001_6557fbf8-05bb-4747-9958-bb03634ebd2e_770x.webp",
+        imageone:"../assets/Slider-Three-xQHub4q_.webp",
         manecardimage1:"http://localhost:5173/src/assets/team001_800x.webp",
         manecardimage2:"http://localhost:5173/src/assets/team002_800x.webp",
         manecardimage3:"http://localhost:5173/src/assets/team003_800x.webp",
@@ -32,7 +32,7 @@ const aboutus=[
 <template>
     <div class="Heading">
         <!-- Title_Heading=========================== -->
-        <div class="Title_Heading py-10 lg:mt-20 w-full h-auto text-center mb-20 relative z-[1]">
+        <div class="Title_Heading py-10 lg:mt-20 w-full h-auto text-center lg:mb-20 mb-8 relative z-[1]">
             <h2 v-for="(indexs , index) in aboutus" :key="index" class="text-white text-5xl font-normal">{{indexs.about}}</h2>
 
             <nav class="flex justify-center py-5" aria-label="Breadcrumb">
@@ -61,9 +61,9 @@ const aboutus=[
 
         <div class="container mx-auto bg-white pb-10">
             <div class="grid lg:grid-cols-2 gap-5">
-                <div class="video w-full h-full">
+                <div class="video w-full h-full px-2">
 
-                    <div class="w-full lg:h-[400px] h-[350px] text-center mt-5 rounded-2xl bg-[url(../assets/image/Slider.png)] bg-no-repeat bg-opacity-30">
+                    <div class="w-full lg:h-[400px] h-[350px] text-center mt-5 rounded-2xl bg-[url(../assets/image/Slider.png)] bg-no-repeat bg-cover bg-opacity-30">
                         <div class="h-full flex justify-center items-center">
                             <a href="https://www.facebook.com/hicare11/videos/406464681786826/" class="play-icon w-20 h-20 rounded-full bg-[#eb9843] text-4xl text-black cursor-pointer flex justify-center items-center mt-5 mb-5">
                                 <i class="fa-solid fa-play"></i>
@@ -76,8 +76,8 @@ const aboutus=[
                 <div class="text">
                     <div class="text-start">
                         <h2 class="text-[#f89b3b] lg:text-5xl text-3xl pl-5 font-medium lg:pt-28 lg:pl-10">Company Introduction</h2>
-                        <h5 class="font-normal lg:text-2xl text-[#999999] lg:pl-10 pl-5 pt-8">We Believe in Quality</h5>
-                        <p class="font-normal lg:text-xl text-base pl-5 text-[#999999] lg:pl-10 pt-6 leading-9">
+                        <h5 class="font-normal lg:text-2xl text-xl text-[#999999] lg:pl-10 pl-5 pt-8">We Believe in Quality</h5>
+                        <p class="font-normal lg:text-xl text-base pl-5 text-[#999999] lg:pl-10 pt-6 leading-6">
                             provides high quality accessories of hardware, specially
                             <br class="lg:block hidden"> various Lock, Handle, others doors and all kinds of 
                             <br class="lg:block hidden"> home accessories etc.
@@ -89,10 +89,10 @@ const aboutus=[
       
         <!-- about-page-card=================================== -->
 
-        <h2 v-for="(indexs , index) in aboutus" :key="index" class="text-center lg:text-4xl lg:font-semibold mt-10">{{indexs.UNITECH}}</h2>
+        <h2 v-for="(indexs , index) in aboutus" :key="index" class="text-center lg:text-4xl text-2xl lg:font-semibold mt-5">{{indexs.UNITECH}}</h2>
         <p v-for="(indexs , index) in aboutus" :key="index" class="text-center lg:py-5 py-5 lg:text-xl text-[#B4B4B8]">{{indexs.Vivamus}}</p>
 
-            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-4 py-10">
+            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4 px-3 gap-x-8 gap-y-4 py-10">
 
                 <!-- card-1==================================== -->
                 <div class="lg:ml-5 max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
@@ -103,7 +103,7 @@ const aboutus=[
                             <h5 v-for="(indexs , index) in aboutus" :key="index" class="mt-4 mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">{{indexs.PLUMBING}}</h5>
                         </a>
                         <p v-for="(indexs , index) in aboutus" :key="index" class="mb-3 font-normal text-gray-500 dark:text-gray-400">{{indexs.Sed}}</p>
-                    </div>
+                </div>
                 <!-- card-1 End==================================== -->
                 
                 <!-- card-2=============================== -->                 
@@ -245,10 +245,10 @@ const aboutus=[
 
 <style scoped>
 .Title_Heading{
-    background: url(../assets/image/PageTitle-Background.webp) no-repeat;
+    background: url(../assets/image/Slider/Slider-5.jpg) no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    background-position: top;
+    background-position:center;
 }
 .Title_Heading:before {
     position: absolute;

@@ -29,20 +29,21 @@ export default {
   /* Add spinner animation styles */
   background: url(../assets/image/UGL/Unitech-Logo-Animation.gif) no-repeat;
   background-size: cover;
-  width: 650px;
-  height: 400px;
+  width: 850px;
+  height: 450px;
 }
 @media (max-width: 768px) {
   .spinner {
-    width: 350px;
-    height: 200px;
+    width: 500px;
+    height: 320px;
+    margin-left: -10px;
   }
 }
 
 @media (max-width: 576px) {
   .spinner {
-    width: 350px;
-    height: 200px;
+    width: 700px;
+    height: 220px;
   }
 }
 </style>

@@ -1,8 +1,8 @@
 <script setup></script>
 
 <template>
-    <div class="Product_Heading lg:w-full lg:mt-20">
-        <div class="Title_Heading py-5 w-full h-auto text-start lg:px-5 pl-3 lg:pl-5 mb-20 relative z-[1]">
+    <div class="Product_Heading lg:w-full lg:mt-20 mt-20">
+        <div class="Title_Heading py-5 w-full h-auto text-start lg:px-5 pl-3 lg:pl-5 mb-10 relative z-[1]">
 
             <nav class="flex justify-start py-5" aria-label="Breadcrumb">
                 <ol class="inline-flex items-start space-x-1 md:space-x-2 rtl:space-x-reverse">
@@ -26,19 +26,19 @@
             </nav>
 
             <h2 class="text-[#f89b3b] lg:text-5xl text-3xl font-medium lg:py-5"> We Believe in Quality</h2>
-            <p class="text-white lg:text-xl text-base font-normal leading-8">
+            <p class="text-white lg:text-xl text-base font-normal leading-6">
                 provides high quality accessories of hardware, specially various Lock, <br class="lg:block hidden"> Handle, others doors and all kinds of home
                 accessories etc.
             </p>
 
-            <h4 class="font-normal lg:text-2xl text-xl text-[#bf1f36] py-10">W H O L E  S A L E  O N L Y</h4>
+            <h4 class="font-normal lg:text-2xl text-xl text-[#bf1f36] py-6">W&nbsp;H&nbsp;O&nbsp;L&nbsp;E&nbsp;&nbsp;&nbsp;&nbsp;S&nbsp;A&nbsp;L&nbsp;E&nbsp;&nbsp;&nbsp;&nbsp;O&nbsp;N&nbsp;L&nbsp;Y</h4>
         </div>
     </div>
 </template>
 
 <style scoped>
 .Title_Heading{
-    background: url(../assets/image/PageTitle-Background.webp) no-repeat;
+    background: url(../assets/image/Slider/Slider-5.jpg) no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-position: top;

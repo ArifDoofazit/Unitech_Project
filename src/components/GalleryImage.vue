@@ -59,14 +59,14 @@ const galleryCard = [
                 <div class="flex justify-center">
                     <div  class="product-card w-72 rounded-2xl drop-shadow-2xl overflow-hidden cursor-pointer relative group">
                         <div class="flex justify-center">
-                            <div class="icon absolute text-6xl text-gray-400 z-10 lg:mt-32">
+                            <div class="icon absolute text-6xl text-gray-400 z-10 lg:mt-32 mt-32">
                                 <i class="fa-regular fa-circle-play"></i>
                             </div>
                         </div>
                         <img :src="gallery.images"
                             class="w-full h-80 rounded-2xl transition-transform duration-300 transform scale-100 group-hover:scale-105"
                             alt="">
-                        <div class="h-32 rounded-b-2xl text-[#f89b3b] transition duration-300 ease-in-out transform">
+                        <div class="lg:h-32 h-14 rounded-b-2xl text-[#f89b3b] transition duration-300 ease-in-out transform">
                             <h2 class="font-semibold pt-5 text-xl">
                                 {{ gallery.cardTitle }} 
                                 <span class="px-1 text-[#524c4c]">|</span>

@@ -38,7 +38,7 @@
 
 <style scoped>
 .Title_Heading {
-    background: url(../assets/image/PageTitle-Background.webp) no-repeat;
+    background: url(../assets/image/Slider/Slider-5.jpg) no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-position: top;

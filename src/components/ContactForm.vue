@@ -22,11 +22,11 @@ const openingHours = {
 </script>
 
 <template>
-    <div class="container mx-auto pb-20">
+    <div class="container mx-auto pb-7">
         <div class="grid lg:grid-cols-2 gap-5">
-            <div class="Info ">
+            <div class="Info pt-5 lg:pt-0">
                 <div v-for="(addressInfo , index) in addressDetails" :key="index" class="Address border-b pb-6 border-gray-300 lg:px-0 px-4">
-                    <h3 class="font-medium text-xl text-[#2c306b] leading-10 lg:pt-10">
+                    <h3 class="font-medium text-xl text-[#2c306b] leading-7 lg:pt-10">
                         <i class="fa-solid fa-house pr-2"></i> {{ addressInfo.title }} 
                         <span class="text-gray-500 text-lg lg:ml-16"> <br class="lg:hidden block">
                             {{ addressInfo.officeAddress }}
@@ -39,7 +39,7 @@ const openingHours = {
                         <i class="fa-solid fa-phone pr-2"></i> 
                             {{ oderInfo.title }}
                         <br class="lg:hidden block">
-                        <span class="text-gray-500 text-lg lg:ml-5 leading-10">
+                        <span class="text-gray-500 text-lg lg:ml-5 leading-5">
                             {{ oderInfo.oderNumber }}
                         </span>
                     </h3>

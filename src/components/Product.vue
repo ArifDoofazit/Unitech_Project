@@ -3,13 +3,20 @@
 </script>
 
 <template>
-    <div class="container mx-auto bg-white lg:py-10">
+    <div class="container mx-auto bg-white lg:py-10 py-10 lg:mt-10">
         <div class="grid lg:grid-cols-2 gap-5">
             <div class="video w-full h-full lg:px-0 px-3">
                 <div class="w-full lg:h-[400px] hidden h-[350px] text-center mt-5 rounded-2xl bg-[url(../assets/image/Slider/Slider-2.jpg)] bg-no-repeat bg-opacity-30"></div>
                 <div class="w-full lg:h-[400px] hidden h-[350px] text-center mt-5 rounded-2xl bg-[url(../assets/image/Slider/Slider-3.jpg)] bg-no-repeat bg-opacity-30"></div>
                 <div class="w-full lg:h-[400px] hidden h-[350px] text-center mt-5 rounded-2xl bg-[url(../assets/image/Slider/Slider-4.jpg)] bg-no-repeat bg-opacity-30"></div>
                 <div class="w-full lg:h-[400px] hidden h-[350px] text-center mt-5 rounded-2xl bg-[url(../assets/image/Slider/Slider-1.jpg)] bg-no-repeat bg-opacity-30"></div>
+                <div class="w-full lg:h-[400px] hidden h-[350px] text-center mt-5 rounded-2xl bg-[url(../assets/image/Slider-Three.webp)] bg-no-repeat bg-opacity-30"></div>
+                <div class="w-full lg:h-[400px] hidden h-[350px] text-center mt-5 rounded-2xl bg-[url(../assets/image/About-4.webp)] bg-no-repeat bg-opacity-30"></div>
+                <div class="w-full lg:h-[400px] hidden h-[350px] text-center mt-5 rounded-2xl bg-[url(../assets/image/Slider/Mobile_Slider-1.jpg)] bg-no-repeat bg-opacity-30"></div>
+                <div class="w-full lg:h-[400px] hidden h-[350px] text-center mt-5 rounded-2xl bg-[url(../assets/image/Slider/Mobile_Slider-2.jpg)] bg-no-repeat bg-opacity-30"></div>
+                <div class="w-full lg:h-[400px] hidden h-[350px] text-center mt-5 rounded-2xl bg-[url(../assets/image/Slider/Mobile_Slider-3.jpg)] bg-no-repeat bg-opacity-30"></div>
+                <div class="w-full lg:h-[400px] hidden h-[350px] text-center mt-5 rounded-2xl bg-[url(../assets/image/Slider/Mobile_Slider-4.jpg)] bg-no-repeat bg-opacity-30"></div>
+                <div class="w-full lg:h-[400px] hidden h-[350px] text-center mt-5 rounded-2xl bg-[url(../assets/image/Slider/Mobile_Slider-5.jpg)] bg-no-repeat bg-opacity-30"></div>
                 <div class="w-full lg:h-[400px] h-[350px] px-5 text-center mt-5 rounded-2xl bg-[url(../assets/image/Slider/Slider-5.jpg)] bg-no-repeat bg-cover bg-opacity-30">
                     <div class="h-full flex justify-center items-center">
                         <a href="https://www.facebook.com/hicare11/videos/406464681786826/" class="play-icon w-20 h-20 rounded-full bg-[#eb9843] text-4xl text-black cursor-pointer flex justify-center items-center mt-5 mb-5">

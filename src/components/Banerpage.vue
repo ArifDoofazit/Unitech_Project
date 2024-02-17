@@ -1,7 +1,7 @@
 <script setup>
 const banners = [
     {
-        images: "https://olefinsbd.com/wp-content/uploads/2020/03/zkteco-lh3600-new-smart-door-lock.jpg",
+        images: "https://i.ebayimg.com/images/g/1GwAAOSwEIdgiZ-H/s-l1200.jpg",
         title: "Installation",
         description : "Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate"
     },
@@ -21,7 +21,8 @@ const banners = [
 <template>
     <section class="">
         <div class="">
-            <img src="../assets/banner-hardware.jpg" class="w-full lg:h-60 h-40 mt-10 opacity-30" alt="">
+            <!-- <img src="../assets/image/Featured_BG.png" class="w-full lg:h-60 h-40 mt-10 opacity-50" alt=""> -->
+            <div class="Featured_Image"></div>
             <div class="container mx-auto">
                 <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-4 lg:mt-0 -mt-72">
                     <div v-for="(banner, index) in  banners " :key="index" class="flex justify-center lg:mt-0 mt-10">
@@ -37,3 +38,22 @@ const banners = [
         </div>
     </section>
 </template>
+
+<style scoped>
+.Featured_Image{
+    width: 100%;
+    height: 240px;
+    background: url(../assets/image/Featured_BG.png) no-repeat;
+    background-size: cover;
+    opacity: 0.35;
+}
+@media (max-width: 768px) {
+    .Featured_Image{
+        width: 100%;
+        height: 180px;
+        background: url(../assets/image/Featured_BG.png) no-repeat;
+        background-size: cover;
+        opacity: 0.35;
+    }
+}
+</style>
