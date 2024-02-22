@@ -55,6 +55,6 @@ import GalleryImage from './GalleryImage.vue';
     top: 0;
     z-index: -1;
     background:black;
-    opacity: 0.6;
+    opacity: 80%;
 }
 </style>

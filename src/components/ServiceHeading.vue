@@ -54,5 +54,5 @@
     top: 0;
     z-index: -1;
     background: #000;
-    opacity: .6;
+    opacity: 80%;
 }</style>

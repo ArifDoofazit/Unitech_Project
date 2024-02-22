@@ -1,82 +1,28 @@
 <script setup>
-// function slider(flag, num) {
-//     var current = $(".item.current"),
-//         next,
-//         index;
-//     if (!flag) {
-//         next = current.is(":last-child") ? $(".item").first() : current.next();
-//         index = next.index();
-//     } else if (flag === 'dot') {
-//         next = $(".item").eq(num);
-//         index = num;
-//     } else {
-//         next = current.is(":first-child") ? $(".item").last() : current.prev();
-//         index = next.index();
-//     }
-//     next.addClass("current");
-//     current.removeClass("current");
-//     $(".dot").eq(index).addClass("current").siblings().removeClass("current");
-// }
-// var setSlider = setInterval(slider, 4000);
-
-// $(".button").on("click", function () {
-//     clearInterval(setSlider);
-//     var flag = $(this).is(".prev") ? true : false;
-//     slider(flag);
-//     setSlider = setInterval(slider, 4000);
-// });
-
-// $(".dot").on("click", function () {
-//     if ($(this).is(".current")) return;
-//     clearInterval(setSlider);
-//     var num = $(this).index();
-//     slider('dot', num);
-//     setSlider = setInterval(slider, 4000);
-// });
-
-// const slides = [
-//     { image: "../assets/Slider-1-yMkRT9Pb.jpg", content: { title: "PAD LOCK", description: "Super premium solid steel<br>10 years guarantee" } },
-//     { image: "../assets/Slider-2-K0edHQel.jpg", content: { title: "DOVE HANDLE", description: "Premium quality of<br>aluminium" } },
-//     { image: "../assets/Slider-3-J3fB3FmE.jpg", content: { title: "DRAWER SLIDER", description: "100% stainless steel<br>hydraulic Presser" } },
-//     { image: "../assets/Slider-4-4gG5P3jC.jpg", content: { title: "DOVE HANDLE", description: "Premium quality of<br>aluminium" } },
-//     { image: "../assets/Slider-5-UXzDk7bZ.jpg", content: { title: "CONCEALED HINGES", description: "100% stainless steel<br>hydraulic piston " } },
-// ];
-
-// let currentIndex = 0;
-
-// let sliderContent = slides[currentIndex].content;
-
-// Mobile Slider //
-
 const slides = [
     {
         largeImage: "../assets/Slider-1-yMkRT9Pb.jpg",
         smallImage: "../assets/Mobile_Slider-1-5NY80X16.jpg",
-        // smallImage: "../src/assets/image/Slider/Mobile_Slider-1.jpg",
         content: { title: "PAD LOCK", description: "Super premium solid steel<br>10 years guarantee" }
     },
     {
         largeImage: "../assets/Slider-2-K0edHQel.jpg",
         smallImage: "../assets/Mobile_Slider-2-kTs8QQ23.jpg",
-        // smallImage: "../src/assets/image/Slider/Mobile_Slider-2.jpg",
         content: { title: "DOVE HANDLE", description: "Premium quality of<br>aluminium" }
     },
     {
         largeImage: "../assets/Slider-3-J3fB3FmE.jpg",
         smallImage: "../assets/Mobile_Slider-3-icF4hRMr.jpg",
-        // smallImage: "../src/assets/image/Slider/Mobile_Slider-3.jpg",
         content: { title: "DRAWER SLIDER", description: "100% stainless steel<br>hydraulic Presser" }
     },
     {
         largeImage: "../assets/Slider-4-4gG5P3jC.jpg",
         smallImage: "../assets/Mobile_Slider-4-t-Ct7FIn.jpg",
-        // smallImage: "../src/assets/image/Slider/Mobile_Slider-4.jpg",
         content: { title: "DOVE HANDLE", description: "Premium quality of<br>aluminium" }
     },
     {
         largeImage: "../assets/Slider-5-UXzDk7bZ.jpg",
         smallImage: "../assets/Mobile_Slider-5-2cQeLRdx.jpg",
-        // smallImage: "../src/assets/image/Slider/Mobile_Slider-5.jpg",
         content: { title: "CONCEALED HINGES", description: "100% stainless steel<br>hydraulic piston " }
     },
 ];
@@ -106,14 +52,14 @@ function slider(flag, num) {
 }
 
 // Interval remains the same as before
-var setSlider = setInterval(slider, 4000);
+var setSlider = setInterval(slider, 5000);
 
 // Event listeners remain the same as before
 $(".button").on("click", function () {
     clearInterval(setSlider);
     var flag = $(this).is(".prev") ? true : false;
     slider(flag);
-    setSlider = setInterval(slider, 4000);
+    setSlider = setInterval(slider, 5000);
 });
 
 $(".dot").on("click", function () {
@@ -121,7 +67,7 @@ $(".dot").on("click", function () {
     clearInterval(setSlider);
     var num = $(this).index();
     slider('dot', num);
-    setSlider = setInterval(slider, 4000);
+    setSlider = setInterval(slider, 5000);
 });
 </script>
 

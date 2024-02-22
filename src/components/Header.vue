@@ -14,10 +14,10 @@ const closeMobileMenu = () => {
 
 const menuItems = [
   { label: 'Home', to: '/' },
-  { label: 'Service', to: '/service' },
   { label: 'About', to: '/about' },
   { label: 'Product', to: '/products' },
   { label: 'Gallery', to: '/gallery' },
+  { label: 'Service', to: '/service' },
   { label: 'Contact us', to: '/contact' }
 ];
 
@@ -57,7 +57,7 @@ const menuItems = [
         <div class="hidden lg:mr-0 xl:w-3/6 lg:w-[55%] sm:block rounded-l-3xl" style="background:#2c306b;">
           <div class="flex justify-center items-center space-x-3 lg:mr-8">
               <!-- Loop through menu items -->
-              <RouterLink v-for="(item, index) in menuItems" :key="index" @click="closeMobileMenu" :to="item.to" class="text-white px-2 py-3 text-base font-medium hover:bg-[#f89b3b] hover:text-white transition-all">
+              <RouterLink v-for="(item, index) in menuItems" :key="index" @click="closeMobileMenu" :to="item.to" class="text-white px-2 py-3 text-base font-medium hover:bg-[#f89b3b] hover:text-white transition-all nav-link">
                 {{ item.label }}
               </RouterLink>
 
@@ -89,7 +89,10 @@ const menuItems = [
 
 <style scoped>
 nav a.router-link-exact-active {
-    color: #f89b3b;
+  color: #f89b3b;
+}
+nav a.router-link-exact-active:hover {
+  color: #2c306b;
 }
 .Header_icon{
   width: 380px;

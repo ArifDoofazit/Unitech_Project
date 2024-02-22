@@ -32,7 +32,7 @@ const aboutus=[
 <template>
     <div class="Heading">
         <!-- Title_Heading=========================== -->
-        <div class="Title_Heading py-10 lg:mt-20 w-full h-auto text-center lg:mb-20 mb-8 relative z-[1]">
+        <div class="Title_Heading py-10 lg:mt-20 w-full h-auto text-center lg:mb-8 mb-8 relative z-[1]">
             <h2 v-for="(indexs , index) in aboutus" :key="index" class="text-white text-5xl font-normal">{{indexs.about}}</h2>
 
             <nav class="flex justify-center py-5" aria-label="Breadcrumb">
@@ -260,7 +260,7 @@ const aboutus=[
     top: 0;
     z-index: -1;
     background:black;
-    opacity: 0.6;
+    opacity: 80%;
 }
 .about-page-para{
     width: 100%;

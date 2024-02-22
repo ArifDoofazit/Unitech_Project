@@ -25,13 +25,13 @@
                 </ol>
             </nav>
 
-            <h2 class="text-[#f89b3b] lg:text-5xl text-3xl font-medium lg:py-5"> We Believe in Quality</h2>
-            <p class="text-white lg:text-xl text-base font-normal leading-6">
+            <h2 class="text-[#f89b3b] lg:text-5xl text-3xl font-medium lg:py-5 text-center"> We Believe in Quality</h2>
+            <p class="text-white lg:text-xl text-base font-normal leading-6 text-center">
                 provides high quality accessories of hardware, specially various Lock, <br class="lg:block hidden"> Handle, others doors and all kinds of home
                 accessories etc.
             </p>
 
-            <h4 class="font-normal lg:text-2xl text-xl text-[#bf1f36] py-6">W&nbsp;H&nbsp;O&nbsp;L&nbsp;E&nbsp;&nbsp;&nbsp;&nbsp;S&nbsp;A&nbsp;L&nbsp;E&nbsp;&nbsp;&nbsp;&nbsp;O&nbsp;N&nbsp;L&nbsp;Y</h4>
+            <h4 class="font-normal lg:text-2xl text-xl text-[#bf1f36] py-6 text-center">W&nbsp;H&nbsp;O&nbsp;L&nbsp;E&nbsp;&nbsp;&nbsp;&nbsp;S&nbsp;A&nbsp;L&nbsp;E&nbsp;&nbsp;&nbsp;&nbsp;O&nbsp;N&nbsp;L&nbsp;Y</h4>
         </div>
     </div>
 </template>
@@ -52,7 +52,7 @@
     left: 0;
     top: 0;
     z-index: -1;
-    background: #333888;
-    opacity: .6;
+    background: #000;
+    opacity: 85%;
 }
 </style>

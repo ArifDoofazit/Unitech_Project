@@ -17,7 +17,7 @@ const oderDetails = [
 
 const copyRight = [
     {
-        copyRightInfo: "Copyright © Unitech Global Limited | Hi-Care - Hardware Product.All rights reserved"
+        copyRightInfo: "Copyright © Unitech Global Limited | Hi-Care - Hardware Products. All rights reserved"
     }
 ]
 

@@ -69,7 +69,9 @@
                     <h2 class="text-2xl font-semibold py-3 mt-5">What is the price of SmartX SX-528 Smart Door Bell In Bangladesh?</h2>
                     <p class="text-base font-medium text-justify leading-8 pl-4">The price of SmartX SX-528 Smart Door Bell starts from 11,800 . The price may vary due to your customization and product availability. You can buy SmartX SX-528 Smart Door Bell from our website or visit our showrooms nearby.</p>
                 </div>
-                
+                <img src="../assets/Lock/hcu.jpg" alt="" class="hidden">
+                <img src="../assets/Lock/hcu1.jpg" alt="" class="hidden">
+                <img src="../assets/Lock/hcu2.jpg" alt="" class="hidden">
             </div>
 
         </div>
