@@ -2,17 +2,16 @@
 const addressDetails = [
     {
         title: "Address ",
-        officeAddress: "House 49 Road 07 Nikunja - 1 Dhaka 1223, Bangladesh"
+        officeAddress: "Dhaka, Bangladesh"
     }
 ]
 
 const oderDetails = [
     {
-        title: "Make an oder",
+        title: "Make an order",
         oderNumber: "+8801877-040404"
     }
 ]
-
 
 const openingHours = {
     sunToWed: ({ day: 'Sun to Wed', hours: '09.00 am - 06.00pm' }),
