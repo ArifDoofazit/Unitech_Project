@@ -3,8 +3,8 @@ const contactDetails = [
     {
         title: "Contact Us",
         number: "+8801877-040404",
-        emailAdress: "E: unitechg@gmail.com",
-        officeAddress: 'House 49, Road 07, Nikunja 1 Dhaka 1223, Bangladesh',
+        emailAdress: "E-mail :  unitechgloballtd1@gmail.com",
+        officeAddress: 'Dhaka , Bangladesh',
     }
 ]
 
