@@ -1,6 +1,6 @@
 <script setup>
 const serviceHeading = {
-    image: "../assets/About-4-mAf3Rufd.webp",
+    image: "/assets/About-4-mAf3Rufd.webp",
     smallQuote: "Unitech - Believe In Quality",
     title: "Where Quality Meets Affordability",
     description: "Etiam sit amet orci eget eros faucibus tincidunt.  Duis leo.<br>Sed fringilla mauris sit amet nibh.  Donec sodales sagittis <br> Etiam sit amet orci eget eros faucibus tincidunt. <br> Sed fringilla mauris sit amet nibh. Donec sodales",
@@ -11,10 +11,10 @@ const serviceHeading = {
 <template>
     <div class="container mx-auto pb-10">
         <div class="grid lg:grid-cols-2 gap-5 group">
-            <div v-for="(services , index) in serviceHeading" :key="index"
+            <div
                 class="Image w-full h-auto lg:rounded-2xl flex justify-center overflow-hidden">
                 <img class="w-full h-auto object-cover object-center rounded-2xl transition-all group-hover:scale-110 overflow-hidden"
-                    :src="services.image" alt="">
+                    :src="serviceHeading.image" alt="">
             </div>
 
             <div v-if="serviceHeading" class="text-info text-center">
