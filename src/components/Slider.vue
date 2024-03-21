@@ -3,27 +3,33 @@ const slides = [
     {
         largeImage: "../assets/Slider-1-yMkRT9Pb.jpg",
         smallImage: "../assets/Mobile_Slider-1-5NY80X16.jpg",
-        content: { title: "PAD LOCK", description: "Super premium solid steel<br>10 years guarantee" }
+        title: "PAD LOCK",
+        description: "Super premium solid steel<br>10 years guarantee" 
     },
     {
         largeImage: "../assets/Slider-2-K0edHQel.jpg",
         smallImage: "../assets/Mobile_Slider-2-kTs8QQ23.jpg",
-        content: { title: "DOVE HANDLE", description: "Premium quality of<br>aluminium" }
+        title: "DOVE HANDLE",
+        description: "Premium quality of<br>aluminium" 
     },
     {
         largeImage: "../assets/Slider-3-J3fB3FmE.jpg",
         smallImage: "../assets/Mobile_Slider-3-icF4hRMr.jpg",
-        content: { title: "DRAWER SLIDER", description: "100% stainless steel<br>hydraulic Presser" }
+        title: "DRAWER SLIDER",
+        description: "100% stainless steel<br>hydraulic Presser"
+
     },
     {
         largeImage: "../assets/Slider-4-4gG5P3jC.jpg",
         smallImage: "../assets/Mobile_Slider-4-t-Ct7FIn.jpg",
-        content: { title: "DOVE HANDLE", description: "Premium quality of<br>aluminium" }
+        title: "DOVE HANDLE",
+        description: "Premium quality of<br>aluminium"
     },
     {
         largeImage: "../assets/Slider-5-UXzDk7bZ.jpg",
         smallImage: "../assets/Mobile_Slider-5-2cQeLRdx.jpg",
-        content: { title: "CONCEALED HINGES", description: "100% stainless steel<br>hydraulic piston " }
+        title: "CONCEALED HINGES",
+        description: "100% stainless steel<br>hydraulic piston "
     },
 ];
 
@@ -99,10 +105,10 @@ $(".dot").on("click", function () {
                     <!-- Small screen image -->
                     <img :src="slide.smallImage" alt="slide image" class="lg:hidden block">
                 
-                    <div v-if="slide.content" class="w-full absolute lg:top-[340px] flex lg:justify-end top-2/4 z-20 lg:rounded-r-xl bg-opacity-40 lg:pr-32 pr-5">
+                    <div class="w-full absolute lg:top-[340px] flex lg:justify-end top-2/4 z-20 lg:rounded-r-xl bg-opacity-40 lg:pr-32 pr-5">
                         <div class="lg:w-[500px] w-full text-right">
-                            <h2 class="font-bold lg:text-5xl text-2xl text-[#f89b3b] lg:pl-8 pl-4">{{ slide.content.title }}</h2>
-                            <p class="lg:w-[410px] lg:ml-[90px] lg:text-right lg:font-normal lg:text-3xl text-lg lg:pl-8 pl-4 lg:pt-5 pt-2 leading-6 text-white" v-html="slide.content.description"></p>
+                            <h2 class="font-bold lg:text-5xl text-2xl text-[#f89b3b] lg:pl-8 pl-4">{{ slide.title }}</h2>
+                            <p class="lg:w-[410px] lg:ml-[90px] lg:text-right lg:font-normal lg:text-3xl text-lg lg:pl-8 pl-4 lg:pt-5 pt-2 leading-6 text-white" v-html="slide.description"></p>
                             <button class="mt-5 py-2 px-8 rounded-md bg-[#f89b3b] font-medium lg:text-2xl text-lg ml-4 lg:ml-0">More</button>
                         </div>
                     </div>

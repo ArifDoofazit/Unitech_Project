@@ -214,29 +214,29 @@ const aboutus=[
         <!-- men-card============================================ -->
         <section class="bg-[#F2EFE5]">
             <div class="container mx-auto">
-            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-4 py-10">
-                <div v-for="(indexs , index) in aboutus" :key="index" class="h-auto bg-[#E3E1D9]">
-                    <img :src="indexs.manecardimage1" alt="">
-                    <h3 class="text-center text-xl font-medium mt-5">{{indexs.Main}}</h3>
-                    <p class="text-center text-md">{{indexs.Rs}}</p>
-                </div>
-                <div v-for="(indexs , index) in aboutus" :key="index" class="bg-[#E3E1D9]">
-                    <img :src="indexs.manecardimage2" alt="">
-                    <h3 class="text-center text-xl font-medium mt-5">{{indexs.Doors}}</h3>
-                    <p class="text-center text-md">{{indexs.AU}}</p>
-                </div>
-                <div v-for="(indexs , index) in aboutus" :key="index" class="bg-[#E3E1D9]">
-                    <img :src="indexs.manecardimage3" alt=""/>
-                    <h3 class="text-center text-xl font-medium mt-5">{{indexs.Glass}}</h3>
-                    <p class="text-center text-md">US $79.19</p>
-                </div>
-                <div v-for="(indexs , index) in aboutus" :key="index" class="bg-[#E3E1D9]">
-                    <img :src="indexs.manecardimage4" alt="">
-                    <h3 class="text-center text-xl font-medium mt-5">{{indexs.Horse}}</h3>
-                    <p class="text-center text-md">{{indexs.P}}</p>
+                <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-4 py-10">
+                    <div v-for="(indexs , index) in aboutus" :key="index" class="h-auto bg-[#E3E1D9]">
+                        <img :src="indexs.manecardimage1" alt="">
+                        <h3 class="text-center text-xl font-medium mt-5">{{indexs.Main}}</h3>
+                        <p class="text-center text-md">{{indexs.Rs}}</p>
+                    </div>
+                    <div v-for="(indexs , index) in aboutus" :key="index" class="bg-[#E3E1D9]">
+                        <img :src="indexs.manecardimage2" alt="">
+                        <h3 class="text-center text-xl font-medium mt-5">{{indexs.Doors}}</h3>
+                        <p class="text-center text-md">{{indexs.AU}}</p>
+                    </div>
+                    <div v-for="(indexs , index) in aboutus" :key="index" class="bg-[#E3E1D9]">
+                        <img :src="indexs.manecardimage3" alt=""/>
+                        <h3 class="text-center text-xl font-medium mt-5">{{indexs.Glass}}</h3>
+                        <p class="text-center text-md">US $79.19</p>
+                    </div>
+                    <div v-for="(indexs , index) in aboutus" :key="index" class="bg-[#E3E1D9]">
+                        <img :src="indexs.manecardimage4" alt="">
+                        <h3 class="text-center text-xl font-medium mt-5">{{indexs.Horse}}</h3>
+                        <p class="text-center text-md">{{indexs.P}}</p>
+                    </div>
                 </div>
             </div>
-        </div>
         </section>
         <!-- men-card End============================================ -->
 

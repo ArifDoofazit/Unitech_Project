@@ -1,5 +1,23 @@
 <script setup>
-
+const gridItems = [
+    {
+        img1: 'Img-1',
+        img2: 'Img-2',
+        title: 'DOOR LOCK',
+        description: 'Material: Steel; <br> Key: 3 normal brass keys/iron; OEM: Accepted SN, PC, AB, AC, PB, etc'
+    },
+    {
+        img1: 'Img-3',
+        title: 'HANDLE LOCK',
+        description: 'Iron plate, plate length: 250-260 available All designs and colors available 1.0mm-2.0mm with 8540 lockbody with iron keys'
+    },
+    {
+        img1: 'Img-4',
+        img2: 'Img-5',
+        title: 'PAD LOCK',
+        description: 'Super premium solid steel 10 years guarantee'
+    }
+];
 </script>
 
 <template>
@@ -8,30 +26,16 @@
             <div class="Featured_Image"></div>
             <div class="container mx-auto">
                 <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-4 lg:mt-0 -mt-72">
-                    <div class="flex justify-center lg:mt-0 mt-10">
-                        <div class="z-10 h-72 w-72 shadow-2xl bg-[#323787] rounded-full lg:ml-0 ml-4 lg:-mt-28 mt-36 ring-8 ring-white overflow-visible">
-                            <div class="Img-1"></div>
-                            <div class="Img-2"></div>
-                            <h3 class="lg:ml-4 text-center text-2xl lg:font-semibold text-[#eb9843] mt-16">DOOR LOCK</h3>
-                            <p class="text-xl text-center text-[#606060] pt-3">Material: Steel; <br> Key: 3 normal brass keys/iron; OEM: Accepted SN, PC, AB, AC, PB, etc</p>
+                    <div v-for="(item, index) in gridItems" :key="index" class="flex justify-center lg:mt-0 mt-10">
+                        <div
+                            class="z-10 h-72 w-72 shadow-2xl bg-[#323787] rounded-full lg:ml-0 ml-4 lg:-mt-28 mt-36 ring-8 ring-white overflow-visible">
+                            <div :class="item.img1"></div>
+                            <div v-if="item.img2" :class="item.img2"></div>
+                            <h3 class="lg:ml-4 text-center text-2xl lg:font-semibold text-[#eb9843]"
+                                :class="{ 'mt-16': item.img2, 'mt-9': !item.img2 }">{{ item.title }}</h3>
+                            <p class="text-xl text-center text-[#606060] pt-3" v-html="item.description"></p>
                         </div>
                     </div>
-                    <div class="flex justify-center lg:mt-0 mt-16">
-                        <div class="z-10 h-72 w-72 shadow-2xl bg-[#323787] rounded-full lg:ml-0 ml-4 lg:-mt-28 mt-36 ring-8 ring-white overflow-visible">
-                            <div class="Img-3"></div>
-                            <h3 class="lg:ml-4 text-center text-2xl lg:font-semibold text-[#eb9843] mt-9">HANDLE LOCK</h3>
-                            <p class="text-xl text-center text-[#606060] pt-3">Iron plate, plate length: 250-260 available All designs and colors available 1.0mm-2.0mm with 8540 lockbody with iron keys</p>
-                        </div>
-                    </div>
-                    <div class="flex justify-center lg:mt-0 mt-16">
-                        <div class="z-10 h-72 w-72 shadow-2xl bg-[#292a2e] rounded-full lg:ml-0 ml-4 lg:-mt-28 mt-36 ring-8 ring-white overflow-visible">
-                            <div class="Img-4"></div>
-                            <div class="Img-5"></div>
-                            <h3 class="lg:ml-4 text-center text-2xl lg:font-semibold text-[#eb9843] mt-20">PAD LOCK</h3>
-                            <p class="text-xl text-center text-[#606060] pt-3">Super premium solid steel 10 years guarantee</p>
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </div>
