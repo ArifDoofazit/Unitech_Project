@@ -17,7 +17,6 @@ const slides = [
         smallImage: "../assets/Mobile_Slider-3-icF4hRMr.jpg",
         title: "DRAWER SLIDER",
         description: "100% stainless steel<br>hydraulic Presser"
-
     },
     {
         largeImage: "../assets/Slider-4-4gG5P3jC.jpg",
