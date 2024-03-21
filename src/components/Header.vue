@@ -13,13 +13,12 @@ const closeMobileMenu = () => {
 };
 
 
-const isMobile = ref(false); // Example ref for determining mobile/desktop view
-
 // Define navLogo with separate properties for large and small screen logos
 const navLogo = [
   {
     largeScreenLogo: "/assets/UGL-AND-Hi_Care-logo-of-web-desktop-o90Bn3SL.png",
     smallScreenLogo: "/assets/UGL-AND-Hi_Care-logo-of-web-mobile-gg24XQuN.png",
+    preloader: "../assets/image/UGL/Unitech-Logo-Animation.gif",
     logoLink: "#"
   }
 ];

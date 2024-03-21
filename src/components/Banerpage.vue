@@ -1,17 +1,17 @@
 <script setup>
 const banerPage = [
     {
-        imageUrl: "/src/assets/Lock/doorLock1.png",
+        imageUrl: "/assets/doorLock1-KWB637kg.png",
         title: "DOOR LOCK",
         description: `Material: Steel; <br> Key: 3 normal brass keys/iron; OEM: Accepted SN, PC, AB, AC, PB, etc`
     },
     {
-        imageUrl: "/src/assets/Lock/handelLock.png",
+        imageUrl: "/assets/handelLock-Nvozfggs.png",
         title: "HANDLE LOCK",
         description: `Iron plate, plate length: 250-260 available All designs and colors available 1.0mm-2.0mm with 8540 lockbody with iron keys`
     },
     {
-        imageUrl: "/src/assets/Lock/padLock1.png",
+        imageUrl: "/assets/padLock1-laOfch4n.png",
         title: "PAD LOCK",
         description: `Super premium solid steel 10 years guarantee`
     }

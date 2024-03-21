@@ -4,6 +4,7 @@ const homeIntro = {
     videoLink: "https://www.facebook.com/hicare11/videos/406464681786826/",
     title: "Company Introduction",
     description: "provides high quality accessories of hardware, specially various Lock, Handle, others doors and all kinds of home accessories etc.",
+    shortTitle: "WHOLE SALE OLNY"
 }
 </script>
 
@@ -32,8 +33,9 @@ const homeIntro = {
                     <p class="font-normal lg:text-xl text-base pl-5 text-[#999999] lg:pl-10 pt-6 leading-9">
                         {{ homeIntro.description }}
                     </p>
-                    <h4 class="font-medium text-[#ec2c49] text-xl lg:pl-10 pl-5 pt-8 lg:mt-5">
-                        W&nbsp;H&nbsp;O&nbsp;L&nbsp;E&nbsp;&nbsp;&nbsp;&nbsp;S&nbsp;A&nbsp;L&nbsp;E&nbsp;&nbsp;&nbsp;&nbsp;O&nbsp;N&nbsp;L&nbsp;Y
+                    <h4
+                        class="font-medium text-[#ec2c49] text-xl lg:pl-10 pl-5 pt-8 lg:mt-5 tracking-[6px] whitespace-nowrap">
+                        {{ homeIntro.shortTitle }}
                     </h4>
 
                 </div>

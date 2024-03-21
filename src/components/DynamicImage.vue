@@ -46,4 +46,13 @@
     <div
         class="w-full lg:h-[400px] hidden h-[350px] text-center mt-5 rounded-2xl bg-[url(../assets/image/Slider/Slider-5.jpg)] bg-no-repeat bg-opacity-30">
     </div>
+    <div
+        class="w-full lg:h-[400px] hidden h-[350px] text-center mt-5 rounded-2xl bg-[url(../assets/Lock/doorLock1.png)] bg-no-repeat bg-opacity-30">
+    </div>
+    <div
+        class="w-full lg:h-[400px] hidden h-[350px] text-center mt-5 rounded-2xl bg-[url(../assets/Lock/handelLock.png)] bg-no-repeat bg-opacity-30">
+    </div>
+    <div
+        class="w-full lg:h-[400px] hidden h-[350px] text-center mt-5 rounded-2xl bg-[url(../assets/Lock/padLock1.png)] bg-no-repeat bg-opacity-30">
+    </div>
 </template>
