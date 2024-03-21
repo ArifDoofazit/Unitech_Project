@@ -2,6 +2,12 @@
 
 <template>
     <div
+        class="w-full lg:h-[400px] hidden h-[350px] text-center mt-5 rounded-2xl bg-[url(../assets/image/UGL/UGL-AND-Hi_Care-logo-of-web-desktop.png)] bg-no-repeat bg-opacity-30">
+    </div>
+    <div
+        class="w-full lg:h-[400px] hidden h-[350px] text-center mt-5 rounded-2xl bg-[url(../assets/image/UGL/UGL-AND-Hi_Care-logo-of-web-mobile.png)] bg-no-repeat bg-opacity-30">
+    </div>
+    <div
         class="w-full lg:h-[400px] hidden h-[350px] text-center mt-5 rounded-2xl bg-[url(../assets/About-4-mAf3Rufd.webp)] bg-no-repeat bg-opacity-30">
     </div>
     <div

@@ -12,6 +12,19 @@ const closeMobileMenu = () => {
   isMobileMenuOpen.value = false;
 };
 
+
+const isMobile = ref(false); // Example ref for determining mobile/desktop view
+
+// Define navLogo with separate properties for large and small screen logos
+const navLogo = [
+  {
+    largeScreenLogo: "/assets/UGL-AND-Hi_Care-logo-of-web-desktop-o90Bn3SL.png",
+    smallScreenLogo: "/assets/UGL-AND-Hi_Care-logo-of-web-mobile-gg24XQuN.png",
+    logoLink: "#"
+  }
+];
+
+
 const menuItems = [
   { menuName: 'Home', menuLink: '/' },
   { menuName: 'About', menuLink: '/about' },
@@ -52,8 +65,11 @@ const menuItems = [
 
       <!-- Logo -->
       <div class="flex justify-end items-center w-full lg:w-auto h-14 overflow-hidden lg:z-10 lg:ml-0">
-        <a href="https://demo.unitechgloballtd.com">
-          <div class="Header_icon "></div>
+        <a :href="navLogo[0].logoLink">
+          <div>
+            <img :src="navLogo[0].largeScreenLogo" class="Header_icon lg:block xl:block md:hidden hidden" alt="">
+            <img :src="navLogo[0].smallScreenLogo" class="Header_icon_M lg:hidden md:hidden xl:hidden block" alt="">
+          </div>
         </a>
       </div>
 
@@ -71,7 +87,7 @@ const menuItems = [
             class="w-7 h-7 flex justify-center items-center bg-white rounded-full text-[#2c306b] hover:bg-[#f89b3b] hover:text-white transition-all">
             <i class="fa-solid fa-phone"></i>
           </RouterLink>
-          
+
           <RouterLink to="/contact"
             class="w-7 h-7 flex justify-center items-center bg-white rounded-full text-[#2c306b] hover:bg-[#f89b3b] hover:text-white transition-all">
             <i class="fa-solid fa-location-dot"></i>
@@ -117,23 +133,21 @@ nav a.router-link-exact-active:hover {
 .Header_icon{
   width: 380px;
   height: 50px;
-  background: url(../assets/image/UGL/UGL-AND-Hi_Care-logo-of-web-desktop.png) no-repeat;
+  background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
   margin-top: 0px;
   z-index: 1;
 }
-@media (max-width: 768px) {
-  .Header_icon  {
+  .Header_icon_M  {
     width: 240px;
     height: 30px;
-    background: url(../assets/image/UGL/UGL-AND-Hi_Care-logo-of-web-mobile.png) no-repeat;
     background-size: cover;
+    background-repeat: no-repeat;
     overflow: hidden;
     position: sticky;
     margin-left: 110px;
     z-index: 1;
   }
-}
 
 </style>

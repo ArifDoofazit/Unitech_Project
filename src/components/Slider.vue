@@ -1,40 +1,40 @@
 <script setup>
 const slides = [
     {
-        largeScreenImage: "../assets/Slider-1-yMkRT9Pb.jpg",
-        smallScreenImage: "../assets/Mobile_Slider-1-5NY80X16.jpg",
+        largeScreenImage: "/assets/Slider-1-yMkRT9Pb.jpg",
+        smallScreenImage: "/assets/Mobile_Slider-1-5NY80X16.jpg",
         title: "PAD LOCK",
         description: "Super premium solid steel<br>10 years guarantee",
         buttonText: "More",
         buttonLink: "#"
     },
     {
-        largeImage: "../assets/Slider-2-K0edHQel.jpg",
-        smallImage: "../assets/Mobile_Slider-2-kTs8QQ23.jpg",
+        largeScreenImage: "/assets/Slider-2-K0edHQel.jpg",
+        smallScreenImage: "/assets/Mobile_Slider-2-kTs8QQ23.jpg",
         title: "DOVE HANDLE",
         description: "Premium quality of<br>aluminium",
         buttonText: "More",
         buttonLink: "#"        
     },
     {
-        largeImage: "../assets/Slider-3-J3fB3FmE.jpg",
-        smallImage: "../assets/Mobile_Slider-3-icF4hRMr.jpg",
+        largeScreenImage: "/assets/Slider-3-J3fB3FmE.jpg",
+        smallScreenImage: "/assets/Mobile_Slider-3-icF4hRMr.jpg",
         title: "DRAWER SLIDER",
         description: "100% stainless steel<br>hydraulic Presser",
         buttonText: "More",
         buttonLink: "#"
     },
     {
-        largeImage: "../assets/Slider-4-4gG5P3jC.jpg",
-        smallImage: "../assets/Mobile_Slider-4-t-Ct7FIn.jpg",
+        largeScreenImage: "/assets/Slider-4-4gG5P3jC.jpg",
+        smallScreenImage: "/assets/Mobile_Slider-4-t-Ct7FIn.jpg",
         title: "DOVE HANDLE",
         description: "Premium quality of<br>aluminium",
         buttonText: "More",
         buttonLink: "#"
     },
     {
-        largeImage: "../assets/Slider-5-UXzDk7bZ.jpg",
-        smallImage: "../assets/Mobile_Slider-5-2cQeLRdx.jpg",
+        largeScreenImage: "/assets/Slider-5-UXzDk7bZ.jpg",
+        smallScreenImage: "/assets/Mobile_Slider-5-2cQeLRdx.jpg",
         title: "CONCEALED HINGES",
         description: "100% stainless steel<br>hydraulic piston ",
         buttonText: "More",
@@ -120,10 +120,10 @@ $(".dot").on("click", function () {
                         <div class="lg:w-[500px] w-full text-right">
                             <h2 class="font-bold lg:text-5xl text-2xl text-[#f89b3b] lg:pl-8 pl-4">{{ slide.title }}
                             </h2>
-                            <p class="lg:w-[410px] lg:ml-[90px] lg:text-right lg:font-normal lg:text-3xl text-lg lg:pl-8 pl-4 lg:pt-5 pt-2 leading-6 text-white"
+                            <p class="lg:w-[410px] lg:ml-[90px] lg:text-right lg:font-normal lg:text-3xl text-lg lg:pl-8 pl-4 lg:pt-5 lg:pb-5 pt-2 leading-6 text-white"
                                 v-html="slide.description"></p>
                             <a :href="slide.buttonLink"
-                                class="mt-5 py-2 px-8 rounded-md bg-[#f89b3b] font-medium lg:text-2xl text-lg ml-4 lg:ml-0">{{
+                                class="py-2 px-8 mt-7 rounded-md bg-[#f89b3b] font-medium lg:text-2xl text-lg ml-4 lg:ml-0">{{
                                 slide.buttonText }}</a>
                         </div>
                     </div>
