@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue';
+import { onMounted , ref } from 'vue';
 import { useRoute, RouterLink } from 'vue-router';
 
 const isMobileMenuOpen = ref(false);
@@ -14,24 +14,42 @@ const closeMobileMenu = () => {
 
 
 // Define navLogo with separate properties for large and small screen logos
-const navLogo = [
-  {
-    largeScreenLogo: "/assets/UGL-AND-Hi_Care-logo-of-web-desktop-o90Bn3SL.png",
-    smallScreenLogo: "/assets/UGL-AND-Hi_Care-logo-of-web-mobile-gg24XQuN.png",
-    preloader: "../assets/image/UGL/Unitech-Logo-Animation.gif",
-    logoLink: "#"
+// const navLogo = [
+//   {
+//     largeScreenLogo: "/assets/UGL-AND-Hi_Care-logo-of-web-desktop-o90Bn3SL.png",
+//     smallScreenLogo: "/assets/UGL-AND-Hi_Care-logo-of-web-mobile-gg24XQuN.png",
+//     preloader: "../assets/image/UGL/Unitech-Logo-Animation.gif",
+//     logoLink: "#"
+//   }
+// ];
+
+import axios from 'axios';
+import { BASE_URL } from '../assets/apiConfig';
+import { IMG } from '../assets/imageUrl';
+
+const data = ref(null);
+
+onMounted(async () => {
+  try {
+    const response = await axios.get(`${BASE_URL}items`);
+    data.value = response.data;
+    console.log('Data fetched successfully:', data.value);
+  } catch (error) {
+    console.error('Error fetching data:', error);
   }
-];
+});
 
+const items = ref(null);
 
-const menuItems = [
-  { menuName: 'Home', menuLink: '/' },
-  { menuName: 'About', menuLink: '/about' },
-  { menuName: 'Product', menuLink: '/products' },
-  { menuName: 'Gallery', menuLink: '/gallery' },
-  { menuName: 'Service', menuLink: '/service' },
-  { menuName: 'Contact us', menuLink: '/contact' }
-];
+onMounted(async () => {
+  try {
+    const response = await axios.get(`${BASE_URL}menuItem`);
+    items.value = response.data;
+    console.log('Data fetched successfully:', items.value);
+  } catch (error) {
+    console.error('Error fetching data:', error);
+  }
+});
 
 </script>
 
@@ -63,23 +81,28 @@ const menuItems = [
       </div>
 
       <!-- Logo -->
-      <div class="flex justify-end items-center w-full lg:w-auto h-14 overflow-hidden lg:z-10 lg:ml-0">
-        <a :href="navLogo[0].logoLink">
-          <div>
-            <img :src="navLogo[0].largeScreenLogo" class="Header_icon lg:block xl:block md:hidden hidden" alt="">
-            <img :src="navLogo[0].smallScreenLogo" class="Header_icon_M lg:hidden md:hidden xl:hidden block" alt="">
-          </div>
-        </a>
+      <div v-if="data && data">
+        <div v-for="( header, index) in data.data" :key="index"
+          class="flex justify-end items-center w-full lg:w-auto h-14 overflow-hidden lg:z-10 lg:ml-0">
+          <a :href="header.logoLink">
+            <div>
+              <img :src="IMG + header.largeScreenLogo" class="Header_icon lg:block xl:block md:hidden hidden" alt="">
+              <img :src="IMG + header.smallScreenLogo" class="Header_icon_M lg:hidden md:hidden xl:hidden block" alt="">
+            </div>
+          </a>
+        </div>
       </div>
 
       <!-- Mobile menu links -->
       <div class="hidden lg:mr-0 xl:w-3/6 lg:w-[55%] sm:block rounded-l-3xl" style="background:#2c306b;">
-        <div class="flex justify-center items-center space-x-3 lg:mr-8">
+        <div class="flex justify-center items-center space-x-3 lg:mr-8 px-3 lg:py-[7px]">
           <!-- Loop through menu items -->
-          <RouterLink v-for="(item, index) in menuItems" :key="index" @click="closeMobileMenu" :to="item.menuLink"
-            class="text-white px-2 py-3 text-base font-medium hover:bg-[#f89b3b] hover:text-white transition-all nav-link">
-            {{ item.menuName }}
-          </RouterLink>
+          <div v-if="items && items">
+            <RouterLink v-for="(item, index) in items.data" :key="index" @click="closeMobileMenu" :to="item.menuLink"
+              class="text-white px-3 py-3 text-base font-medium hover:bg-[#f89b3b] hover:text-white transition-all nav-link">
+              {{ item.menuName }}
+            </RouterLink>
+          </div>
 
           <!-- Additional links -->
           <RouterLink to="/contact"

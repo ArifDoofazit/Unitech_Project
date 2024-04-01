@@ -1,27 +1,33 @@
 <script setup>
-const aboutUs=[
-    {
-        image:"../assets/Slider-Three-xQHub4q_.webp",
+import { onMounted, ref } from 'vue';
+import axios from 'axios';
+import { BASE_URL } from '../assets/apiConfig';
+import { IMG } from '../assets/imageUrl';
+
+const aboutBox = ref(null);
+
+onMounted(async () => {
+    try {
+        const response = await axios.get(`${BASE_URL}aboutBox`);
+        aboutBox.value = response.data;
+        console.log('Data fetched successfully:', aboutBox.value);
+    } catch (error) {
+        console.error('Error fetching data:', error);
     }
-]
-const aboutBox = [
-    {
-        title: "PLUMBING MATERIALS",
-        description: "Sed vestibulum nulla elementum auctor tincidunt. Aliquam sit amet cursus mauris. Sed vitae mattis ipsum. Vestibulum enim nulla, sollicitudin ac hendrerit nec, tempor quis nisl"
-    },
-    {
-        title: "ELECTRICAL FITTINGS",
-        description: "Sed vestibulum nulla elementum auctor tincidunt. Aliquam sit amet cursus mauris. Sed vitae mattis ipsum. Vestibulum enim nulla, sollicitudin ac hendrerit nec, tempor quis nisl"
-    },
-    {
-        title: "THE DRIVEWAY & LAWN",
-        description: "Sed vestibulum nulla elementum auctor tincidunt. Aliquam sit amet cursus mauris. Sed vitae mattis ipsum. Vestibulum enim nulla, sollicitudin ac hendrerit nec, tempor quis nisl"
-    },
-    {
-        title: "EXTERIORS",
-        description: "Sed vestibulum nulla elementum auctor tincidunt. Aliquam sit amet cursus mauris. Sed vitae mattis ipsum. Vestibulum enim nulla, sollicitudin ac hendrerit nec, tempor quis nisl"
+});
+
+const aboutUs = ref(null);
+
+onMounted(async () => {
+    try {
+        const response = await axios.get(`${BASE_URL}aboutImage`);
+        aboutUs.value = response.data;
+        console.log('Data fetched successfully:', aboutUs.value);
+    } catch (error) {
+        console.error('Error fetching data:', error);
     }
-];
+});
+
 const aboutWorkInfo = [
     {
         title: 'EXTERIORS',
@@ -36,29 +42,18 @@ const aboutWorkInfo = [
         description: 'Sed vestibulum nulla elementum auctor tincidunt. Aliquam sit amet cursus mauris. Sed vitae mattis ipsum. Vestibulum enim nulla, sollicitudin ac hendrerit nec, tempor quis nisl'
     },
 ]
-const aboutCard = [
-    {
-        image: 'http://localhost:5173/src/assets/team001_800x.webp',
-        title: 'Main Door Handles',
-        price: 'Rs.2,999.00',
-    },
-    {
-        image: 'http://localhost:5173/src/assets/team002_800x.webp',
-        title: 'Main Doors Pack of (Left)',
-        price: 'AU $250.44',
-    },   
-    {
-        image: 'http://localhost:5173/src/assets/team003_800x.webp',
-        title: 'Glass Door Pull Handle',
-        price: 'US $79.19',
-    },
-    {
-        image: 'http://localhost:5173/src/assets/team004_800x.webp',
-        title: '10\'\' Aluminum Horse',
-        price: '₱7,823.27'
-    }
-];
 
+const aboutCard = ref(null);
+
+onMounted(async () => {
+    try {
+        const response = await axios.get(`${BASE_URL}aboutCardInfo`);
+        aboutCard.value = response.data;
+        console.log('Data fetched successfully:', aboutCard.value);
+    } catch (error) {
+        console.error('Error fetching data:', error);
+    }
+});
 </script>
 
 <template>
@@ -136,9 +131,10 @@ const aboutCard = [
         <p v-for="(indexs , index) in aboutus" :key="index" class="text-center lg:py-5 py-5 lg:text-xl text-[#B4B4B8]">
             {{indexs.Vivamus}}</p>
 
-        <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-4 px-3 gap-x-8 gap-y-4 py-10">
+        <div v-if="aboutBox && aboutBox"
+            class="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-4 px-3 gap-x-8 gap-y-4 py-10">
 
-            <div v-for="(item, index) in aboutBox" :key="index"
+            <div v-for="(item, index) in aboutBox.data" :key="index"
                 class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                 <a href="#"
                     class="bg-[#202472] text-[#fab915] text-4xl pt-3 pb-2 pr-3 pl-3 shadow-md rounded-full lg:w-32 lg:h-32 border-solid border-4 border-yellow-400">
@@ -169,7 +165,7 @@ const aboutCard = [
 
 
                         <div class="container mx-auto mt-6">
-                            <div class="grid grid-cols-1 gap-4">
+                            <div v-if="aboutWorkInfo && aboutWorkInfo" class="grid grid-cols-1 gap-4">
                                 <!-- ========================1================================= -->
                                 <div v-for="(box , index) in aboutWorkInfo" :key="index"
                                     class="max-w-full p-6 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
@@ -191,9 +187,11 @@ const aboutCard = [
 
 
                     </div>
-                    <div v-for="(box , index) in aboutUs" :key="index"
-                        class="border-8 border-[#202447] rounded-md">
-                        <img :src="box.image" class="w-full h-full bg-cover" alt="">
+                    <div v-if="aboutUs && aboutUs">
+                        <div v-for="(box , index) in aboutUs.data" :key="index"
+                            class="border-8 border-[#202447] rounded-md">
+                            <img :src="IMG + box.image" class="w-full h-full bg-cover" alt="">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -202,9 +200,10 @@ const aboutCard = [
         <!-- men-card============================================ -->
         <section class="bg-section">
             <div class="container mx-auto">
-                <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-4 py-10">
-                    <div v-for="(item, index) in aboutCard" :key="index" class="card bg-card">
-                        <img :src="item.image" alt="">
+                <div v-if="aboutCard && aboutCard"
+                    class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-4 py-10">
+                    <div v-for="(item, index) in aboutCard.data" :key="index" class="card bg-card">
+                        <img :src="IMG +item.image" alt="">
                         <h3 class="text-center text-xl font-medium mt-5">{{ item.title }}</h3>
                         <p class="text-center text-md">{{ item.price }}</p>
                     </div>

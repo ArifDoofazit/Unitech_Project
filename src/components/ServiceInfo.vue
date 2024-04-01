@@ -1,22 +1,33 @@
 <script setup>
-const serviceInfo = {
-    image: "/assets/About-4-mAf3Rufd.webp",
-    smallQuote: "Unitech - Believe In Quality",
-    title: "Where Quality Meets Affordability",
-    description: "Etiam sit amet orci eget eros faucibus tincidunt.  Duis leo.<br>Sed fringilla mauris sit amet nibh.  Donec sodales sagittis <br> Etiam sit amet orci eget eros faucibus tincidunt. <br> Sed fringilla mauris sit amet nibh. Donec sodales",
-    buttonName: "View Help Videos"
-}
+import { onMounted, ref } from 'vue';
+import axios from 'axios';
+import { BASE_URL } from '../assets/apiConfig';
+import { IMG } from '../assets/imageUrl';
+
+const serviceDetails = ref(null);
+
+onMounted(async () => {
+    try {
+        const response = await axios.get(`${BASE_URL}serviceDetailsInfo`);
+        serviceDetails.value = response.data;
+        console.log('Data fetched successfully:', serviceDetails.value);
+    } catch (error) {
+        console.error('Error fetching data:', error);
+    }
+});
 </script>
 
 <template>
     <div class="container mx-auto pb-10">
-        <div class="grid lg:grid-cols-2 gap-5 group">
-            <div class="Image w-full h-auto lg:rounded-2xl flex justify-center overflow-hidden">
-                <img class="w-full h-auto object-cover object-center rounded-2xl transition-all group-hover:scale-110 overflow-hidden"
-                    :src="serviceInfo.image" alt="">
+        <div v-if="serviceDetails && serviceDetails" class="grid md:grid-cols-2 grid-cols-1 gap-5 group">
+            <div v-for="(serviceInfo , index) in serviceDetails.data" :key="index">
+                <div class="Image w-full h-auto lg:rounded-2xl flex justify-center overflow-hidden">
+                    <img class="w-full h-auto object-cover object-center rounded-2xl transition-all group-hover:scale-110 overflow-hidden"
+                        :src="IMG +serviceInfo.image" alt="">
+                </div>
             </div>
-
-            <div v-if="serviceInfo" class="text-info text-center">
+            <div v-for="(serviceInfo, index) in serviceDetails.data" :key="index"
+                class="text-info text-center float-left">
                 <p class="lg:text-2xl font-light mt-12">{{ serviceInfo.smallQuote }}</p>
                 <h1 class="lg:text-5xl text-2xl font-medium leading-[60px] lg:mt-5 text-[#273270]">
                     {{ serviceInfo.title }}

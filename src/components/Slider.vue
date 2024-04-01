@@ -1,50 +1,67 @@
 <script setup>
-const slides = [
+const slide = [
     {
-        largeScreenImage: "/assets/Slider-1-yMkRT9Pb.jpg",
-        smallScreenImage: "/assets/Mobile_Slider-1-5NY80X16.jpg",
-        title: "PAD LOCK",
-        description: "Super premium solid steel<br>10 years guarantee",
-        buttonText: "More",
-        buttonLink: "#"
+        // largeScreenImage: "/assets/Slider-1-yMkRT9Pb.jpg",
+        // smallScreenImage: "/assets/Mobile_Slider-1-5NY80X16.jpg",
+        // title: "PAD LOCK",
+        // description: "Super premium solid steel<br>10 years guarantee",
+        // buttonText: "More",
+        // buttonLink: "#"
     },
     {
-        largeScreenImage: "/assets/Slider-2-K0edHQel.jpg",
-        smallScreenImage: "/assets/Mobile_Slider-2-kTs8QQ23.jpg",
-        title: "DOVE HANDLE",
-        description: "Premium quality of<br>aluminium",
-        buttonText: "More",
-        buttonLink: "#"        
+        // largeScreenImage: "/assets/Slider-2-K0edHQel.jpg",
+        // smallScreenImage: "/assets/Mobile_Slider-2-kTs8QQ23.jpg",
+        // title: "DOVE HANDLE",
+        // description: "Premium quality of<br>aluminium",
+        // buttonText: "More",
+        // buttonLink: "#"        
     },
     {
-        largeScreenImage: "/assets/Slider-3-J3fB3FmE.jpg",
-        smallScreenImage: "/assets/Mobile_Slider-3-icF4hRMr.jpg",
-        title: "DRAWER SLIDER",
-        description: "100% stainless steel<br>hydraulic Presser",
-        buttonText: "More",
-        buttonLink: "#"
+        // largeScreenImage: "/assets/Slider-3-J3fB3FmE.jpg",
+        // smallScreenImage: "/assets/Mobile_Slider-3-icF4hRMr.jpg",
+        // title: "DRAWER SLIDER",
+        // description: "100% stainless steel<br>hydraulic Presser",
+        // buttonText: "More",
+        // buttonLink: "#"
     },
     {
-        largeScreenImage: "/assets/Slider-4-4gG5P3jC.jpg",
-        smallScreenImage: "/assets/Mobile_Slider-4-t-Ct7FIn.jpg",
-        title: "DOVE HANDLE",
-        description: "Premium quality of<br>aluminium",
-        buttonText: "More",
-        buttonLink: "#"
+        // largeScreenImage: "/assets/Slider-4-4gG5P3jC.jpg",
+        // smallScreenImage: "/assets/Mobile_Slider-4-t-Ct7FIn.jpg",
+        // title: "DOVE HANDLE",
+        // description: "Premium quality of<br>aluminium",
+        // buttonText: "More",
+        // buttonLink: "#"
     },
     {
-        largeScreenImage: "/assets/Slider-5-UXzDk7bZ.jpg",
-        smallScreenImage: "/assets/Mobile_Slider-5-2cQeLRdx.jpg",
-        title: "CONCEALED HINGES",
-        description: "100% stainless steel<br>hydraulic piston ",
-        buttonText: "More",
-        buttonLink: "#"
+        // largeScreenImage: "/assets/Slider-5-UXzDk7bZ.jpg",
+        // smallScreenImage: "/assets/Mobile_Slider-5-2cQeLRdx.jpg",
+        // title: "CONCEALED HINGES",
+        // description: "100% stainless steel<br>hydraulic piston ",
+        // buttonText: "More",
+        // buttonLink: "#"
     },
 ];
 
+import { onMounted, ref } from 'vue';
+import axios from 'axios';
+import { BASE_URL } from '../assets/apiConfig';
+import { IMG } from '../assets/imageUrl';
+
+const slides = ref(null);
+
+onMounted(async () => {
+    try {
+        const response = await axios.get(`${BASE_URL}sliderInfo`);
+        slides.value = response.data;
+        console.log('Data fetched successfully:', slides.value);
+    } catch (error) {
+        console.error('Error fetching data:', error);
+    }
+});
+
 // Initialize currentIndex and sliderContent as before
 let currentIndex = 0;
-let sliderContent = slides[currentIndex].content;
+let sliderContent = slide[currentIndex].content;
 
 // Slider function remains the same as before
 function slider(flag, num) {
@@ -107,21 +124,23 @@ $(".dot").on("click", function () {
         <!-- Mobile Responsive -->
 
         <div class="slider w-full lg:h-[650px] h-[500px] relative ">
-            <ul class="items relative w-full lg:h-[650px] h-[500px] overflow-hidden">
-                <li v-for="(slide, index) in slides" :key="index" class="item"
+            <ul v-if="slides && slides" class="items relative w-full lg:h-[650px] h-[500px] overflow-hidden">
+                <li v-for="( slide, index) in slides.data" :key="index" class="item"
                     :class="{ current: index === currentIndex }">
                     <!-- Large screen image -->
-                    <img :src="slide.largeScreenImage" alt="slide image" class="bg-cover lg-image lg:block hidden">
+                    <img :src="IMG +slide.largeScreenImage" alt="slide image" class="bg-cover lg-image lg:block hidden">
                     <!-- Small screen image -->
-                    <img :src="slide.smallScreenImage" alt="slide image" class="lg:hidden block">
+                    <img :src="IMG +slide.smallScreenImage" alt="slide image" class="lg:hidden block">
 
                     <div
                         class="w-full absolute lg:top-[340px] flex lg:justify-end top-2/4 z-20 lg:rounded-r-xl bg-opacity-40 lg:pr-32 pr-5">
                         <div class="lg:w-[500px] w-full text-right">
-                            <h2 class="font-bold lg:text-5xl text-2xl text-[#f89b3b] lg:pl-8 pl-4">{{ slide.title }}
+                            <h2 class="font-bold lg:text-5xl text-2xl text-[#f89b3b] lg:pl-8 pl-4">{{ slide.Title }}
                             </h2>
-                            <p class="lg:w-[410px] lg:ml-[90px] lg:text-right lg:font-normal lg:text-3xl text-lg lg:pl-8 pl-4 lg:pt-5 lg:pb-5 pt-2 leading-6 text-white"
-                                v-html="slide.description"></p>
+                            <p
+                                class="lg:w-[410px] lg:ml-[90px] lg:text-right lg:font-normal lg:text-3xl text-lg lg:pl-8 pl-4 lg:pt-5 lg:pb-5 pt-2 leading-6 text-white">
+                                {{ slide.description }}
+                            </p>
                             <a :href="slide.buttonLink"
                                 class="py-2 px-8 mt-7 rounded-md bg-[#f89b3b] font-medium lg:text-2xl text-lg ml-4 lg:ml-0">{{
                                 slide.buttonText }}</a>
