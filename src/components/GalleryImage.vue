@@ -15,56 +15,6 @@ onMounted(async () => {
         console.error('Error fetching data:', error);
     }
 });
-// const galleryCard = [
-//     {
-//         images: "https://m.media-amazon.com/images/I/61PutjqJLFL.jpg",
-//         cardTitle: "DOVE HANDLE"
-//     },
-//     {
-//         images: "https://www.plantex.in/cdn/shop/products/81NXVeS3vBL_4ddf2b74-9ec0-4f06-87a6-c76e5d7b5484.jpg?v=1690692488",
-//         cardTitle: "DOVE HANDLE"
-//     },
-//     {
-//         images: "https://m.media-amazon.com/images/I/71GV627s4YL._AC_UF1000,1000_QL80_.jpg",
-//         cardTitle: "DOVE HANDLE"
-//     },
-//     {
-//         images: "https://www.jiomart.com/images/product/original/rvegn1pyt6/screwtight-heavy-duty-mortise-handle-door-locks-for-main-door-bullet-door-lock-body-with-3-key-double-action-mortise-lock-for-door-door-locks-for-home-azmph-001-ky-bs-product-images-orvegn1pyt6-p605635730-0-202310141507.jpg?im=Resize=(420,420)",
-//         cardTitle: "DOVE HANDLE"
-//     },
-//     {
-//         images: "https://m.media-amazon.com/images/I/61PutjqJLFL.jpg",
-//         cardTitle: "DOVE HANDLE"
-//     },
-//     {
-//         images: "https://www.plantex.in/cdn/shop/products/81NXVeS3vBL_4ddf2b74-9ec0-4f06-87a6-c76e5d7b5484.jpg?v=1690692488",
-//         cardTitle: "DOVE HANDLE"
-//     },
-//     {
-//         images: "https://www.jiomart.com/images/product/original/rvegn1pyt6/screwtight-heavy-duty-mortise-handle-door-locks-for-main-door-bullet-door-lock-body-with-3-key-double-action-mortise-lock-for-door-door-locks-for-home-azmph-001-ky-bs-product-images-orvegn1pyt6-p605635730-0-202310141507.jpg?im=Resize=(420,420)",
-//         cardTitle: "DOVE HANDLE"
-//     },
-//     {
-//         images: "https://m.media-amazon.com/images/I/71GV627s4YL._AC_UF1000,1000_QL80_.jpg",
-//         cardTitle: "DOVE HANDLE"
-//     },
-//     {
-//         images: "https://www.plantex.in/cdn/shop/products/81NXVeS3vBL_4ddf2b74-9ec0-4f06-87a6-c76e5d7b5484.jpg?v=1690692488",
-//         cardTitle: "DOVE HANDLE"
-//     },
-//     {
-//         images: "https://www.jiomart.com/images/product/original/rvegn1pyt6/screwtight-heavy-duty-mortise-handle-door-locks-for-main-door-bullet-door-lock-body-with-3-key-double-action-mortise-lock-for-door-door-locks-for-home-azmph-001-ky-bs-product-images-orvegn1pyt6-p605635730-0-202310141507.jpg?im=Resize=(420,420)",
-//         cardTitle: "DOVE HANDLE"
-//     },
-//     {
-//         images: "https://m.media-amazon.com/images/I/71GV627s4YL._AC_UF1000,1000_QL80_.jpg",
-//         cardTitle: "DOVE HANDLE"
-//     },
-//     {
-//         images: "https://www.plantex.in/cdn/shop/products/81NXVeS3vBL_4ddf2b74-9ec0-4f06-87a6-c76e5d7b5484.jpg?v=1690692488",
-//         cardTitle: "DOVE HANDLE"
-//     },
-// ]
 </script>
 
 <template>
