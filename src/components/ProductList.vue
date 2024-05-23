@@ -27,9 +27,9 @@ const allProductsCategory = async () => {
 };
 
 
-const filterProductsByCategory = async (categoryId) => {
+const detailsProductsById = async (Id) => {
     try {
-        const response = await axios.get(`${BASE_URL}productCardInfobyCategory/` + categoryId );
+        const response = await axios.get(`${BASE_URL}productCardInfobyId/` + Id);
         productCards.value = response.data;
         console.log('Data fetched successfully:', productCards.value);
     } catch (error) {
@@ -37,10 +37,13 @@ const filterProductsByCategory = async (categoryId) => {
     }
 };
 
-const shuffleProductCards = () => {
-    for (let i = productCards.value.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [productCards.value[i], productCards.value[j]] = [productCards.value[j], productCards.value[i]];
+const filterProductsByCategory = async (categoryId) => {
+    try {
+        const response = await axios.get(`${BASE_URL}productCardInfobyCategory/` + categoryId);
+        productCards.value = response.data;
+        console.log('Data fetched successfully:', productCards.value);
+    } catch (error) {
+        console.error('Error fetching data:', error);
     }
 };
 
@@ -111,7 +114,6 @@ const setSelectedCategory = (categoryName) => {
 };
 
 console.log('sortedCategories');
-
 </script>
 
 <template>
@@ -129,7 +131,7 @@ console.log('sortedCategories');
                         data-tabs-inactive-classes="dark:border-transparent text-white hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300"
                         role="tablist">
                         <li class="me-2 focus:bg-[#2c306b] bg-[#f89b3b] mt-2 rounded-md"
-                            @click="setSelectedCategory(category.categoryName)" role="presentation">
+                            @click="setSelectedCategory(category)" role="presentation">
                             <button @click="allProductsCategory"
                                 class="inline-block focus:bg-[#2c306b] text-white focus:text-white w-full p-4 rounded-t-lg"
                                 id="profile-styled-tab" data-tabs-target="#styled-profile" type="button" role="tab"
@@ -160,25 +162,27 @@ console.log('sortedCategories');
                 <div v-if="productCards && productCards"
                     class="col-span-2 grid lg:grid-cols-3 grid-cols-2 gap-4 p-4 rounded-lg bg-gray-50 dark:bg-gray-800"
                     id="styled-profile" role="tabpanel" aria-labelledby="profile-tab">
-                    <RouterLink v-for="(productCard, index) in productCards.data" :key="index" to="/product-details">
-                        <div class="flex justify-center">
-                            <div
-                                class="product-card w-72 rounded-lg drop-shadow-2xl overflow-hidden cursor-pointer relative group border hover:shadow-2xl">
-                                <img :src="IMG +productCard.images" class="w-full lg:h-[270px] rounded-lg " alt="">
-                                <img :src="IMG +productCard.images"
-                                    class="w-full lg:h-[270px] rounded-lg absolute top-0 left-0 opacity-0 " alt="">
+                    <div v-for="(productCard, index) in productCards.data" :key="index">
+                        <RouterLink :to="'/product-details/' + productCard.id">
+                            <div class="flex justify-center">
                                 <div
-                                    class="lg:h-20 leading-9 rounded-2xl drop-shadow-xl border-2 border-[#f89b3b] bg-white text-[#f89b3b] transition duration-300 ease-in-out transform group-hover:text-[#eb9843]">
-                                    <h2 class="text-center font-semibold pt-1 text-xl">{{ productCard.productName }}
-                                    </h2>
-                                    <div class="text-center text-black text-sm">
-                                        <p>{{ productCard.productDetails }}</p>
-                                        <p class="font-medium">Code: {{ productCard.productCode }}</p>
+                                    class="product-card w-72 rounded-lg drop-shadow-2xl overflow-hidden cursor-pointer relative group border hover:shadow-2xl">
+                                    <img :src="IMG + productCard.images" class="w-full lg:h-[270px] rounded-lg " alt="">
+                                    <img :src="IMG + productCard.images"
+                                        class="w-full lg:h-[270px] rounded-lg absolute top-0 left-0 opacity-0 " alt="">
+                                    <div
+                                        class="lg:h-20 leading-9 rounded-2xl drop-shadow-xl border-2 border-[#f89b3b] bg-white text-[#f89b3b] transition duration-300 ease-in-out transform group-hover:text-[#eb9843]">
+                                        <h2 class="text-center font-semibold pt-1 text-xl">{{ productCard.productName }}
+                                        </h2>
+                                        <div class="text-center text-black text-sm">
+                                            <p>{{ productCard.productInfo }}</p>
+                                            <p class="font-medium">Code: {{ productCard.productCode }}</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </RouterLink>
+                        </RouterLink>
+                    </div>
                 </div>
             </div>
         </div>

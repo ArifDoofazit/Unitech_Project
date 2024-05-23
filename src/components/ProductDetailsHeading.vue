@@ -2,7 +2,7 @@
 
 <template>
     <div class="Product_Heading lg:w-full">
-        <div class="Title_Heading py-28 w-full h-auto text-center mb-20 relative z-[1]">
+        <div class="Title_Heading lg:pt-40 lg:pb-20 py-28 w-full h-auto text-center mb-20 relative z-[1]">
             <h2 class="text-white text-5xl font-normal">Product Details</h2>
 
             <nav class="flex justify-center py-5" aria-label="Breadcrumb">
@@ -49,7 +49,7 @@
 
 <style scoped>
 .Title_Heading {
-    background: url(../assets/image/PageTitle-Background.webp) no-repeat;
+    background: url(../assets/image/Slider/Slider-5.jpg) no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-position: top;
@@ -66,4 +66,5 @@
     z-index: -1;
     background: #000;
     opacity: .6;
-}</style>
+}
+</style>

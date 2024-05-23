@@ -81,12 +81,11 @@ onMounted(async () => {
     background-size: contain;
 } */
 .Img-2{
-    width: 330px;
-    height: 165px;
-    margin-top: 100px;
-    margin-left: -20px;
+    width: 100%;
+    height: 210px;
+    margin-top: 50px;
+    margin-left: 0px;
     background-size: contain;
-    rotate: 10deg;
 }
 /* .Img-3{
     width: 340px;

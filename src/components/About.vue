@@ -28,20 +28,18 @@ onMounted(async () => {
     }
 });
 
-const aboutWorkInfo = [
-    {
-        title: 'EXTERIORS',
-        description: 'Sed vestibulum nulla elementum auctor tincidunt. Aliquam sit amet cursus mauris. Sed vitae mattis ipsum. Vestibulum enim nulla, sollicitudin ac hendrerit nec, tempor quis nisl'
-    },
-    {
-        title: 'MASONRY',
-        description: 'Sed vestibulum nulla elementum auctor tincidunt. Aliquam sit amet cursus mauris. Sed vitae mattis ipsum. Vestibulum enim nulla, sollicitudin ac hendrerit nec, tempor quis nisl'
-    },
-    {
-        title: 'INTERIORS',
-        description: 'Sed vestibulum nulla elementum auctor tincidunt. Aliquam sit amet cursus mauris. Sed vitae mattis ipsum. Vestibulum enim nulla, sollicitudin ac hendrerit nec, tempor quis nisl'
-    },
-]
+const aboutWorkInfo = ref(null);
+
+onMounted(async () => {
+    try {
+        const response = await axios.get(`${BASE_URL}aboutWorkInfo`);
+        aboutWorkInfo.value = response.data;
+        console.log('Data fetched successfully:', aboutWorkInfo.value);
+    } catch (error) {
+        console.error('Error fetching data:', error);
+    }
+});
+
 
 const aboutCard = ref(null);
 
@@ -60,8 +58,8 @@ onMounted(async () => {
     <div class="Heading">
         <!-- Title_Heading=========================== -->
         <div class="Title_Heading py-10 lg:mt-20 w-full h-auto text-center lg:mb-8 mb-8 relative z-[1]">
-            <h2 v-for="(indexs , index) in aboutus" :key="index" class="text-white text-5xl font-normal">
-                {{indexs.about}}</h2>
+            <!-- <h2 v-for="(indexs , index) in aboutus" :key="index" class="text-white text-5xl font-normal">
+                {{indexs.about}}</h2> -->
 
             <nav class="flex justify-center py-5" aria-label="Breadcrumb">
                 <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
@@ -126,10 +124,10 @@ onMounted(async () => {
 
         <!-- about-page-card=================================== -->
 
-        <h2 v-for="(indexs , index) in aboutus" :key="index"
+        <!-- <h2 v-for="(indexs , index) in aboutus" :key="index"
             class="text-center lg:text-4xl text-2xl lg:font-semibold mt-5">{{indexs.UNITECH}}</h2>
         <p v-for="(indexs , index) in aboutus" :key="index" class="text-center lg:py-5 py-5 lg:text-xl text-[#B4B4B8]">
-            {{indexs.Vivamus}}</p>
+            {{indexs.Vivamus}}</p> -->
 
         <div v-if="aboutBox && aboutBox"
             class="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-4 px-3 gap-x-8 gap-y-4 py-10">
@@ -154,20 +152,20 @@ onMounted(async () => {
         <!-- about-page-card End=================================== -->
 
         <div class="about-page-para py-20 w-full h-auto mb-20 relative z-[1]">
-            <h2 v-for="(indexs , index) in aboutus" :key="index"
-                class="text-white lg:text-6xl text-3xl font-normal text-center">{{indexs.OUR}}</h2>
+            <!-- <h2 v-for="(indexs , index) in aboutus" :key="index"
+                class="text-white lg:text-6xl text-3xl font-normal text-center">{{indexs.OUR}}</h2> -->
 
             <div class="container mx-auto mt-8">
                 <div class="grid md:grid-cols-2 grid-cols-1 gap-4 ">
                     <div class="p-2 rounded-md">
-                        <h2 v-for="(indexs , index) in aboutus" :key="index" class="text-white lg:text-4xl text-xl">
-                            {{indexs.WALKWAYS}}</h2>
+                        <!-- <h2 v-for="(indexs , index) in aboutus" :key="index" class="text-white lg:text-4xl text-xl">
+                            {{indexs.WALKWAYS}}</h2> -->
 
 
                         <div class="container mx-auto mt-6">
-                            <div v-if="aboutWorkInfo && aboutWorkInfo" class="grid grid-cols-1 gap-4">
+                            <div v-if="aboutBox && aboutBox" class="grid grid-cols-1 gap-4">
                                 <!-- ========================1================================= -->
-                                <div v-for="(box , index) in aboutWorkInfo" :key="index"
+                                <div v-for="(box, index) in aboutWorkInfo.data" :key="index"
                                     class="max-w-full p-6 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                                     <a href="#"
                                         class="bg-[#202472] text-[#fab915] text-4xl pt-2 pb-1 pr-3 pl-3 shadow-md rounded-full lg:w-32 lg:h-32 border-solid border-4 border-yellow-400">
@@ -176,7 +174,8 @@ onMounted(async () => {
 
                                     <a href="#">
                                         <h5 class="mt-4 mb-2 text-2xl font-semibold tracking-tight text-white">
-                                            {{ box.title }}</h5>
+                                            {{ box.title }}
+                                        </h5>
                                     </a>
                                     <p class="mb-3 font-normal text-gray-500 dark:text-gray-100">
                                         {{ box.description }}
@@ -197,7 +196,7 @@ onMounted(async () => {
             </div>
         </div>
 
-        <!-- men-card============================================ -->
+        <!-- men-card ============================================ -->
         <section class="bg-section">
             <div class="container mx-auto">
                 <div v-if="aboutCard && aboutCard"

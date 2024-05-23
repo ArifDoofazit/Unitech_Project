@@ -1,6 +1,6 @@
 <script setup>
 import { onMounted , ref } from 'vue';
-import { useRoute, RouterLink } from 'vue-router';
+import { RouterLink } from 'vue-router';
 
 const isMobileMenuOpen = ref(false);
 
@@ -11,17 +11,6 @@ const toggleMobileMenu = () => {
 const closeMobileMenu = () => {
   isMobileMenuOpen.value = false;
 };
-
-
-// Define navLogo with separate properties for large and small screen logos
-// const navLogo = [
-//   {
-//     largeScreenLogo: "/assets/UGL-AND-Hi_Care-logo-of-web-desktop-o90Bn3SL.png",
-//     smallScreenLogo: "/assets/UGL-AND-Hi_Care-logo-of-web-mobile-gg24XQuN.png",
-//     preloader: "../assets/image/UGL/Unitech-Logo-Animation.gif",
-//     logoLink: "#"
-//   }
-// ];
 
 import axios from 'axios';
 import { BASE_URL } from '../assets/apiConfig';
@@ -39,13 +28,27 @@ onMounted(async () => {
   }
 });
 
-const items = ref(null);
+const menuItemsData = ref(null);
+const sortedMenuItems = ref([]);
+
+const sortByMenuPosition = (items) => {
+  items.sort((a, b) => a.menuPosition - b.menuPosition);
+};
 
 onMounted(async () => {
   try {
     const response = await axios.get(`${BASE_URL}menuItem`);
-    items.value = response.data;
-    console.log('Data fetched successfully:', items.value);
+    menuItemsData.value = response.data;
+    console.log('Data fetched successfully:', menuItemsData.value);
+
+    if (menuItemsData.value && menuItemsData.value.data && Array.isArray(menuItemsData.value.data)) {
+      // Sort the data by position
+      sortByMenuPosition(menuItemsData.value.data);
+      sortedMenuItems.value = [...menuItemsData.value.data];
+      console.log('Sorted data:', sortedMenuItems.value);
+    } else {
+      console.error('Data fetched is not an array:', menuItemsData.value);
+    }
   } catch (error) {
     console.error('Error fetching data:', error);
   }
@@ -97,11 +100,13 @@ onMounted(async () => {
       <div class="hidden lg:mr-0 xl:w-3/6 lg:w-[55%] sm:block rounded-l-3xl" style="background:#2c306b;">
         <div class="flex justify-center items-center space-x-3 lg:mr-8 px-3 lg:py-[7px]">
           <!-- Loop through menu items -->
-          <div v-if="items && items">
-            <RouterLink v-for="(item, index) in items.data" :key="index" @click="closeMobileMenu" :to="item.menuLink"
-              class="text-white px-3 py-3 text-base font-medium hover:bg-[#f89b3b] hover:text-white transition-all nav-link">
-              {{ item.menuName }}
-            </RouterLink>
+          <div v-for="(menuItem, index) in sortedMenuItems" :key="index">
+            
+                <RouterLink @click="closeMobileMenu" :to="menuItem.menuLink"
+                  class="text-white px-3 py-3 text-base font-medium hover:bg-[#f89b3b] hover:text-white transition-all nav-link">
+                  {{ menuItem.menuName }}
+                </RouterLink>
+
           </div>
 
           <!-- Additional links -->

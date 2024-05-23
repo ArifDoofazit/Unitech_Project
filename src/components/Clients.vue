@@ -31,7 +31,7 @@ onMounted(async () => {
                     <div v-for="(client, index) in clients.data" :key="index" class="w-full flex justify-center">
                         <div
                             class="border-solid border-2 rounded-2xl border-inherit flex justify-center lg:w-64 w-11/12 hover:shadow-md">
-                            <img :src="IMG +client.Images" class="h-40" alt="">
+                            <img :src="IMG + client.Image" class="h-40" alt="">
                         </div>
                     </div>
 
