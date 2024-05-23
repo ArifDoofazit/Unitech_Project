@@ -1,1 +1,1 @@
-export const IMG = "http://admin.unitechgloballtd.com";
+export const IMG = "https://admin.unitechgloballtd.com";
