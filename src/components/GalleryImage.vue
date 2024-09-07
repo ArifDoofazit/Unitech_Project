@@ -27,7 +27,7 @@ onMounted(async () => {
                         <div
                             class="product-card w-72 rounded-2xl drop-shadow-2xl overflow-hidden cursor-pointer relative group">
                             <div class="flex justify-center">
-                                <div class="icon absolute text-6xl text-gray-400 z-10 lg:mt-32 mt-32">
+                                <div class="icon absolute text-6xl text-white z-10 lg:mt-32 mt-32">
                                     <i class="fa-regular fa-circle-play"></i>
                                 </div>
                             </div>

@@ -5,12 +5,14 @@ import { BASE_URL } from '../assets/apiConfig';
 import { IMG } from '../assets/imageUrl';
 
 const productCards = ref(null);
+const selectedCategoryName = ref('All Products'); // Default value
 
 onMounted(async () => {
     try {
         const response = await axios.get(`${BASE_URL}productCardInfo`);
-        productCards.value = response.data;
-        console.log('Data fetched successfully:', productCards.value);
+        // Sort the product cards by productPosition
+        productCards.value = response.data.data.sort((a, b) => a.productPosition - b.productPosition);
+        console.log('Data fetched and sorted by product position:', productCards.value);
     } catch (error) {
         console.error('Error fetching data:', error);
     }
@@ -109,8 +111,8 @@ const sortByPosition = (categories) => {
 };
 
 const setSelectedCategory = (categoryName) => {
-    // Update the content of the <h2> tag with the selected category name
-    document.getElementById('selected-category').textContent = categoryName;
+    selectedCategoryName.value = categoryName || 'All Products';
+    document.getElementById('selected-category').textContent = selectedCategoryName.value;
 };
 
 console.log('sortedCategories');
@@ -155,23 +157,22 @@ console.log('sortedCategories');
 
             <div id="default-styled-tab-content" class="col-span-2">
                 <div class="w-72 h-auto rounded-lg text-center bg-[#eb9843]">
-                    <h2 class="font-medium text-4xl p-2 text-white" id="selected-category">
-
-                    </h2>
+                    <h2 class="font-medium text-4xl p-2 text-white" id="selected-category">{{ selectedCategoryName }}</h2>
                 </div>
                 <div v-if="productCards && productCards"
                     class="col-span-2 grid lg:grid-cols-3 grid-cols-2 gap-4 p-4 rounded-lg bg-gray-50 dark:bg-gray-800"
-                    id="styled-profile" role="tabpanel" aria-labelledby="profile-tab">
-                    <div v-for="(productCard, index) in productCards.data" :key="index">
+                    id="styled-profile" role="tabpanel">
+                    <div v-for="(productCard, index) in productCards" :key="index">
                         <RouterLink :to="'/product-details/' + productCard.id">
                             <div class="flex justify-center">
-                                <div
-                                    class="product-card w-72 rounded-lg drop-shadow-2xl overflow-hidden cursor-pointer relative group border hover:shadow-2xl">
-                                    <img :src="IMG + productCard.images" class="w-full lg:h-[270px] rounded-lg " alt="">
-                                    <img :src="IMG + productCard.images"
-                                        class="w-full lg:h-[270px] rounded-lg absolute top-0 left-0 opacity-0 " alt="">
-                                    <div
-                                        class="lg:h-20 leading-9 rounded-2xl drop-shadow-xl border-2 border-[#f89b3b] bg-white text-[#f89b3b] transition duration-300 ease-in-out transform group-hover:text-[#eb9843]">
+                                <div class="product-card w-72 rounded-lg drop-shadow-2xl overflow-hidden cursor-pointer relative group border hover:shadow-2xl">
+                                    <div class="md:min-h-32 lg:min-h-0 min-h-40">
+                                        <img :src="IMG + productCard.imageOne" class="w-full h-[190px] lg:h-[270px] rounded-lg "
+                                            alt="">
+                                        <img :src="IMG + productCard.imageTwo"
+                                            class="w-full h-[190px] lg:h-[270px] rounded-lg absolute top-0 left-0 opacity-0" alt="">
+                                    </div>
+                                    <div class="lg:h-20 leading-9 rounded-2xl drop-shadow-xl border-2 border-[#f89b3b] bg-white text-[#f89b3b] transition duration-300 ease-in-out transform group-hover:text-[#eb9843]">
                                         <h2 class="text-center font-semibold pt-1 text-xl">{{ productCard.productName }}
                                         </h2>
                                         <div class="text-center text-black text-sm">
@@ -192,12 +193,12 @@ console.log('sortedCategories');
 </template>
 
 <style scoped>
-ul.text-white > li > button {
-  color: white;
+ul.text-white>li>button {
+    color: white;
 }
 
 /* Change text color for active link when clicked and stays active */
-ul.text-white > li.active-link > button {
-  color: blue;
+ul.text-white>li.active-link>button {
+    color: blue;
 }
 </style>

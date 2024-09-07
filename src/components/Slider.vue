@@ -137,12 +137,12 @@ $(".dot").on("click", function () {
                         <div class="lg:w-[500px] w-full text-right">
                             <h2 class="font-bold lg:text-5xl text-2xl text-[#f89b3b] lg:pl-8 pl-4">{{ slide.Title }}
                             </h2>
-                            <p
-                                class="lg:w-[410px] lg:ml-[90px] lg:text-right lg:font-normal lg:text-3xl text-lg lg:pl-8 pl-4 lg:pt-5 lg:pb-5 pt-2 leading-6 text-white">
+                            <p  
+                                class="lg:w-[410px] lg:ml-[90px] lg:text-right lg:font-normal lg:text-3xl text-lg lg:pl-8 pl-4 lg:pt-5 lg:pb-5 pt-2 pb-5 leading-6 text-white">
                                 {{ slide.description }}
                             </p>
                             <a :href="slide.buttonLink"
-                                class="py-2 px-8 mt-7 rounded-md bg-[#f89b3b] font-medium lg:text-2xl text-lg ml-4 lg:ml-0">{{
+                                class="py-2 px-8 lg:mt-7 mt-12 rounded-md bg-[#f89b3b] font-medium lg:text-2xl text-lg ml-4 lg:ml-0">{{
                                 slide.buttonText }}</a>
                         </div>
                     </div>

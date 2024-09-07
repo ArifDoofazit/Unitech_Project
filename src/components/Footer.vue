@@ -82,7 +82,7 @@ const creator = [
                             <a href="#"
                                 class="bg-white lg:ml-4 rounded px-2 flex justify-center items-center py-2 text-xl font-medium lg:h-8 lg:w-8 lg:mt-1 w-8 text-[#2c306b]">
                                 <i class="fa-brands fa-instagram"></i> </a>
-                            <a href="#"
+                            <a href="https://www.youtube.com/@HiCareHardwareProducts"
                                 class="bg-white lg:ml-4 rounded px-2 flex justify-center items-center py-2 text-xl font-medium lg:h-8 lg:w-8 lg:mt-1 w-8 text-[#2c306b]">
                                 <i class="fa-brands fa-youtube"></i> </a>
                         </div>

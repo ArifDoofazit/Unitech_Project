@@ -1,14 +1,15 @@
 <script>
 export default {
-    name: 'Preloader'
+  name: 'Preloader'
 }
 </script>
 
 <template>
-    <div class="preloader">
-        <!-- Add your preloader animation here -->
-        <div class="spinner"></div>
+  <div class="preloader">
+    <div class="flex justify-center items-center">
+      <div class="spinner"></div>
     </div>
+  </div>
 </template>
 
 <style scoped>
@@ -31,19 +32,26 @@ export default {
   background-size: cover;
   width: 850px;
   height: 450px;
+  position: fixed;
+  left: 50%;
+  top: 45% !important;
 }
+
 @media (max-width: 768px) {
   .spinner {
     width: 500px;
     height: 320px;
     margin-left: -10px;
+    left: 0px;
   }
 }
 
 @media (max-width: 576px) {
   .spinner {
-    width: 700px;
+    width: 400px;
     height: 220px;
+    position: fixed;
+    left: 50%;
   }
 }
 </style>

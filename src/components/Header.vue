@@ -20,7 +20,11 @@ const data = ref(null);
 
 onMounted(async () => {
   try {
-    const response = await axios.get(`${BASE_URL}items`);
+    const response = await axios.get(`${BASE_URL}items`, {
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
     data.value = response.data;
     console.log('Data fetched successfully:', data.value);
   } catch (error) {
@@ -84,7 +88,7 @@ onMounted(async () => {
       </div>
 
       <!-- Logo -->
-      <div v-if="data && data">
+      <div v-if="data && data" class="contents">
         <div v-for="( header, index) in data.data" :key="index"
           class="flex justify-end items-center w-full lg:w-auto h-14 overflow-hidden lg:z-10 lg:ml-0">
           <a :href="header.logoLink">
@@ -172,8 +176,9 @@ nav a.router-link-exact-active:hover {
     background-size: cover;
     background-repeat: no-repeat;
     overflow: hidden;
-    position: sticky;
-    margin-left: 110px;
+    padding-right: 10px;
+    /* position: sticky;
+    margin-left: 125px; */
     z-index: 1;
   }
 

@@ -29,7 +29,7 @@ onMounted(async () => {
                     <div
                         class="product-card lg:max-w-full max-w-[320px] rounded-2xl drop-shadow-2xl overflow-hidden cursor-pointer relative border group">
                         <div class="h-[100%]">
-                            <img :src="IMG + productDetail.images"
+                            <img :src="IMG + productDetail.imageOne"
                                 class="lg:w-full h-[440px] transition-transform duration-300 transform scale-100 group-hover:scale-105"
                                 alt="">
                             <img :src="IMG + productDetail.imageTwo"
@@ -43,17 +43,27 @@ onMounted(async () => {
 
             <div class="flex justify-start">
                 <div class="pt-4 pl-10 mt-2">
-                    <h3 class="lg:text-3xl text-xl font-semibold underline">{{ productDetail.productName }}</h3>
-                    <p class="font-normal lg:text-lg text-base pt-3">Product Id: {{ productDetail.productInfo }}</p>
-                    <p class="font-normal lg:text-lg text-base pt-3">Product Code: {{ productDetail.productCode }}</p>
-                    <p class="font-normal lg:text-lg text-base pt-3">Product Availability:
+                    <h3 class="lg:text-5xl text-xl font-semibold text-[#f89b3b]">{{ productDetail.productName }}</h3>
+
+                    <p class="font-normal lg:text-lg text-base pt-3">
+                        <span class="font-medium text-lg text-[#2c306b]">Product Id - </span> 
+                        {{ productDetail.productInfo }}
+                    </p>
+
+                    <p class="font-normal lg:text-lg text-base pt-3">
+                        <span class="font-medium text-lg text-[#2c306b]">Product Code - </span>
+                        {{ productDetail.productCode }}
+                    </p>
+                    <p class="font-normal lg:text-lg text-base pt-3">
+                        <span class="font-medium text-lg text-[#2c306b]">Product Availability - </span>
                         <span class="text-red-600">{{ productDetail.productAvailability }}</span>
                     </p>
-                    <div class="grid lg:grid-cols-2">
-                        <h4 class="font-normal w-60 rounded-md lg:text-lg py-3 px-3 mt-10 bg-[#f2f2f2]">
-                            Product Price :
-                            {{ productDetail.productPrice }}
-                        </h4>
+                    <div class="grid lg:grid-cols-2 mt-4">
+                        <a class="px-2 py-[6px] gradient text-white text-lg rounded-2xl tracking-wider" href="http://m.me/hicare11" target="__blank">
+                            <i class="fa-brands fa-facebook-messenger pr-2"></i>
+                            Message
+                        </a>
+                        <span class="flex items-center pl-2 font-medium text-base">For Oder / Price / Others</span>
                     </div>
 
 
@@ -69,3 +79,12 @@ onMounted(async () => {
 
     </div>
 </template>
+
+<style scoped>
+.gradient{
+    background: #0695FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+</style>
